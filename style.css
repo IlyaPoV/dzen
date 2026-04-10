@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+}
+
+/* BODY */
+
+body {
+  margin: 0;
+  font-family: "HeliosCondC", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  background: #EFEEEC;
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  padding: 0 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
