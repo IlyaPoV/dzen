@@ -5,18 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Дзен</title>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./style.css" />
 </head>
 
 <body>
     <!-- Шапка сайта -->
-
     <header class="header">
         <div class="container">
             <div class="header__inner">
                 <a href="#" class="header__logo">
-                    <img src="./images/logo.svg" alt="Дзен" />
+                    <img src="./assets/images/logo.png" alt="Дзен" />
                 </a>
 
                 <nav class="header__nav">
@@ -40,376 +40,374 @@
         </div>
     </header>
 
-    <main>
-        <!-- Герой -->
-        <section class="hero">
-            <div class="container">
-                <div class="hero__card">
-                    <div class="hero__media"></div>
+    <section class="hero">
+        <div class="container">
+            <div class="hero__card">
+                <div class="hero__media"></div>
 
-                    <div class="hero__main">
-                        <div class="hero__content-box">
-                            <h1 class="hero__title">
-                                СТРОИТЕЛЬСТВО
-                                И
-                                ПРОДАЖА
-                                ЗАГОРОДНЫХ
-                                ДОМОВ
-                            </h1>
+                <div class="hero__main">
+                    <div class="hero__content-box">
+                        <h1 class="hero__title">
+                            СТРОИТЕЛЬСТВО И<br>
+                            ПРОДАЖА ЗАГОРОДНЫХ<br>
+                            ДОМОВ <span class="hero__title-note">[ПОД КЛЮЧ]</span>
+                        </h1>
 
-                            <div class="hero__subtitle">[ПОД КЛЮЧ]</div>
+                        <p class="hero__text">
+                            Возводим дома под Екатеринбургом по собственным архитектурным
+                            решениям. Выберите продуманный для жизни проект, который мы
+                            реализуем для вас.
+                        </p>
+                    </div>
+                </div>
 
-                            <p class="hero__text">
-                                Возводим дома под Екатеринбургом по собственным архитектурным
-                                решениям. Выберите продуманный для жизни проект, который мы
-                                реализуем для вас.
-                            </p>
+                <div class="hero__footer">
+                    <a href="#projects" class="hero__button">ПОСМОТРЕТЬ КАТАЛОГ</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Блок «О нас» -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title section-title--left">О нас</h2>
+            <div class="about__inner">
+                <div class="about__text">
+                    <p>
+                        Мы — застройщик «Дзен». С 2019 года строим современные
+                        загородные дома под Екатеринбургом по собственным проектам из
+                        нашего каталога.
+                    </p>
+                    <p>
+                        Вы можете выбрать уже готовый дом с участком в подходящей
+                        комплектации либо заказать строительство проекта из нашего
+                        каталога на своей территории. Мы не перепродаём объекты других
+                        застройщиков и не строим по чужим картинкам — продаём только
+                        то, что возводим сами, и отвечаем за качество каждого этапа.
+                    </p>
+                </div>
+                <div class="about__stats">
+                    <div class="stat">
+                        <div class="stat__value">100+</div>
+                        <div class="stat__label">успешных проектов</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat__value">5 лет</div>
+                        <div class="stat__label">гарантия на строительство</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat__value">6+</div>
+                        <div class="stat__label">лет на рынке недвижимости</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat__value">от 180</div>
+                        <div class="stat__label">дней на строительство дома</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Фотография готового дома сразу после блока «О нас» -->
+    <section class="about-photo">
+        <div class="container">
+            <div class="about-photo__box">
+                <!-- Замените путь на изображение демонстрационного дома -->
+                <img src="./images/about-photo.jpg" alt="Готовый дом" />
+            </div>
+        </div>
+    </section>
+
+    <!-- Блок «Наши услуги» -->
+    <section class="services">
+        <div class="container">
+            <h2 class="section-title">Наши услуги</h2>
+            <p class="section-subtitle">
+                Наша задача — сделать ваш переезд за город предсказуемым и
+                комфортным процессом. Предлагаем два прозрачных формата работы. Выберите
+                свой сценарий:
+            </p>
+            <div class="services__tabs">
+                <button type="button" class="services__tab services__tab--active">
+                    Строим по нашим проектам
+                </button>
+                <button type="button" class="services__tab">
+                    Продаём готовые дома
+                </button>
+            </div>
+            <div class="services__grid">
+                <div class="services__image">
+                    <!-- Замените путь на фотографию проекта -->
+                    <img src="./images/service-image.jpg" alt="Дом" />
+                </div>
+                <div class="service-card">
+                    <div class="service-card__number">01</div>
+                    <h3 class="service-card__title">Выбирайте проект</h3>
+                    <p class="service-card__text">
+                        Подбираем проект по нашему каталогу и формат отделки — строим
+                        в трёх комплектациях, от чистовой до отделки «под ключ».
+                    </p>
+                </div>
+                <div class="service-card">
+                    <div class="service-card__number">02</div>
+                    <h3 class="service-card__title">Фиксация условий</h3>
+                    <p class="service-card__text">
+                        Подписываем договор с фиксированной сметой и сроком строительства
+                        от 6 месяцев, разделяя платежи на удобные этапы по ходу стройки.
+                    </p>
+                </div>
+                <div class="service-card">
+                    <div class="service-card__number">03</div>
+                    <h3 class="service-card__title">Строим объект на вашем участке</h3>
+                    <p class="service-card__text">
+                        Строим дом по графику от фундамента до отделки, полностью
+                        освобождая вас от роли прораба. Для полной прозрачности можем
+                        вывести онлайн‑камеры с участка на ваш телефон.
+                    </p>
+                </div>
+                <!-- Форму переносим в центр второй строки -->
+                <div class="services-form">
+                    <h3 class="services-form__title">
+                        Запишитесь на просмотр дома в любое удобное для вас время
+                    </h3>
+                    <form>
+                        <input class="input" type="text" placeholder="Ваше имя" />
+                        <input class="input" type="tel" placeholder="+7 (___) ___‑__‑__" />
+                        <div class="services-form__checkboxes">
+                            <label class="checkbox">
+                                <input type="checkbox" />
+                                <span>Согласен с политикой конфиденциальности</span>
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox" />
+                                <span>Даю согласие на обработку персональных данных</span>
+                            </label>
                         </div>
-                    </div>
+                        <button type="submit" class="btn btn--dark">Записаться</button>
+                    </form>
+                </div>
+                <div class="service-card">
+                    <div class="service-card__number">04</div>
+                    <h3 class="service-card__title">Получаете ключи от дома</h3>
+                    <p class="service-card__text">
+                        По окончанию строительства объекта мы передаём ключи от дома
+                        с работающими коммуникациями, готовым техпаспортом и оформленной
+                        правовой собственностью.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                    <div class="hero__footer">
-                        <a href="#projects" class="hero__button">Посмотреть каталог</a>
+    <!-- Блок «Популярные проекты» -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Популярные проекты</h2>
+            <div class="projects__grid">
+                <div class="project-card">
+                    <img src="./images/project-140.jpg" alt="Дзен 140" />
+                    <div class="project-card__body">
+                        <h3 class="project-card__title">Дзен 140</h3>
+                        <p class="project-card__text">
+                            Дом со вторым светом на 140 м²
+                        </p>
+                        <a href="#" class="project-card__btn">Узнать больше</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="./images/project-155.jpg" alt="Дзен 155" />
+                    <div class="project-card__body">
+                        <h3 class="project-card__title">Дзен 155</h3>
+                        <p class="project-card__text">
+                            Классический дом с двускатной крышей и двумя верандами.
+                        </p>
+                        <a href="#" class="project-card__btn">Узнать больше</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="./images/project-200.jpg" alt="Дзен 200" />
+                    <div class="project-card__body">
+                        <h3 class="project-card__title">Дзен 200</h3>
+                        <p class="project-card__text">
+                            Дом в стиле хай‑тек с плоской крышей и навесом для
+                            автомобилей.
+                        </p>
+                        <a href="#" class="project-card__btn">Узнать больше</a>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- О НАС -->
-        <section id="about" class="about">
-            <div class="container">
-                <h2 class="section-title section-title--left">О нас</h2>
-                <div class="about__inner">
-                    <div class="about__text">
-                        <p>
-                            Мы — застройщик «Дзен». С 2019 года строим современные
-                            загородные дома под Екатеринбургом по собственным проектам из
-                            нашего каталога.
-                        </p>
-                        <p>
-                            Вы можете выбрать уже готовый дом с участком в подходящей
-                            комплектации либо заказать строительство проекта из нашего
-                            каталога на своей территории. Мы не перепродаём объекты других
-                            застройщиков и не строим по чужим картинкам — продаём только
-                            то, что возводим сами, и отвечаем за качество каждого этапа.
-                        </p>
+    <!-- Блок с актуальными готовыми объектами -->
+    <section class="ready-objects">
+        <div class="container">
+            <div class="ready-objects__inner">
+                <div class="ready-objects__content">
+                    <h2 class="ready-objects__title">Актуальные готовые объекты</h2>
+                    <p class="ready-objects__text">
+                        Подписывайтесь на наши каналы в Telegram и MAX, чтобы первыми
+                        узнавать о новых готовых домах и следить за реальным ходом
+                        строительства.
+                    </p>
+                    <div class="ready-objects__actions">
+                        <a href="#" class="icon-btn"><span>MAX</span></a>
+                        <a href="#" class="icon-btn"><span>TG</span></a>
                     </div>
-                    <div class="about__stats">
-                        <div class="stat">
-                            <div class="stat__value">100+</div>
-                            <div class="stat__label">успешных проектов</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat__value">5 лет</div>
-                            <div class="stat__label">гарантия на строительство</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat__value">6+</div>
-                            <div class="stat__label">лет на рынке недвижимости</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat__value">от 180</div>
-                            <div class="stat__label">дней на строительство дома</div>
-                        </div>
-                    </div>
+                </div>
+                <div class="ready-objects__phone-box">
+                    <!-- Изображение телефона или приложения -->
+                    <img src="./images/phone.png" alt="Телефон" />
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- ФОТО ИЛИ ВИДЕО -->
-        <section class="about-photo">
-            <div class="container">
-                <div class="about-photo__box">
-                    <img src="./images/about-photo.jpg" alt="Готовый дом" />
+    <!-- Блок «Условия покупки готового дома» -->
+    <section class="conditions">
+        <div class="container">
+            <h2 class="section-title">Условия покупки готового дома</h2>
+            <div class="conditions__grid">
+                <div class="condition-card">
+                    <div class="condition-card__value">100%</div>
+                    <div class="condition-card__label">оплата</div>
+                </div>
+                <div class="condition-card">
+                    <div class="condition-card__value">от 6%</div>
+                    <div class="condition-card__label">Семейная ипотека</div>
+                </div>
+                <div class="condition-card">
+                    <div class="condition-card__value">от 3%</div>
+                    <div class="condition-card__label">Сельская ипотека</div>
+                </div>
+                <div class="condition-card condition-card--image">
+                    <img src="./images/condition-1.jpg" alt="Условия" />
+                </div>
+                <div class="condition-card condition-card--image">
+                    <img src="./images/condition-2.jpg" alt="Условия" />
+                </div>
+                <div class="condition-card condition-card--image">
+                    <img src="./images/condition-3.jpg" alt="Условия" />
+                </div>
+                <div class="condition-card">
+                    <div class="condition-card__value">от 5%</div>
+                    <div class="condition-card__label">IT‑ипотека</div>
+                </div>
+                <div class="condition-card">
+                    <div class="condition-card__value">от 17%</div>
+                    <div class="condition-card__label">Стандартная ипотека</div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- УСЛУГИ -->
-        <section class="services">
-            <div class="container">
-                <h2 class="section-title">Наши услуги</h2>
-                <p class="section-subtitle">
-                    Наша задача — сделать ваш переезд за город предсказуемым и
-                    комфортным процессом. Предлагаем два прозрачных формата работы. Выберите
-                    свой сценарий:
-                </p>
-                <div class="services__tabs">
-                    <button type="button" class="services__tab services__tab--active">
-                        Строим по нашим проектам
-                    </button>
-                    <button type="button" class="services__tab">
-                        Продаём готовые дома
-                    </button>
+    <!-- Блок «3 простых шага» -->
+    <section class="steps">
+        <div class="container">
+            <h2 class="section-title section-title--light section-title--left">
+                3 простых шага к строительству вашего дома
+            </h2>
+            <div class="steps__grid">
+                <div class="step-card">
+                    <div class="step-card__number">1</div>
+                    <h3 class="step-card__title">Оставьте заявку</h3>
+                    <p class="step-card__text">
+                        Свяжемся с вами и пригласим на экскурсию. Покажем готовые дома
+                        или договоримся о просмотре тех, в которых уже живут люди.
+                    </p>
                 </div>
-                <div class="services__grid">
-                    <div class="services__image">
-                        <img src="./images/service-image.jpg" alt="Дом" />
-                    </div>
-                    <div class="service-card">
-                        <div class="service-card__number">01</div>
-                        <h3 class="service-card__title">Выбирайте проект</h3>
-                        <p class="service-card__text">
-                            Подбираем проект по нашему каталогу и формат отделки — строим
-                            в трёх комплектациях, от чистовой до отделки «под ключ».
-                        </p>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-card__number">02</div>
-                        <h3 class="service-card__title">Фиксация условий</h3>
-                        <p class="service-card__text">
-                            Подписываем договор с фиксированной сметой и сроком строительства
-                            от 6 месяцев, разделяя платежи на удобные этапы по ходу стройки.
-                        </p>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-card__number">03</div>
-                        <h3 class="service-card__title">Строим объект на вашем участке</h3>
-                        <p class="service-card__text">
-                            Строим дом по графику от фундамента до отделки, полностью
-                            освобождая вас от роли прораба. Для полной прозрачности можем
-                            вывести онлайн‑камеры с участка на ваш телефон.
-                        </p>
-                    </div>
-                    <!-- ФОРМА -->
-                    <div class="services-form">
-                        <h3 class="services-form__title">
-                            Запишитесь на просмотр дома в любое удобное для вас время
-                        </h3>
-                        <form>
-                            <input class="input" type="text" placeholder="Ваше имя" />
-                            <input class="input" type="tel" placeholder="+7 (___) ___‑__‑__" />
-                            <div class="services-form__checkboxes">
-                                <label class="checkbox">
-                                    <input type="checkbox" />
-                                    <span>Согласен с политикой конфиденциальности</span>
-                                </label>
-                                <label class="checkbox">
-                                    <input type="checkbox" />
-                                    <span>Даю согласие на обработку персональных данных</span>
-                                </label>
-                            </div>
-                            <button type="submit" class="btn btn--dark">Записаться</button>
-                        </form>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-card__number">04</div>
-                        <h3 class="service-card__title">Получаете ключи от дома</h3>
-                        <p class="service-card__text">
-                            По окончанию строительства объекта мы передаём ключи от дома
-                            с работающими коммуникациями, готовым техпаспортом и оформленной
-                            правовой собственностью.
-                        </p>
-                    </div>
+                <div class="step-card">
+                    <div class="step-card__number">2</div>
+                    <h3 class="step-card__title">Закрепите условия</h3>
+                    <p class="step-card__text">
+                        Согласовываем проект из нашего каталога и детально считаем
+                        смету. Подписываем договор, где будут прописаны сроки и финальная
+                        стоимость объекта.
+                    </p>
+                </div>
+                <div class="step-card">
+                    <div class="step-card__number">3</div>
+                    <h3 class="step-card__title">Получите ключи</h3>
+                    <p class="step-card__text">
+                        Строим дом на вашем участке точно в срок. Вся работу и контроль
+                        берём на себя, чтобы вы спокойно получили ключи от готового
+                        объекта со всеми коммуникациями и техпаспортом.
+                    </p>
                 </div>
             </div>
-        </section>
+            <form class="steps-form">
+                <input class="input input--light" type="text" placeholder="Ваше имя" />
+                <input class="input input--light" type="tel" placeholder="+7 (___) ___‑__‑__" />
+                <button type="submit" class="btn btn--accent">Оставить заявку</button>
+            </form>
+        </div>
+    </section>
 
-        <!-- ПОПУЛЯРНОЕ -->
-        <section id="projects" class="projects">
-            <div class="container">
-                <h2 class="section-title">Популярные проекты</h2>
-                <div class="projects__grid">
-                    <div class="project-card">
-                        <img src="./images/project-140.jpg" alt="Дзен 140" />
-                        <div class="project-card__body">
-                            <h3 class="project-card__title">Дзен 140</h3>
-                            <p class="project-card__text">
-                                Дом со вторым светом на 140 м²
-                            </p>
-                            <a href="#" class="project-card__btn">Узнать больше</a>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <img src="./images/project-155.jpg" alt="Дзен 155" />
-                        <div class="project-card__body">
-                            <h3 class="project-card__title">Дзен 155</h3>
-                            <p class="project-card__text">
-                                Классический дом с двускатной крышей и двумя верандами.
-                            </p>
-                            <a href="#" class="project-card__btn">Узнать больше</a>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <img src="./images/project-200.jpg" alt="Дзен 200" />
-                        <div class="project-card__body">
-                            <h3 class="project-card__title">Дзен 200</h3>
-                            <p class="project-card__text">
-                                Дом в стиле хай‑тек с плоской крышей и навесом для
-                                автомобилей.
-                            </p>
-                            <a href="#" class="project-card__btn">Узнать больше</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ГОТОВО СЕЙЧАС -->
-        <section class="ready-objects">
-            <div class="container">
-                <div class="ready-objects__inner">
-                    <div class="ready-objects__content">
-                        <h2 class="ready-objects__title">Актуальные готовые объекты</h2>
-                        <p class="ready-objects__text">
-                            Подписывайтесь на наши каналы в Telegram и MAX, чтобы первыми
-                            узнавать о новых готовых домах и следить за реальным ходом
-                            строительства.
-                        </p>
-                        <!-- ИКОНКИ МАКСА И ТГ -->
-                        <div class="ready-objects__actions">
-                            <a href="#" class="icon-btn"><span>MAX</span></a>
-                            <a href="#" class="icon-btn"><span>TG</span></a>
-                        </div>
-                    </div>
-                    <div class="ready-objects__phone-box">
-                        <img src="./images/phone.png" alt="Телефон" />
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- УСЛОВИЯ ПОКУПКИ -->
-        <section class="conditions">
-            <div class="container">
-                <h2 class="section-title">Условия покупки готового дома</h2>
-                <div class="conditions__grid">
-                    <div class="condition-card">
-                        <div class="condition-card__value">100%</div>
-                        <div class="condition-card__label">оплата</div>
-                    </div>
-                    <div class="condition-card">
-                        <div class="condition-card__value">от 6%</div>
-                        <div class="condition-card__label">Семейная ипотека</div>
-                    </div>
-                    <div class="condition-card">
-                        <div class="condition-card__value">от 3%</div>
-                        <div class="condition-card__label">Сельская ипотека</div>
-                    </div>
-                    <div class="condition-card condition-card--image">
-                        <img src="./images/condition-1.jpg" alt="Условия" />
-                    </div>
-                    <div class="condition-card condition-card--image">
-                        <img src="./images/condition-2.jpg" alt="Условия" />
-                    </div>
-                    <div class="condition-card condition-card--image">
-                        <img src="./images/condition-3.jpg" alt="Условия" />
-                    </div>
-                    <div class="condition-card">
-                        <div class="condition-card__value">от 5%</div>
-                        <div class="condition-card__label">IT‑ипотека</div>
-                    </div>
-                    <div class="condition-card">
-                        <div class="condition-card__value">от 17%</div>
-                        <div class="condition-card__label">Стандартная ипотека</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 3 ШАГА -->
-        <section class="steps">
-            <div class="container">
-                <h2 class="section-title section-title--light section-title--left">
-                    3 простых шага к строительству вашего дома
-                </h2>
-                <div class="steps__grid">
-                    <div class="step-card">
-                        <div class="step-card__number">1</div>
-                        <h3 class="step-card__title">Оставьте заявку</h3>
-                        <p class="step-card__text">
-                            Свяжемся с вами и пригласим на экскурсию. Покажем готовые дома
-                            или договоримся о просмотре тех, в которых уже живут люди.
-                        </p>
-                    </div>
-                    <div class="step-card">
-                        <div class="step-card__number">2</div>
-                        <h3 class="step-card__title">Закрепите условия</h3>
-                        <p class="step-card__text">
-                            Согласовываем проект из нашего каталога и детально считаем
-                            смету. Подписываем договор, где будут прописаны сроки и финальная
-                            стоимость объекта.
-                        </p>
-                    </div>
-                    <div class="step-card">
-                        <div class="step-card__number">3</div>
-                        <h3 class="step-card__title">Получите ключи</h3>
-                        <p class="step-card__text">
-                            Строим дом на вашем участке точно в срок. Вся работу и контроль
-                            берём на себя, чтобы вы спокойно получили ключи от готового
-                            объекта со всеми коммуникациями и техпаспортом.
-                        </p>
-                    </div>
-                </div>
-                <form class="steps-form">
-                    <input class="input input--light" type="text" placeholder="Ваше имя" />
-                    <input class="input input--light" type="tel" placeholder="+7 (___) ___‑__‑__" />
-                    <button type="submit" class="btn btn--accent">Оставить заявку</button>
-                </form>
-            </div>
-        </section>
-
-        <!-- ВОПРОСИК -->
-        <section class="plot">
-            <div class="container">
-                <div class="plot__inner">
-                    <div class="plot__content">
-                        <h2 class="plot__title">У вас уже есть участок?</h2>
-                        <p class="plot__text">
-                            Мы построим любой дом из нашего каталога проектов на вашей земле.
-                            Вы получаете наш опыт, готовый проект с точным бюджетом и
-                            фиксированными сроками.
-                        </p>
-                        <form class="plot-form">
-                            <input class="input input--light" type="text" placeholder="Ваше имя" />
-                            <input class="input input--light" type="tel" placeholder="+7 (___) ___‑__‑__" />
-                            <button type="submit" class="btn btn--accent">
-                                Обсудить проект
-                            </button>
-                        </form>
-                    </div>
-                    <div class="plot__image-box">
-                        <img src="./images/plot.jpg" alt="Участок" />
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ГАЛЕРЕЯ -->
-        <section class="gallery">
-            <div class="container">
-                <div class="gallery__grid">
-                    <div class="gallery__item"><img src="./images/gallery-1.jpg" alt="" /></div>
-                    <div class="gallery__item"><img src="./images/gallery-2.jpg" alt="" /></div>
-                    <div class="gallery__item"><img src="./images/gallery-3.jpg" alt="" /></div>
-                    <div class="gallery__item"><img src="./images/gallery-4.jpg" alt="" /></div>
-                    <div class="gallery__item"><img src="./images/gallery-5.jpg" alt="" /></div>
-                    <div class="gallery__item"><img src="./images/gallery-6.jpg" alt="" /></div>
-                    <div class="gallery__item"><img src="./images/gallery-7.jpg" alt="" /></div>
-                    <div class="gallery__item"><img src="./images/gallery-8.jpg" alt="" /></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ЧАСТЫЕ ВОПРОСИКИ -->
-        <section class="faq">
-            <div class="container">
-                <h2 class="section-title">Часто задаваемые вопросы</h2>
-                <div class="faq__list">
-                    <article class="faq-item">
-                        <button class="faq-item__head" type="button">
-                            <span>Оперативность</span>
-                            <span class="faq-item__icon">+</span>
+    <!-- Блок «У вас уже есть участок?» -->
+    <section class="plot">
+        <div class="container">
+            <div class="plot__inner">
+                <div class="plot__content">
+                    <h2 class="plot__title">У вас уже есть участок?</h2>
+                    <p class="plot__text">
+                        Мы построим любой дом из нашего каталога проектов на вашей земле.
+                        Вы получаете наш опыт, готовый проект с точным бюджетом и
+                        фиксированными сроками.
+                    </p>
+                    <form class="plot-form">
+                        <input class="input input--light" type="text" placeholder="Ваше имя" />
+                        <input class="input input--light" type="tel" placeholder="+7 (___) ___‑__‑__" />
+                        <button type="submit" class="btn btn--accent">
+                            Обсудить проект
                         </button>
-                    </article>
-                    <article class="faq-item">
-                        <button class="faq-item__head" type="button">
-                            <span>Опыт и профессионализм</span>
-                            <span class="faq-item__icon">+</span>
-                        </button>
-                    </article>
+                    </form>
+                </div>
+                <div class="plot__image-box">
+                    <!-- Изображение участка -->
+                    <img src="./images/plot.jpg" alt="Участок" />
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
+
+    <!-- Галерея реализованных проектов -->
+    <section class="gallery">
+        <div class="container">
+            <div class="gallery__grid">
+                <!-- Вставьте по 8 фотографий ваших проектов -->
+                <div class="gallery__item"><img src="./images/gallery-1.jpg" alt="" /></div>
+                <div class="gallery__item"><img src="./images/gallery-2.jpg" alt="" /></div>
+                <div class="gallery__item"><img src="./images/gallery-3.jpg" alt="" /></div>
+                <div class="gallery__item"><img src="./images/gallery-4.jpg" alt="" /></div>
+                <div class="gallery__item"><img src="./images/gallery-5.jpg" alt="" /></div>
+                <div class="gallery__item"><img src="./images/gallery-6.jpg" alt="" /></div>
+                <div class="gallery__item"><img src="./images/gallery-7.jpg" alt="" /></div>
+                <div class="gallery__item"><img src="./images/gallery-8.jpg" alt="" /></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Блок «Часто задаваемые вопросы» -->
+    <section class="faq">
+        <div class="container">
+            <h2 class="section-title">Часто задаваемые вопросы</h2>
+            <div class="faq__list">
+                <article class="faq-item">
+                    <button class="faq-item__head" type="button">
+                        <span>Оперативность</span>
+                        <span class="faq-item__icon">+</span>
+                    </button>
+                </article>
+                <article class="faq-item">
+                    <button class="faq-item__head" type="button">
+                        <span>Опыт и профессионализм</span>
+                        <span class="faq-item__icon">+</span>
+                    </button>
+                </article>
+            </div>
+        </div>
+    </section>
     </main>
 </body>
 
