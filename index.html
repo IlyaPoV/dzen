@@ -11,58 +11,64 @@
 
 <body>
     <!-- Шапка сайта -->
+
     <header class="header">
         <div class="container">
             <div class="header__inner">
-                <!-- Логотип -->
-                <a href="#" class="logo">
+                <a href="#" class="header__logo">
                     <img src="./images/logo.svg" alt="Дзен" />
                 </a>
-                <!-- Навигация -->
-                <nav class="nav">
-                    <ul class="nav__list">
-                        <li class="nav__item"><a href="#about">О нас</a></li>
-                        <li class="nav__item"><a href="#projects">Проекты</a></li>
-                        <li class="nav__item"><a href="#contacts">Контакты</a></li>
+
+                <nav class="header__nav">
+                    <ul class="header__menu">
+                        <li><a href="#about">О нас</a></li>
+                        <li><a href="#projects">Проекты</a></li>
+                        <li><a href="#contacts">Контакты</a></li>
                     </ul>
                 </nav>
-                <!-- Контакты и кнопка вызова -->
-                <div class="header__right">
-                    <div class="header__contacts">
-                        <div class="header__location">Екатеринбург</div>
-                        <a href="tel:+79120342244" class="header__phone">+7 (912) 034‑22‑44</a>
-                    </div>
-                    <a href="#" class="header__btn">
-                        <span>Заказать звонок</span>
-                    </a>
+
+                <div class="header__contacts">
+                    <div class="header__city">Екатеринбург</div>
+                    <a href="tel:+79120342244" class="header__phone">+7 (912) 034-22-44</a>
                 </div>
+
+                <a href="#" class="header__button">
+                    <span class="header__button-arrow">↗</span>
+                    <span>ЗАКАЗАТЬ ЗВОНОК</span>
+                </a>
             </div>
         </div>
     </header>
 
     <main>
-        <!-- Первый блок -->
+        <!-- Герой -->
         <section class="hero">
             <div class="container">
                 <div class="hero__card">
-                    <div class="hero__bg">
-                        <!-- ЛОГО надо вставить будет -->
-                        <img src="./images/hero.jpg" alt="Загородный дом" />
+                    <div class="hero__media"></div>
+
+                    <div class="hero__main">
+                        <div class="hero__content-box">
+                            <h1 class="hero__title">
+                                СТРОИТЕЛЬСТВО
+                                И
+                                ПРОДАЖА
+                                ЗАГОРОДНЫХ
+                                ДОМОВ
+                            </h1>
+
+                            <div class="hero__subtitle">[ПОД КЛЮЧ]</div>
+
+                            <p class="hero__text">
+                                Возводим дома под Екатеринбургом по собственным архитектурным
+                                решениям. Выберите продуманный для жизни проект, который мы
+                                реализуем для вас.
+                            </p>
+                        </div>
                     </div>
-                    <div class="hero__overlay"></div>
-                    <div class="hero__content">
-                        <h1 class="hero__title">
-                            Строительство и<br />
-                            продажа загородных<br />
-                            домов
-                        </h1>
-                        <div class="hero__subtitle">[Под ключ]</div>
-                        <p class="hero__text">
-                            Возводим дома под Екатеринбургом по собственным архитектурным
-                            решениям. Выберите продуманный для жизни проект, который мы
-                            реализуем для вас.
-                        </p>
-                        <a href="#projects" class="hero__btn">Посмотреть каталог</a>
+
+                    <div class="hero__footer">
+                        <a href="#projects" class="hero__button">Посмотреть каталог</a>
                     </div>
                 </div>
             </div>
