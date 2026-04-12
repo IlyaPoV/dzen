@@ -68,40 +68,45 @@
         </div>
     </section>
 
-    <!-- Блок «О нас» -->
+    <!-- О НАС -->
     <section id="about" class="about">
         <div class="container">
-            <h2 class="section-title section-title--left">О нас</h2>
+            <h2 class="section-title section-title--left">О НАС</h2>
+
             <div class="about__inner">
                 <div class="about__text">
                     <p>
-                        Мы — застройщик «Дзен». С 2019 года строим современные
-                        загородные дома под Екатеринбургом по собственным проектам из
-                        нашего каталога.
+                        Мы — застройщик «ДЗЕН». С 2019 года строим современные загородные
+                        дома под Екатеринбургом по собственным проектам из нашего каталога.
                     </p>
+
                     <p>
-                        Вы можете выбрать уже готовый дом с участком в подходящей
-                        комплектации либо заказать строительство проекта из нашего
-                        каталога на своей территории. Мы не перепродаём объекты других
-                        застройщиков и не строим по чужим картинкам — продаём только
-                        то, что возводим сами, и отвечаем за качество каждого этапа.
+                        Вы можете выбрать уже готовый дом с участком в подходящей
+                        комплектации либо заказать строительство проекта из нашего каталога
+                        на своей территории. Мы не перепродаём объекты других застройщиков
+                        и не строим по чужим картинкам — продаём только то, что возвели
+                        сами, и отвечаем за качество каждого этапа.
                     </p>
                 </div>
+
                 <div class="about__stats">
                     <div class="stat">
                         <div class="stat__value">100+</div>
                         <div class="stat__label">успешных проектов</div>
                     </div>
+
                     <div class="stat">
-                        <div class="stat__value">5 лет</div>
+                        <div class="stat__value">5 лет</div>
                         <div class="stat__label">гарантия на строительство</div>
                     </div>
+
                     <div class="stat">
                         <div class="stat__value">6+</div>
                         <div class="stat__label">лет на рынке недвижимости</div>
                     </div>
+
                     <div class="stat">
-                        <div class="stat__value">от 180</div>
+                        <div class="stat__value">от 180</div>
                         <div class="stat__label">дней на строительство дома</div>
                     </div>
                 </div>
@@ -109,93 +114,112 @@
         </div>
     </section>
 
-    <!-- Фотография готового дома сразу после блока «О нас» -->
+    <!-- ВИДЕО БЛОК -->
     <section class="about-photo">
-        <div class="container">
-            <div class="about-photo__box">
-                <!-- Замените путь на изображение демонстрационного дома -->
-                <img src="./images/about-photo.jpg" alt="Готовый дом" />
-            </div>
+        <!--         <div class="container"> -->
+        <div class="about-photo__box">
+            <video class="about-photo__video" autoplay muted loop playsinline preload="auto">
+                <source src="./assets/video/main-video.mp4" type="video/mp4" />
+            </video>
         </div>
+        <!--         </div> -->
     </section>
 
-    <!-- Блок «Наши услуги» -->
     <section class="services">
         <div class="container">
-            <h2 class="section-title">Наши услуги</h2>
-            <p class="section-subtitle">
-                Наша задача — сделать ваш переезд за город предсказуемым и
-                комфортным процессом. Предлагаем два прозрачных формата работы. Выберите
-                свой сценарий:
+            <h2 class="section-title services__section-title">НАШИ УСЛУГИ</h2>
+
+            <p class="services__lead">
+                Наша задача — сделать ваш переезд за город предсказуемым и комфортным
+                процессом.
             </p>
+
+            <p class="services__sublead">
+                Предлагаем два прозрачных формата работы. Выберите свой сценарий:
+            </p>
+
             <div class="services__tabs">
                 <button type="button" class="services__tab services__tab--active">
-                    Строим по нашим проектам
+                    Строим по нашим проектам
                 </button>
                 <button type="button" class="services__tab">
-                    Продаём готовые дома
+                    Продаем готовые дома
                 </button>
             </div>
+
             <div class="services__grid">
-                <div class="services__image">
-                    <!-- Замените путь на фотографию проекта -->
-                    <img src="./images/service-image.jpg" alt="Дом" />
+                <div class="services__image-card">
+                    <img src="./assets/images/services-house.jpg" alt="Дом" />
                 </div>
-                <div class="service-card">
+
+                <article class="service-card service-card--small">
                     <div class="service-card__number">01</div>
                     <h3 class="service-card__title">Выбирайте проект</h3>
                     <p class="service-card__text">
-                        Подбираем проект по нашему каталогу и формат отделки — строим
-                        в трёх комплектациях, от чистовой до отделки «под ключ».
+                        Подбираем проект по нашему каталогу и формат отделки — строим в трёх
+                        комплектациях, от чистовой до отделки под «под ключ».
                     </p>
-                </div>
-                <div class="service-card">
+                </article>
+
+                <article class="service-card service-card--small">
                     <div class="service-card__number">02</div>
                     <h3 class="service-card__title">Фиксация условий</h3>
                     <p class="service-card__text">
-                        Подписываем договор с фиксированной сметой и сроком строительства
-                        от 6 месяцев, разделяя платежи на удобные этапы по ходу стройки.
+                        Подписываем договор с фиксированной сметой и сроком строительства от
+                        6 месяцев, разделяя платежи на удобные этапы по ходу стройки.
                     </p>
-                </div>
-                <div class="service-card">
+                </article>
+
+                <article class="service-card service-card--wide">
                     <div class="service-card__number">03</div>
                     <h3 class="service-card__title">Строим объект на вашем участке</h3>
                     <p class="service-card__text">
-                        Строим дом по графику от фундамента до отделки, полностью
-                        освобождая вас от роли прораба. Для полной прозрачности можем
-                        вывести онлайн‑камеры с участка на ваш телефон.
+                        Строим дом по графику от фундамента до отделки, полностью освобождая
+                        вас от роли прораба, а для абсолютной прозрачности можем вывести
+                        онлайн-камеры с участка на ваш телефон.
                     </p>
-                </div>
-                <!-- Форму переносим в центр второй строки -->
+                </article>
+
                 <div class="services-form">
-                    <h3 class="services-form__title">
-                        Запишитесь на просмотр дома в любое удобное для вас время
-                    </h3>
-                    <form>
-                        <input class="input" type="text" placeholder="Ваше имя" />
-                        <input class="input" type="tel" placeholder="+7 (___) ___‑__‑__" />
-                        <div class="services-form__checkboxes">
-                            <label class="checkbox">
+                    <div class="services-form__overlay">
+                        <h3 class="services-form__title">
+                            Запишитесь на просмотр дома в любое удобное для Вас время
+                        </h3>
+
+                        <form class="services-form__body">
+                            <input class="input services-form__input" type="text" placeholder="Ваше имя" />
+                            <input class="input services-form__input" type="tel" placeholder="+7 (000) 000-00-00" />
+
+                            <label class="services-form__check">
                                 <input type="checkbox" />
-                                <span>Согласен с политикой конфиденциальности</span>
+                                <span>Я согласен с политикой конфиденциальности</span>
                             </label>
-                            <label class="checkbox">
+
+                            <label class="services-form__check">
                                 <input type="checkbox" />
-                                <span>Даю согласие на обработку персональных данных</span>
+                                <span>Даю согласие на обработку персональных данных</span>
                             </label>
-                        </div>
-                        <button type="submit" class="btn btn--dark">Записаться</button>
-                    </form>
+
+                            <button type="submit" class="services-form__btn">
+                                ЗАПИСАТЬСЯ
+                            </button>
+
+                            <a href="#projects" class="services-form__link-btn">
+                                ↗ ПОСМОТРЕТЬ КАТАЛОГ ГОТОВЫХ ДОМОВ
+                            </a>
+                        </form>
+                    </div>
                 </div>
-                <div class="service-card">
+
+                <article class="service-card service-card--wide">
                     <div class="service-card__number">04</div>
-                    <h3 class="service-card__title">Получаете ключи от дома</h3>
+                    <h3 class="service-card__title">Получаете ключи от дома</h3>
                     <p class="service-card__text">
-                        По окончанию строительства объекта мы передаём ключи от дома
-                        с работающими коммуникациями, готовым техпаспортом и оформленной
-                        правовой собственностью.
+                        По окончанию строительства объекта мы передаём ключи от дома с
+                        работающими коммуникациями, готовым техпаспортом и оформленным правом
+                        собственности.
                     </p>
-                </div>
+                </article>
             </div>
         </div>
     </section>
