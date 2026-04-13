@@ -1,57 +1,65 @@
 @font-face {
-  font-family: "Exo 2 Expanded";
-  src: url("./assets/fonts/exo/Exo2-RegularExpanded.otf") format("opentype");
-  font-weight: 400;
+  font-family: "Druk";
+  src: url("./assets/fonts/druk/DrukCyr-Medium.woff2") format("woff2");
+  font-weight: 500;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-  font-family: "Exo 2 Expanded";
-  src: url("./assets/fonts/exo/Exo2-SemiBoldExpanded.otf") format("opentype");
+  font-family: "Druk";
+  src: url("./assets/fonts/druk/DrukCyr-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Druk";
+  src: url("./assets/fonts/druk/DrukCyr-Heavy.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Wix";
+  src: url("./assets/fonts/wix/WixMadeforDisplay-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Wix";
+  src: url("./assets/fonts/wix/WixMadeforDisplay-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Wix";
+  src: url("./assets/fonts/wix/WixMadeforDisplay-SemiBold.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-  font-family: "Exo 2 Expanded";
-  src: url("./assets/fonts/exo/Exo2-ExtraBoldExpanded.otf") format("opentype");
+  font-family: "Wix";
+  src: url("./assets/fonts/wix/WixMadeforDisplay-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Wix";
+  src: url("./assets/fonts/wix/WixMadeforDisplay-ExtraBold.ttf") format("truetype");
   font-weight: 800;
   font-style: normal;
-}
-
-@font-face {
-  font-family: "Ultramono Wide";
-  src: url("./assets/fonts/ultramono/UltramonoWide-Regular.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Exo2Expanded";
-  src: url("./assets/fonts/exo/Exo2-RegularExpanded.otf") format("opentype");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Exo2Expanded";
-  src: url("./assets/fonts/exo/Exo2-SemiBoldExpanded.otf") format("opentype");
-  font-weight: 600;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Exo2Expanded";
-  src: url("./assets/fonts/exo/Exo2-ExtraBoldExpanded.otf") format("opentype");
-  font-weight: 800;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "UltramonoWide";
-  src: url("./assets/fonts/ultramono/UltramonoWide-Regular.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
+  font-display: swap;
 }
 
 *,
@@ -90,7 +98,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: "Exo2Expanded", Arial, sans-serif;
+  font-family: "Wix", Arial, sans-serif;
   font-size: 16px;
   line-height: 1.5;
   color: var(--color-black);
@@ -306,7 +314,7 @@ p {
 }
 
 .header__phone {
-  font-family: "UltramonoWide", monospace;
+  font-family: "Wix", Arial, sans-serif;
   font-size: 14px;
   line-height: 1;
   font-weight: 400;
@@ -324,7 +332,7 @@ p {
   gap: 12px;
   background-color: transparent;
   color: var(--color-black);
-  font-family: "UltramonoWide", monospace;
+  font-family: "Wix", Arial, sans-serif;
   font-size: 14px;
   line-height: 1;
   font-weight: 400;
@@ -429,7 +437,7 @@ p {
   align-items: center;
   justify-content: center;
   color: var(--color-black);
-  font-family: "UltramonoWide", monospace;
+  font-family: "Wix", Arial, sans-serif;
   font-size: 12px;
   line-height: 1;
   font-weight: 400;
@@ -518,7 +526,7 @@ p {
   object-fit: cover;
 }
 
-/*  УСЛУГИ  */
+/* ===== УСЛУГИ ===== */
 
 .services {
   padding-top: 88px;
@@ -1409,5 +1417,371 @@ p {
   .services-form__link-btn,
   .services-form__input {
     font-size: 16px;
+  }
+}
+
+
+/* ===== Точечная доводка блока услуг под макет ===== */
+.services {
+  padding-top: 96px;
+  padding-bottom: 104px;
+}
+
+.services__section-title {
+  margin-bottom: 18px;
+  letter-spacing: 0;
+}
+
+.services__lead {
+  max-width: 920px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.services__sublead {
+  margin-top: 8px;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.services__tabs {
+  max-width: 848px;
+  margin: 34px auto 46px;
+  border: 1px solid #b7d2b1;
+}
+
+.services__tab {
+  min-height: 64px;
+  padding: 0 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.services__tab:hover {
+  background-color: rgba(103, 160, 91, 0.05);
+}
+
+.services__tab--active {
+  font-weight: 700;
+}
+
+.services__grid {
+  gap: 18px;
+}
+
+.services__image-card,
+.service-card,
+.services-form {
+  border-radius: 20px;
+}
+
+.service-card {
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+.service-card--small {
+  min-height: 236px;
+  padding: 22px 24px 20px;
+}
+
+.service-card--wide {
+  min-height: 230px;
+  padding: 24px 24px 22px;
+}
+
+.service-card__number {
+  font-size: 60px;
+  line-height: 0.88;
+  font-weight: 700;
+}
+
+.service-card__title {
+  margin-top: 12px;
+  font-weight: 600;
+}
+
+.service-card__text {
+  margin-top: 14px;
+  line-height: 1.38;
+}
+
+.services-form {
+  min-height: 484px;
+}
+
+.services-form__overlay {
+  padding: 18px 18px 20px;
+}
+
+.services-form__title {
+  max-width: 320px;
+  line-height: 1.03;
+}
+
+.services-form__body {
+  margin-top: 18px;
+}
+
+.services-form__input {
+  height: 50px;
+  border-radius: 10px;
+}
+
+.services-form__check {
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.services-form__btn,
+.services-form__link-btn {
+  min-height: 50px;
+}
+
+@media (max-width: 1200px) {
+  .services__tabs {
+    max-width: 760px;
+  }
+
+  .service-card--small,
+  .service-card--wide {
+    min-height: auto;
+  }
+
+  .services-form {
+    min-height: 430px;
+  }
+}
+
+@media (max-width: 768px) {
+  .services {
+    padding-top: 72px;
+    padding-bottom: 80px;
+  }
+
+  .services__tabs {
+    max-width: 100%;
+    margin: 28px auto 34px;
+  }
+
+  .services__tab {
+    min-height: 56px;
+    padding: 0 12px;
+  }
+
+  .services__grid {
+    gap: 14px;
+  }
+
+  .services-form {
+    min-height: 0;
+  }
+}
+
+
+/* ===== Глобальная типографика: только Druk + Wix ===== */
+body,
+input,
+textarea,
+select,
+button {
+  font-family: "Wix", Arial, sans-serif;
+  font-size: 19px;
+  line-height: 1.42;
+}
+
+.section-title,
+.about .section-title,
+.services__section-title,
+.projects .section-title,
+.conditions .section-title,
+.faq .section-title,
+.ready-objects__title,
+.plot__title {
+  font-family: "Druk", Arial, sans-serif;
+  font-size: 44px;
+  line-height: 0.95;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.hero__title,
+.hero__title-note,
+.service-card__number,
+.stat__value,
+.condition-card__value,
+.step-card__number {
+  font-family: "Druk", Arial, sans-serif;
+}
+
+.service-card__title,
+.services-form__title,
+.project-card__title,
+.step-card__title {
+  font-family: "Wix", Arial, sans-serif;
+  font-size: 35px;
+  line-height: 1.06;
+  font-weight: 600;
+}
+
+.header__menu a,
+.header__city,
+.header__phone,
+.header__button,
+.hero__text,
+.hero__button,
+.about__text p,
+.stat__label,
+.services__lead,
+.services__sublead,
+.services__tab,
+.service-card__text,
+.services-form__check,
+.services-form__btn,
+.services-form__link-btn,
+.services-form__input,
+.project-card__text,
+.project-card__btn,
+.ready-objects__text,
+.condition-card__label,
+.step-card__text,
+.plot__text,
+.faq-item__head,
+.input,
+.btn {
+  font-family: "Wix", Arial, sans-serif;
+  font-size: 19px;
+}
+
+.header__menu a,
+.header__city,
+.header__phone,
+.header__button,
+.hero__button,
+.services__tab,
+.services-form__btn,
+.services-form__link-btn,
+.project-card__btn,
+.btn {
+  line-height: 1;
+}
+
+.service-card__number,
+.step-card__number,
+.condition-card__value,
+.stat__value {
+  font-weight: 700;
+}
+
+.services__tab--active {
+  font-weight: 700;
+}
+
+@media (max-width: 1200px) {
+  body,
+  input,
+  textarea,
+  select,
+  button,
+  .header__menu a,
+  .header__city,
+  .header__phone,
+  .header__button,
+  .hero__text,
+  .hero__button,
+  .about__text p,
+  .stat__label,
+  .services__lead,
+  .services__sublead,
+  .services__tab,
+  .service-card__text,
+  .services-form__check,
+  .services-form__btn,
+  .services-form__link-btn,
+  .services-form__input,
+  .project-card__text,
+  .project-card__btn,
+  .ready-objects__text,
+  .condition-card__label,
+  .step-card__text,
+  .plot__text,
+  .faq-item__head,
+  .input,
+  .btn {
+    font-size: 17px;
+  }
+
+  .section-title,
+  .about .section-title,
+  .services__section-title,
+  .projects .section-title,
+  .conditions .section-title,
+  .faq .section-title,
+  .ready-objects__title,
+  .plot__title {
+    font-size: 38px;
+  }
+
+  .service-card__title,
+  .services-form__title,
+  .project-card__title,
+  .step-card__title {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  body,
+  input,
+  textarea,
+  select,
+  button,
+  .header__menu a,
+  .header__city,
+  .header__phone,
+  .header__button,
+  .hero__text,
+  .hero__button,
+  .about__text p,
+  .stat__label,
+  .services__lead,
+  .services__sublead,
+  .services__tab,
+  .service-card__text,
+  .services-form__check,
+  .services-form__btn,
+  .services-form__link-btn,
+  .services-form__input,
+  .project-card__text,
+  .project-card__btn,
+  .ready-objects__text,
+  .condition-card__label,
+  .step-card__text,
+  .plot__text,
+  .faq-item__head,
+  .input,
+  .btn {
+    font-size: 16px;
+  }
+
+  .section-title,
+  .about .section-title,
+  .services__section-title,
+  .projects .section-title,
+  .conditions .section-title,
+  .faq .section-title,
+  .ready-objects__title,
+  .plot__title {
+    font-size: 30px;
+  }
+
+  .service-card__title,
+  .services-form__title,
+  .project-card__title,
+  .step-card__title {
+    font-size: 24px;
   }
 }
