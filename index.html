@@ -80,8 +80,9 @@
             <div class="about__inner">
                 <div class="about__content">
                     Мы — застройщик «ДЗЕН». С 2019 года строим современные загородные дома
-                    под Екатеринбургом по собственным проектам из нашего каталога. Вы можете
-                    выбрать уже готовый дом с участком в подходящей комплектации либо
+                    под Екатеринбургом по собственным проектам из нашего каталога.
+                    <br><br>
+                    Вы можете выбрать уже готовый дом с участком в подходящей комплектации либо
                     заказать строительство проекта из нашего каталога на своей территории.
                     Мы не перепродаём объекты других застройщиков и не строим по чужим
                     картинкам — продаём только то, что возвели сами, и отвечаем за качество
@@ -228,40 +229,67 @@
     <!-- Блок «Популярные проекты» -->
     <section id="projects" class="projects">
         <div class="container">
-            <h2 class="section-title">Популярные проекты</h2>
-            <div class="projects__grid">
-                <div class="project-card">
-                    <img src="./images/project-140.jpg" alt="Дзен 140" />
-                    <div class="project-card__body">
-                        <h3 class="project-card__title">Дзен 140</h3>
-                        <p class="project-card__text">
-                            Дом со вторым светом на 140 м²
-                        </p>
-                        <a href="#" class="project-card__btn">Узнать больше</a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <img src="./images/project-155.jpg" alt="Дзен 155" />
-                    <div class="project-card__body">
-                        <h3 class="project-card__title">Дзен 155</h3>
-                        <p class="project-card__text">
-                            Классический дом с двускатной крышей и двумя верандами.
-                        </p>
-                        <a href="#" class="project-card__btn">Узнать больше</a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <img src="./images/project-200.jpg" alt="Дзен 200" />
-                    <div class="project-card__body">
-                        <h3 class="project-card__title">Дзен 200</h3>
-                        <p class="project-card__text">
-                            Дом в стиле хай‑тек с плоской крышей и навесом для
-                            автомобилей.
-                        </p>
-                        <a href="#" class="project-card__btn">Узнать больше</a>
+            <h2 class="section-title projects__title">ПОПУЛЯРНЫЕ ПРОЕКТЫ</h2>
+        </div>
+
+        <div class="projects__outer">
+            <button class="projects__arrow projects__arrow--prev" type="button" aria-label="Назад">
+                ‹
+            </button>
+
+            <div class="projects__center">
+                <div class="container">
+                    <div class="swiper projects-swiper">
+                        <div class="swiper-wrapper">
+                            <article class="swiper-slide project-slide">
+                                <div class="project-slide__image">
+                                    <img src="./assets/images/project-140.png" alt="Дзен 140">
+                                </div>
+                                <h3 class="project-slide__title">ДЗЕН 140</h3>
+                                <p class="project-slide__text">Дом со вторым светом на 140 м²</p>
+                                <a href="#" class="project-slide__btn">УЗНАТЬ БОЛЬШЕ</a>
+                            </article>
+
+                            <article class="swiper-slide project-slide">
+                                <div class="project-slide__image">
+                                    <img src="./assets/images/project-155.png" alt="Дзен 155">
+                                </div>
+                                <h3 class="project-slide__title">ДЗЕН 155</h3>
+                                <p class="project-slide__text">
+                                    Классический дом с двускатной крышей и двумя верандами.
+                                </p>
+                                <a href="#" class="project-slide__btn">УЗНАТЬ БОЛЬШЕ</a>
+                            </article>
+
+                            <article class="swiper-slide project-slide">
+                                <div class="project-slide__image">
+                                    <img src="./assets/images/project-200.png" alt="Дзен 200">
+                                </div>
+                                <h3 class="project-slide__title">ДЗЕН 200</h3>
+                                <p class="project-slide__text">
+                                    Дом в стиле хай-тек с плоской крышей и навесом для автомобилей.
+                                </p>
+                                <a href="#" class="project-slide__btn">УЗНАТЬ БОЛЬШЕ</a>
+                            </article>
+
+                            <article class="swiper-slide project-slide">
+                                <div class="project-slide__image">
+                                    <img src="./assets/images/project-170.jpg" alt="Дзен 175">
+                                </div>
+                                <h3 class="project-slide__title">ДЗЕН 175</h3>
+                                <p class="project-slide__text">
+                                    Современный одноэтажный дом с террасой и удобной планировкой.
+                                </p>
+                                <a href="#" class="project-slide__btn">УЗНАТЬ БОЛЬШЕ</a>
+                            </article>
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <button class="projects__arrow projects__arrow--next" type="button" aria-label="Вперёд">
+                ›
+            </button>
         </div>
     </section>
 
@@ -434,6 +462,35 @@
         </div>
     </section>
     </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+    <script>
+        const projectsSwiper = new Swiper(".projects-swiper", {
+            loop: true,
+            speed: 700,
+            slidesPerView: 3,
+            slidesPerGroup: 1,
+            spaceBetween: 24,
+            navigation: {
+                nextEl: ".projects__arrow--next",
+                prevEl: ".projects__arrow--prev"
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                    spaceBetween: 14
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 18
+                },
+                1200: {
+                    slidesPerView: 3,
+                    spaceBetween: 24
+                }
+            }
+        });
+    </script>
 </body>
 
 </html>

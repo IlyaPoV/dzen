@@ -77,8 +77,11 @@ html {
   --color-black: #1d1d1b;
   --color-green: #67a05b;
   --color-green-light: #d7e68b;
-  --color-page-bg: #f5f5f3;
+
+  --color-page-bg: #ffffff;
   --color-header-bg: #ececeb;
+  --color-block-bg: #f5f5f3;
+
   --color-border-dark: #1d1d1b;
 
   --color-hero-overlay-left: rgba(0, 0, 0, 0.54);
@@ -93,14 +96,20 @@ html {
   --radius-sm: 12px;
 
   --section-gap: 96px;
+
+  --color-muted: #676764;
+  --color-light: #ececeb;
+  --color-primary: #67a05b;
+  --color-primary-dark: #173b1e;
+  --color-accent: #b59b6a;
 }
 
 body {
   margin: 0;
   padding: 0;
   font-family: "Wix", Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
+  font-size: 19px;
+  line-height: 1.42;
   color: var(--color-black);
   background-color: var(--color-page-bg);
 }
@@ -241,6 +250,81 @@ p {
   color: var(--color-white);
   font-size: 16px;
   font-weight: 600;
+}
+
+/* ===== Глобальная типографика: только Druk + Wix ===== */
+
+body,
+input,
+textarea,
+select,
+button {
+  font-family: "Wix", Arial, sans-serif;
+  font-size: 19px;
+  line-height: 1.42;
+}
+
+.section-title,
+.about .section-title,
+.services__section-title,
+.projects .section-title,
+.conditions .section-title,
+.faq .section-title,
+.ready-objects__title,
+.plot__title {
+  font-family: "Druk", Arial, sans-serif;
+  font-size: 44px;
+  line-height: 0.95;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.hero__title,
+.hero__title-note,
+.service-card__number,
+.stat__value,
+.condition-card__value,
+.step-card__number {
+  font-family: "Druk", Arial, sans-serif;
+}
+
+.service-card__title,
+.services-form__title,
+.project-card__title,
+.step-card__title {
+  font-family: "Wix", Arial, sans-serif;
+  font-size: 35px;
+  line-height: 1.06;
+  font-weight: 600;
+}
+
+.header__menu a,
+.header__city,
+.header__phone,
+.header__button,
+.hero__text,
+.hero__button,
+.about__content,
+.stat__label,
+.services__lead,
+.services__sublead,
+.services__tab,
+.service-card__text,
+.services-form__check,
+.services-form__btn,
+.services-form__link-btn,
+.services-form__input,
+.project-card__text,
+.project-card__btn,
+.ready-objects__text,
+.condition-card__label,
+.step-card__text,
+.plot__text,
+.faq-item__head,
+.input,
+.btn {
+  font-family: "Wix", Arial, sans-serif;
+  font-size: 19px;
 }
 
 /*  HEADER*/
@@ -579,7 +663,7 @@ p {
   color: var(--color-black);
 }
 
-.services__tab + .services__tab {
+.services__tab+.services__tab {
   border-left: 1px solid #a7c79f;
 }
 
@@ -618,13 +702,13 @@ p {
 .service-card--small {
   grid-column: span 4;
   min-height: 224px;
-  padding: 24px 24px 20px;
+  padding: 22px 24px 20px;
 }
 
 .service-card--wide {
   grid-column: span 8;
   min-height: 192px;
-  padding: 24px 24px 20px;
+  padding: 24px 24px 22px;
 }
 
 .service-card__number {
@@ -666,10 +750,13 @@ p {
 
 .services-form__overlay {
   min-height: 100%;
-  padding: 20px 18px 22px;
+  padding: 28px 24px 28px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  background-color: rgba(20, 20, 20, 0.22);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 }
 
 .services-form__title {
@@ -735,68 +822,112 @@ p {
   font-weight: 400;
 }
 
-/* --- Популярные проекты --- */
+/* ПОПУЛЯРНЫЕ ПРОЕКТЫ  */
+
 .projects {
-  padding-top: var(--section-gap);
-  padding-bottom: var(--section-gap);
+  padding-top: 96px;
+  padding-bottom: 104px;
+  background-color: var(--color-page-bg);
 }
 
-.projects__grid {
+.projects__title {
+  margin-bottom: 44px;
+  font-family: "Druk", Arial, sans-serif;
+  font-size: 44px;
+  line-height: 0.95;
+  font-weight: 700;
+  color: var(--color-green);
+  text-align: center;
+}
+
+.projects__outer {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
-  margin-top: 32px;
+  grid-template-columns: 60px minmax(0, 1fr) 60px;
+  align-items: center;
+  column-gap: 12px;
+  padding-left: 24px;
+  padding-right: 24px;
 }
 
-.project-card {
-  background-color: var(--color-white);
-  border-radius: var(--radius-md);
+.projects__center {
+  min-width: 0;
+}
+
+.projects-swiper {
+  width: 100%;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.projects-swiper .swiper-wrapper {
+  align-items: flex-start;
+}
+
+.project-slide {
   display: flex;
   flex-direction: column;
+  background-color: transparent;
 }
 
-.project-card img {
-  height: 240px;
-  object-fit: cover;
+.project-slide__image {
+  width: 100%;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+  overflow: hidden;
 }
 
-.project-card__body {
-  padding: 24px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+.project-slide__image img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
-.project-card__title {
-  font-size: 24px;
+.project-slide__title {
+  margin-top: 14px;
+  font-family: "Druk", Arial, sans-serif;
+  font-size: 35px;
+  line-height: 0.95;
   font-weight: 700;
   color: var(--color-black);
 }
 
-.project-card__text {
-  font-size: 16px;
-  line-height: 1.5;
-  color: var(--color-muted);
+.project-slide__text {
+  margin-top: 8px;
+  max-width: 310px;
+  font-family: "Wix", Arial, sans-serif;
+  font-size: 19px;
+  line-height: 1.35;
+  font-weight: 400;
+  color: var(--color-black);
 }
 
-.project-card__btn {
-  display: inline-block;
-  align-self: flex-start;
-  padding: 12px 20px;
-  border: 1px solid var(--color-primary);
-  border-radius: var(--radius-sm);
-  font-size: 16px;
-  font-weight: 600;
-  color: var(--color-primary);
+.project-slide__btn {
+  width: 166px;
+  height: 38px;
+  margin-top: 18px;
+  border: 1px solid var(--color-border-dark);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Wix", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 500;
+  color: var(--color-black);
   background-color: transparent;
-  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-.project-card__btn:hover {
-  background-color: var(--color-primary);
+.projects__arrow {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-green);
   color: var(--color-white);
+  font-size: 28px;
+  line-height: 1;
+  font-weight: 400;
 }
 
 /* --- Актуальные готовые объекты --- */
@@ -1310,6 +1441,7 @@ p {
     font-size: 18px;
   }
 }
+
 /* ===== Правки по шрифтам для блока услуг ===== */
 .services__section-title {
   font-family: 'Druk', Arial, sans-serif;
@@ -1681,6 +1813,7 @@ button {
 }
 
 @media (max-width: 1200px) {
+
   body,
   input,
   textarea,
@@ -1734,6 +1867,7 @@ button {
 }
 
 @media (max-width: 768px) {
+
   body,
   input,
   textarea,
