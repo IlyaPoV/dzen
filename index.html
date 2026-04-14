@@ -296,22 +296,30 @@
     <!-- Блок с актуальными готовыми объектами -->
     <section class="ready-objects">
         <div class="container">
-            <div class="ready-objects__inner">
-                <div class="ready-objects__content">
-                    <h2 class="ready-objects__title">Актуальные готовые объекты</h2>
-                    <p class="ready-objects__text">
-                        Подписывайтесь на наши каналы в Telegram и MAX, чтобы первыми
-                        узнавать о новых готовых домах и следить за реальным ходом
-                        строительства.
-                    </p>
-                    <div class="ready-objects__actions">
-                        <a href="#" class="icon-btn"><span>MAX</span></a>
-                        <a href="#" class="icon-btn"><span>TG</span></a>
+            <div class="ready-objects__shell">
+                <div class="ready-objects__inner">
+                    <div class="ready-objects__content">
+                        <h2 class="ready-objects__title">АКТУАЛЬНЫЕ ГОТОВЫЕ ОБЪЕКТЫ</h2>
+
+                        <p class="ready-objects__text">
+                            Подписывайтесь на наши каналы в Telegram и MAX, чтобы первыми
+                            узнавать о новых готовых домах и следить за реальным ходом
+                            строительства.
+                        </p>
+
+                        <div class="ready-objects__actions">
+                            <a href="#" class="ready-objects__icon-btn">
+                                <img src="./assets/images/max.svg" alt="MAX">
+                            </a>
+                            <a href="#" class="ready-objects__icon-btn">
+                                <img src="./assets/images/tg.svg" alt="Telegram">
+                            </a>
+                        </div>
                     </div>
-                </div>
-                <div class="ready-objects__phone-box">
-                    <!-- Изображение телефона или приложения -->
-                    <img src="./images/phone.png" alt="Телефон" />
+
+                    <div class="ready-objects__phone-box">
+                        <img src="./assets/images/phone-bg.png" alt="Телефон с актуальными объектами">
+                    </div>
                 </div>
             </div>
         </div>
@@ -320,123 +328,169 @@
     <!-- Блок «Условия покупки готового дома» -->
     <section class="conditions">
         <div class="container">
-            <h2 class="section-title">Условия покупки готового дома</h2>
-            <div class="conditions__grid">
-                <div class="condition-card">
-                    <div class="condition-card__value">100%</div>
-                    <div class="condition-card__label">оплата</div>
-                </div>
-                <div class="condition-card">
-                    <div class="condition-card__value">от 6%</div>
-                    <div class="condition-card__label">Семейная ипотека</div>
-                </div>
-                <div class="condition-card">
-                    <div class="condition-card__value">от 3%</div>
-                    <div class="condition-card__label">Сельская ипотека</div>
-                </div>
-                <div class="condition-card condition-card--image">
-                    <img src="./images/condition-1.jpg" alt="Условия" />
-                </div>
-                <div class="condition-card condition-card--image">
-                    <img src="./images/condition-2.jpg" alt="Условия" />
-                </div>
-                <div class="condition-card condition-card--image">
-                    <img src="./images/condition-3.jpg" alt="Условия" />
-                </div>
-                <div class="condition-card">
-                    <div class="condition-card__value">от 5%</div>
-                    <div class="condition-card__label">IT‑ипотека</div>
-                </div>
-                <div class="condition-card">
-                    <div class="condition-card__value">от 17%</div>
-                    <div class="condition-card__label">Стандартная ипотека</div>
-                </div>
+            <h2 class="section-title conditions__title">
+                УСЛОВИЯ ПОКУПКИ<br>
+                ГОТОВОГО ДОМА
+            </h2>
+
+            <div class="conditions__layout">
+                <article class="conditions-tile">
+                    <div class="conditions-tile__value">100%</div>
+                    <div class="conditions-tile__label">оплата</div>
+                </article>
+
+                <article class="conditions-tile">
+                    <div class="conditions-tile__value">от 6%</div>
+                    <div class="conditions-tile__label">Семейная ипотека</div>
+                </article>
+
+                <article class="conditions-tile">
+                    <div class="conditions-tile__value">от 3%</div>
+                    <div class="conditions-tile__label">Сельская ипотека</div>
+                </article>
+
+                <article class="conditions-tile conditions-tile--image">
+                    <img src="./assets/images/condition-1.jpg" alt="Готовый дом">
+                </article>
+
+                <article class="conditions-tile conditions-tile--image">
+                    <img src="./assets/images/condition-2.png" alt="Готовый дом">
+                </article>
+
+                <article class="conditions-tile conditions-tile--image">
+                    <img src="./assets/images/condition-3.jpg" alt="Интерьер дома">
+                </article>
+
+                <article class="conditions-tile">
+                    <div class="conditions-tile__value">от 5%</div>
+                    <div class="conditions-tile__label">IT-ипотека</div>
+                </article>
+
+                <article class="conditions-tile">
+                    <div class="conditions-tile__value">от 17%</div>
+                    <div class="conditions-tile__label">Стандартная ипотека</div>
+                </article>
             </div>
         </div>
     </section>
 
-    <!-- Блок «3 простых шага» -->
     <section class="steps">
         <div class="container">
-            <h2 class="section-title section-title--light section-title--left">
-                3 простых шага к строительству вашего дома
-            </h2>
-            <div class="steps__grid">
-                <div class="step-card">
-                    <div class="step-card__number">1</div>
-                    <h3 class="step-card__title">Оставьте заявку</h3>
-                    <p class="step-card__text">
-                        Свяжемся с вами и пригласим на экскурсию. Покажем готовые дома
-                        или договоримся о просмотре тех, в которых уже живут люди.
-                    </p>
+            <div class="steps__inner">
+                <h2 class="steps__title">
+                    3 ПРОСТЫХ ШАГА К СТРОИТЕЛЬСТВУ<br>
+                    ВАШЕГО ДОМА
+                </h2>
+
+                <div class="steps__cards">
+                    <article class="steps-panel">
+                        <div class="steps-panel__num">1</div>
+                        <h3 class="steps-panel__title">Оставьте заявку</h3>
+                        <p class="steps-panel__text">
+                            Свяжемся с вами и пригласим на экскурсию. Покажем готовые дома
+                            или договоримся о просмотре тех, в которых уже живут люди.
+                        </p>
+                    </article>
+
+                    <article class="steps-panel">
+                        <div class="steps-panel__num">2</div>
+                        <h3 class="steps-panel__title">Закрепите условия</h3>
+                        <p class="steps-panel__text">
+                            Согласовываем проект из нашего каталога и детально считаем смету.
+                            Подписываем договор, где будут прописаны сроки и финальная
+                            стоимость объекта.
+                        </p>
+                    </article>
+
+                    <article class="steps-panel">
+                        <div class="steps-panel__num">3</div>
+                        <h3 class="steps-panel__title">Получите ключи</h3>
+                        <p class="steps-panel__text">
+                            Строим дом на вашем участке точно в срок. Всю работу и контроль
+                            берём на себя, чтобы вы спокойно получили ключи от готового
+                            объекта со всеми коммуникациями и техпаспортом.
+                        </p>
+                    </article>
                 </div>
-                <div class="step-card">
-                    <div class="step-card__number">2</div>
-                    <h3 class="step-card__title">Закрепите условия</h3>
-                    <p class="step-card__text">
-                        Согласовываем проект из нашего каталога и детально считаем
-                        смету. Подписываем договор, где будут прописаны сроки и финальная
-                        стоимость объекта.
-                    </p>
+
+                <div class="steps__caption">
+                    Заполните данные и мы построим дом вашей мечты
                 </div>
-                <div class="step-card">
-                    <div class="step-card__number">3</div>
-                    <h3 class="step-card__title">Получите ключи</h3>
-                    <p class="step-card__text">
-                        Строим дом на вашем участке точно в срок. Вся работу и контроль
-                        берём на себя, чтобы вы спокойно получили ключи от готового
-                        объекта со всеми коммуникациями и техпаспортом.
-                    </p>
-                </div>
+
+                <form class="steps__form-new">
+                    <input class="steps__input" type="text" placeholder="Ваше имя">
+                    <input class="steps__input" type="tel" placeholder="+7 (000) 000-00-00">
+                    <button type="submit" class="steps__submit">ОСТАВИТЬ ЗАЯВКУ</button>
+
+                    <div class="steps__checks">
+                        <label class="steps__check">
+                            <input type="checkbox">
+                            <span>Я согласен с политикой конфиденциальности</span>
+                        </label>
+
+                        <label class="steps__check">
+                            <input type="checkbox">
+                            <span>Даю согласие на обработку персональных данных</span>
+                        </label>
+                    </div>
+                </form>
             </div>
-            <form class="steps-form">
-                <input class="input input--light" type="text" placeholder="Ваше имя" />
-                <input class="input input--light" type="tel" placeholder="+7 (___) ___‑__‑__" />
-                <button type="submit" class="btn btn--accent">Оставить заявку</button>
-            </form>
         </div>
     </section>
 
-    <!-- Блок «У вас уже есть участок?» -->
     <section class="plot">
         <div class="container">
-            <div class="plot__inner">
+            <div class="plot__card">
                 <div class="plot__content">
-                    <h2 class="plot__title">У вас уже есть участок?</h2>
+                    <h2 class="plot__title">
+                        У ВАС УЖЕ ЕСТЬ<br>
+                        УЧАСТОК?
+                    </h2>
+
                     <p class="plot__text">
-                        Мы построим любой дом из нашего каталога проектов на вашей земле.
-                        Вы получаете наш опыт, готовый проект с точным бюджетом и
+                        Мы построим любой дом из нашего каталога проектов на вашей земле.
+                    </p>
+
+                    <p class="plot__text">
+                        Вы получаете наш опыт, готовый проект с точным бюджетом и
                         фиксированными сроками.
                     </p>
-                    <form class="plot-form">
-                        <input class="input input--light" type="text" placeholder="Ваше имя" />
-                        <input class="input input--light" type="tel" placeholder="+7 (___) ___‑__‑__" />
-                        <button type="submit" class="btn btn--accent">
-                            Обсудить проект
-                        </button>
+
+                    <form class="plot__form">
+                        <div class="plot__form-row">
+                            <input class="plot__input" type="text" placeholder="Ваше имя">
+                            <input class="plot__input" type="tel" placeholder="+7 (000) 000-00-00">
+                            <button type="submit" class="plot__submit">ОСТАВИТЬ ЗАЯВКУ</button>
+                        </div>
+
+                        <div class="plot__checks">
+                            <label class="plot__check">
+                                <input type="checkbox">
+                                <span>Я согласен с политикой конфиденциальности</span>
+                            </label>
+
+                            <label class="plot__check">
+                                <input type="checkbox">
+                                <span>Даю согласие на обработку персональных данных</span>
+                            </label>
+                        </div>
                     </form>
-                </div>
-                <div class="plot__image-box">
-                    <!-- Изображение участка -->
-                    <img src="./images/plot.jpg" alt="Участок" />
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Галерея реализованных проектов -->
     <section class="gallery">
         <div class="container">
             <div class="gallery__grid">
-                <!-- Вставьте по 8 фотографий ваших проектов -->
-                <div class="gallery__item"><img src="./images/gallery-1.jpg" alt="" /></div>
-                <div class="gallery__item"><img src="./images/gallery-2.jpg" alt="" /></div>
-                <div class="gallery__item"><img src="./images/gallery-3.jpg" alt="" /></div>
-                <div class="gallery__item"><img src="./images/gallery-4.jpg" alt="" /></div>
-                <div class="gallery__item"><img src="./images/gallery-5.jpg" alt="" /></div>
-                <div class="gallery__item"><img src="./images/gallery-6.jpg" alt="" /></div>
-                <div class="gallery__item"><img src="./images/gallery-7.jpg" alt="" /></div>
-                <div class="gallery__item"><img src="./images/gallery-8.jpg" alt="" /></div>
+                <div class="gallery__item"><img src="./assets/images/g-1.jpg" alt=""></div>
+                <div class="gallery__item"><img src="./assets/images/g-2.jpg" alt=""></div>
+                <div class="gallery__item"><img src="./assets/images/g-3.jpg" alt=""></div>
+                <div class="gallery__item"><img src="./assets/images/g-4.jpg" alt=""></div>
+                <div class="gallery__item"><img src="./assets/images/g-5.jpg" alt=""></div>
+                <div class="gallery__item"><img src="./assets/images/g-6.jpg" alt=""></div>
+                <div class="gallery__item"><img src="./assets/images/g-7.jpg" alt=""></div>
+                <div class="gallery__item"><img src="./assets/images/g-8.jpg" alt=""></div>
             </div>
         </div>
     </section>
@@ -444,24 +498,128 @@
     <!-- Блок «Часто задаваемые вопросы» -->
     <section class="faq">
         <div class="container">
-            <h2 class="section-title">Часто задаваемые вопросы</h2>
+            <h2 class="section-title faq__title">ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ</h2>
+
             <div class="faq__list">
                 <article class="faq-item">
                     <button class="faq-item__head" type="button">
                         <span>Оперативность</span>
                         <span class="faq-item__icon">+</span>
                     </button>
+                    <div class="faq-item__body">
+                        <p>
+                            Мы быстро выходим на связь, согласовываем удобный формат общения
+                            и на каждом этапе держим вас в курсе сроков, материалов и хода работ.
+                        </p>
+                    </div>
                 </article>
+
                 <article class="faq-item">
                     <button class="faq-item__head" type="button">
                         <span>Опыт и профессионализм</span>
                         <span class="faq-item__icon">+</span>
                     </button>
+                    <div class="faq-item__body">
+                        <p>
+                            Мы строим дома по собственным проектам, работаем с понятной сметой
+                            и отвечаем за качество каждого этапа — от подготовки участка до сдачи объекта.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="faq-item">
+                    <button class="faq-item__head" type="button">
+                        <span>Прозрачность условий</span>
+                        <span class="faq-item__icon">+</span>
+                    </button>
+                    <div class="faq-item__body">
+                        <p>
+                            До начала работ фиксируем стоимость, этапы оплаты и сроки строительства,
+                            чтобы у вас было полное понимание бюджета и процесса.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="faq-item">
+                    <button class="faq-item__head" type="button">
+                        <span>Сопровождение клиента</span>
+                        <span class="faq-item__icon">+</span>
+                    </button>
+                    <div class="faq-item__body">
+                        <p>
+                            Мы сопровождаем клиента не только во время стройки, но и после сдачи дома:
+                            консультируем по эксплуатации, документам и дальнейшим вопросам.
+                        </p>
+                    </div>
                 </article>
             </div>
         </div>
     </section>
+    <section class="site-map">
+        <div class="site-map__box">
+            <iframe class="site-map__frame"
+                src="https://yandex.ru/map-widget/v1/?text=Екатеринбург,%20ул.%20Вильгельма%20де%20Геннина,%2040&z=15"
+                loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </section>
     </main>
+    <footer class="site-footer" id="contacts">
+        <div class="container">
+            <div class="site-footer__inner">
+                <div class="site-footer__left">
+                    <div class="site-footer__top">
+                        <a href="#" class="site-footer__logo">
+                            <img src="./assets/images/logo.png" alt="Дзен">
+                        </a>
+
+                        <nav class="site-footer__nav">
+                            <a href="#about">О нас</a>
+                            <a href="#projects">Проекты</a>
+                            <a href="#contacts">Контакты</a>
+                        </nav>
+                    </div>
+
+                    <div class="site-footer__middle">
+                        <div class="site-footer__company">
+                            <p>ИП Хавроничев А. А.</p>
+                            <p>ОГРНИП: 321665800025376</p>
+                            <p>ИНН: 561406718519</p>
+                        </div>
+
+                        <div class="site-footer__socials">
+                            <a href="#" class="site-footer__social">VK</a>
+                            <a href="#" class="site-footer__social">D</a>
+                            <a href="#" class="site-footer__social">TG</a>
+                        </div>
+                    </div>
+
+                    <a href="#" class="site-footer__button">
+                        <span>»</span>
+                        <span>ЗАКАЗАТЬ ЗВОНОК</span>
+                    </a>
+
+                    <div class="site-footer__copy">© 2025 «ДЗЕН Застройщик»</div>
+                </div>
+
+                <div class="site-footer__right">
+                    <div class="site-footer__address">
+                        <p>г. Екатеринбург</p>
+                        <p>ул. Вильгельма де Геннина, 40</p>
+                    </div>
+
+                    <a class="site-footer__phone" href="tel:+79120342244">
+                        +7 (912) 034-22-44
+                    </a>
+
+                    <div class="site-footer__legal">
+                        <a href="#">Политика обработки персональных данных</a>
+                        <a href="#">Согласие на обработку персональных данных</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
     <script>
@@ -489,6 +647,14 @@
                     spaceBetween: 24
                 }
             }
+        });
+    </script>
+    <script>
+        document.querySelectorAll(".faq-item__head").forEach((button) => {
+            button.addEventListener("click", () => {
+                const item = button.closest(".faq-item");
+                item.classList.toggle("is-open");
+            });
         });
     </script>
 </body>
