@@ -134,7 +134,6 @@ ol {
   font-size: 35px;
   line-height: 0.95;
   font-weight: 800;
-  text-transform: uppercase;
   color: var(--color-primary);
   margin: 0 0 24px;
   text-align: center;
@@ -267,10 +266,11 @@ ol {
 }
 
 .header__phone {
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1;
-  font-weight: 400;
+  font-weight: 600;
   color: var(--color-black);
+  white-space: nowrap;
 }
 
 .header__button {
@@ -656,6 +656,14 @@ ol {
   cursor: pointer;
 }
 
+.projects__arrow--prev {
+  margin-left: 16px;
+}
+
+.projects__arrow--next {
+  margin-right: 16px;
+}
+
 .projects__center {
   flex: 1;
 }
@@ -742,7 +750,6 @@ ol {
   font-family: "Druk", Arial, sans-serif;
   font-size: 35px;
   font-weight: 800;
-  text-transform: uppercase;
   color: var(--color-primary);
   margin: 0 0 18px;
 }
@@ -779,7 +786,7 @@ ol {
 }
 
 .ready-objects__phone-box {
-  width: 300px;
+  width: 360px;
 }
 
 /* Conditions section */
@@ -794,7 +801,6 @@ ol {
   font-family: "Druk", Arial, sans-serif;
   font-size: 35px;
   line-height: 0.95;
-  text-transform: uppercase;
   color: var(--color-primary);
   font-weight: 800;
 }
@@ -859,7 +865,6 @@ ol {
   font-family: "Druk", Arial, sans-serif;
   font-size: 35px;
   line-height: 0.95;
-  text-transform: uppercase;
   color: var(--color-white);
   text-align: center;
   margin: 0 0 32px;
@@ -988,11 +993,10 @@ ol {
   font-family: "Druk", Arial, sans-serif;
   font-size: 35px;
   line-height: 0.94;
-  text-transform: uppercase;
   font-weight: 800;
 }
 
-.plot__text { 
+.plot__text {
   font-size: 19px;
   line-height: 1.4;
   margin: 0 0 10px;
@@ -1069,34 +1073,33 @@ ol {
   object-fit: cover;
 }
 
-/* FAQ section */
 .faq {
-  padding-top: 96px;
-  padding-bottom: 96px;
+  padding-top: 88px;
+  padding-bottom: 88px;
+  background-color: var(--color-page-bg);
 }
 
 .faq__title {
   margin-bottom: 32px;
   font-family: "Druk", Arial, sans-serif;
-  font-size: 35px;
+  font-size: 40px;
   line-height: 0.95;
-  color: var(--color-primary);
-  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--color-green);
   text-align: center;
-  font-weight: 800;
 }
 
 .faq__list {
-  max-width: 1000px;
-  margin: 0 auto;
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .faq-item {
-  border-top: 1px solid #e3e3df;
-}
-
-.faq-item:last-child {
-  border-bottom: 1px solid #e3e3df;
+  background-color: transparent;
 }
 
 .faq-item__head {
@@ -1106,11 +1109,15 @@ ol {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--color-light);
+  gap: 20px;
+  background-color: #ececeb;
   border: none;
-  font-size: 19px;
-  font-weight: 500;
   color: var(--color-black);
+  font-family: "Wix", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: 500;
+  text-align: left;
   cursor: pointer;
 }
 
@@ -1118,26 +1125,43 @@ ol {
   width: 28px;
   height: 28px;
   border-radius: 50%;
-  background-color: var(--color-primary);
-  color: var(--color-white);
-  display: flex;
+  flex-shrink: 0;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 20px;
-  transition: none;
+  background-color: var(--color-green);
+  color: var(--color-white);
+  font-size: 18px;
+  line-height: 1;
+  border: 1px solid var(--color-green);
 }
 
 .faq-item__body {
-  display: none;
-  padding: 0 18px 20px;
-  background-color: var(--color-light);
-  font-size: 19px;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  padding: 0 18px;
+  background-color: #ececeb;
+  transition:
+    max-height 0.4s ease,
+    opacity 0.25s ease,
+    padding 0.4s ease;
+}
+
+.faq-item__body p {
+  max-width: 920px;
+  margin: 0;
+  font-family: "Wix", Arial, sans-serif;
+  font-size: 16px;
   line-height: 1.5;
+  font-weight: 400;
   color: var(--color-black);
 }
 
 .faq-item.is-open .faq-item__body {
-  display: block;
+  max-height: 220px;
+  opacity: 1;
+  padding: 14px 18px 18px;
 }
 
 /* Site map */
@@ -1314,7 +1338,6 @@ ol {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-
 @media (max-width: 768px) {
   :root {
     --container-max-width: 100%;
