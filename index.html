@@ -19,6 +19,35 @@
                     <img src="./assets/images/logo.png" alt="Дзен" />
                 </a>
 
+                <div class="header__mobile-center">
+                    <div class="header__city">Екатеринбург</div>
+                    <a href="tel:+79120342244" class="header__phone">+7 (912) 034-22-44</a>
+                </div>
+
+                <button class="header__burger" type="button" aria-label="Открыть меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <nav class="header__drawer">
+                    <div class="header__drawer-head">
+                        <button class="header__drawer-close" type="button" aria-label="Закрыть меню">×</button>
+                    </div>
+
+                    <ul class="header__drawer-menu">
+                        <li><a href="#about">О нас</a></li>
+                        <li><a href="#projects">Проекты</a></li>
+                        <li><a href="#gallery">Галерея</a></li>
+                        <li><a href="#blog">Блог</a></li>
+                        <li><a href="#contacts">Контакты</a></li>
+                    </ul>
+
+                    <a href="#contacts" class="header__drawer-button">Заказать звонок</a>
+                </nav>
+
+                <div class="header__backdrop"></div>
+
                 <nav class="header__nav">
                     <ul class="header__menu">
                         <li><a href="#about">О нас</a></li>
@@ -154,6 +183,22 @@
                 <button type="button" class="services__tab" data-tab="ready">
                     Продаем готовые дома
                 </button>
+            </div>
+
+            <div class="services__mobile-select">
+                <button type="button" class="services__mobile-trigger">
+                    <span class="services__mobile-trigger-text">Строим по нашим проектам</span>
+                    <span class="services__mobile-trigger-arrow">▼</span>
+                </button>
+
+                <div class="services__mobile-dropdown">
+                    <button type="button" class="services__mobile-option is-active" data-tab="build">
+                        Строим по нашим проектам
+                    </button>
+                    <button type="button" class="services__mobile-option" data-tab="ready">
+                        Продаем готовые дома
+                    </button>
+                </div>
             </div>
 
             <div class="services__panels">
@@ -713,7 +758,7 @@
             </div>
         </div>
     </section>
-    
+
     <section class="site-map">
         <div class="site-map__box">
             <iframe class="site-map__frame"
