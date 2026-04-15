@@ -824,7 +824,42 @@
             </div>
         </div>
     </footer>
+    <div class="callback-modal" id="callbackModal" aria-hidden="true">
+        <div class="callback-modal__backdrop" data-modal-close></div>
 
+        <div class="callback-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="callbackModalTitle">
+            <div class="callback-modal__top">
+                <button class="callback-modal__close" type="button" aria-label="Закрыть" data-modal-close>
+                    ×
+                </button>
+            </div>
+
+            <div class="callback-modal__body">
+                <h2 class="callback-modal__title" id="callbackModalTitle">Заказать звонок</h2>
+
+                <p class="callback-modal__text">
+                    Оставьте контактные данные и наш специалист свяжется с Вами через 15 минут
+                </p>
+
+                <form class="callback-modal__form">
+                    <input class="callback-modal__input" type="text" placeholder="Ваше имя">
+                    <input class="callback-modal__input" type="tel" placeholder="+7 (000) 000-00-00">
+
+                    <label class="callback-modal__check">
+                        <input type="checkbox" checked>
+                        <span>Я даю согласие на обработку своих персональных данных в соответствии с политикой</span>
+                    </label>
+
+                    <label class="callback-modal__check">
+                        <input type="checkbox" checked>
+                        <span>Даю согласие на обработку персональных данных</span>
+                    </label>
+
+                    <button class="callback-modal__submit" type="submit">Жду звонка</button>
+                </form>
+            </div>
+        </div>
+    </div>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
     <script defer src="script.js"></script>
 

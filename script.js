@@ -136,3 +136,54 @@ window.addEventListener("scroll", toggleHeaderState, { passive: true });
     }
   });
 })();
+
+(function () {
+  const modal = document.getElementById("callbackModal");
+  if (!modal) return;
+
+  const openSelectors = [
+    ".header__button",
+    ".header__drawer-button",
+    ".site-footer__button"
+  ];
+
+  const openButtons = document.querySelectorAll(openSelectors.join(","));
+  const closeButtons = modal.querySelectorAll("[data-modal-close]");
+  const dialog = modal.querySelector(".callback-modal__dialog");
+
+  const openModal = () => {
+    document.body.classList.remove("menu-open");
+    document.body.classList.add("modal-open");
+    modal.classList.add("is-open");
+    modal.setAttribute("aria-hidden", "false");
+  };
+
+  const closeModal = () => {
+    document.body.classList.remove("modal-open");
+    modal.classList.remove("is-open");
+    modal.setAttribute("aria-hidden", "true");
+  };
+
+  openButtons.forEach((button) => {
+    button.addEventListener("click", (event) => {
+      event.preventDefault();
+      openModal();
+    });
+  });
+
+  closeButtons.forEach((button) => {
+    button.addEventListener("click", closeModal);
+  });
+
+  modal.addEventListener("click", (event) => {
+    if (!dialog.contains(event.target)) {
+      closeModal();
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && modal.classList.contains("is-open")) {
+      closeModal();
+    }
+  });
+})();
