@@ -26,14 +26,7 @@ const projectsSwiper = new Swiper(".projects-swiper", {
 document.querySelectorAll(".faq-item__head").forEach((button) => {
     button.addEventListener("click", () => {
         const item = button.closest(".faq-item");
-        const icon = button.querySelector(".faq-item__icon");
-        const isOpen = item.classList.contains("is-open");
-
         item.classList.toggle("is-open");
-
-        if (icon) {
-            icon.textContent = isOpen ? "+" : "−";
-        }
     });
 });
 const siteHeader = document.getElementById("site-header");
