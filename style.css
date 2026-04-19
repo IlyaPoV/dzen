@@ -1112,10 +1112,10 @@ ol {
 
 .ready-objects__phone-box {
   position: absolute;
-  left: calc(100% - 400px);
-  bottom: -32px;
+  left: calc(100% - 420px);
+  bottom: -0px;
   z-index: 2;
-  width: 470px;
+  width: 400px;
 }
 
 .ready-objects__phone-box img {
