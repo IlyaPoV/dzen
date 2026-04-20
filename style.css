@@ -315,7 +315,7 @@ ol {
 }
 
 .header__menu a {
-  font-family: "Ultramono", Arial, sans-serif;
+  font-family: "ExoExpanded", Arial, sans-serif;
   font-size: 19px;
   line-height: 1;
   font-weight: 400;
@@ -512,7 +512,7 @@ ol {
   padding: 0 24px;
   border: 1px solid var(--color-border-dark-hero);
   background-color: transparent;
-  font-family: "Ultramono", Arial, sans-serif;
+  font-family: "ExoExpanded", Arial, sans-serif;
   font-size: 18px;
   line-height: 1;
   font-weight: 400;
