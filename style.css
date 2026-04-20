@@ -1,63 +1,55 @@
 @font-face {
-  font-family: "Druk";
-  src: url("./assets/fonts/druk/DrukCyr-Medium.woff2") format("woff2");
-  font-weight: 500;
+  font-family: "Ultramono";
+  src: url("./assets/fonts/brand/UltramonoWide-Light.ttf") format("truetype");
+  font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Druk";
-  src: url("./assets/fonts/druk/DrukCyr-Bold.woff2") format("woff2");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Druk";
-  src: url("./assets/fonts/druk/DrukCyr-Heavy.woff2") format("woff2");
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Wix";
-  src: url("./assets/fonts/wix/WixMadeforDisplay-Regular.woff2") format("woff2");
+  font-family: "Ultramono";
+  src: url("./assets/fonts/brand/UltramonoWide-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Wix";
-  src: url("./assets/fonts/wix/WixMadeforDisplay-Medium.woff2") format("woff2");
+  font-family: "Ultramono";
+  src: url("./assets/fonts/brand/UltramonoWide-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ExoExpanded";
+  src: url("./assets/fonts/brand/Exo2-RegularExpanded.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ExoExpanded";
+  src: url("./assets/fonts/brand/Exo2-MediumExpanded.otf") format("opentype");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Wix";
-  src: url("./assets/fonts/wix/WixMadeforDisplay-SemiBold.woff2") format("woff2");
+  font-family: "ExoExpanded";
+  src: url("./assets/fonts/brand/Exo2-SemiBoldExpanded.otf") format("opentype");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Wix";
-  src: url("./assets/fonts/wix/WixMadeforDisplay-Bold.woff2") format("woff2");
+  font-family: "ExoExpanded";
+  src: url("./assets/fonts/brand/Exo2-BoldExpanded.otf") format("opentype");
   font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Wix";
-  src: url("./assets/fonts/wix/WixMadeforDisplay-ExtraBold.woff2") format("woff2");
-  font-weight: 800;
   font-style: normal;
   font-display: swap;
 }
@@ -109,8 +101,8 @@
 
   --container-max-width: 1440px;
   --container-padding: 20px;
-  --header-height: 110px;
-  --body-offset: 120px;
+  --header-height: 92px;
+  --body-offset: 104px;
 }
 
 *,
@@ -125,7 +117,7 @@ html {
 
 body {
   margin: 0;
-  font-family: "Wix", Arial, sans-serif;
+  font-family: "ExoExpanded", Arial, sans-serif;
   font-size: 19px;
   line-height: 1.4;
   color: var(--color-body);
@@ -259,10 +251,10 @@ ol {
 
 .section-title {
   margin: 0 0 24px;
-  font-family: "Druk", Arial, sans-serif;
+  font-family: "Ultramono", Arial, sans-serif;
   font-size: 35px;
   line-height: 0.95;
-  font-weight: 800;
+  font-weight: 900;
   color: var(--color-green);
   text-align: center;
 }
@@ -276,7 +268,7 @@ ol {
   inset: 0 0 auto;
   z-index: 1000;
   width: 100%;
-  padding-block: 14px;
+  padding-block: 6px;
   background-color: var(--color-surface);
   transition:
     background-color 0.3s ease,
@@ -294,9 +286,10 @@ ol {
 
 .header__inner {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 42px;
   min-height: var(--header-height);
+  padding-top: 10px;
 }
 
 .header__logo {
@@ -315,16 +308,17 @@ ol {
 
 .header__menu {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 44px;
   list-style: none;
+  padding-top: 6px;
 }
 
 .header__menu a {
-  font-family: "Druk", Arial, sans-serif;
+  font-family: "Ultramono", Arial, sans-serif;
   font-size: 19px;
   line-height: 1;
-  font-weight: 500;
+  font-weight: 400;
   color: var(--color-black);
   transition: opacity 0.25s ease;
 }
@@ -345,22 +339,23 @@ ol {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 10px;
+  gap: 6px;
+  padding-top: 2px;
 }
 
 .header__city {
-  font-family: "Druk", Arial, sans-serif;
+  font-family: "ExoExpanded", Arial, sans-serif;
   font-size: 18px;
   line-height: 1;
-  font-weight: 500;
+  font-weight: 700;
   color: var(--color-header-city);
 }
 
 .header__phone {
-  font-family: "Druk", Arial, sans-serif;
+  font-family: "ExoExpanded", Arial, sans-serif;
   font-size: 20px;
   line-height: 1;
-  font-weight: 500;
+  font-weight: 400;
   color: var(--color-black);
   white-space: nowrap;
 }
@@ -373,9 +368,10 @@ ol {
   width: 271px;
   height: 44px;
   padding: 0 22px;
+  margin-top: 4px;
   border: 1px solid var(--color-border-dark-soft);
   background-color: transparent;
-  font-family: "Wix", Arial, sans-serif;
+  font-family: "ExoExpanded", Arial, sans-serif;
   font-size: 16px;
   line-height: 1;
   font-weight: 400;
@@ -448,32 +444,34 @@ ol {
   position: relative;
   z-index: 3;
   min-height: 699px;
-  padding: 290px 40px 140px;
+  padding: 250px 40px 18px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 .hero__content-box {
-  max-width: 992px;
+  position: relative;
+  z-index: 2;
+  max-width: 860px;
 }
 
 .hero__title {
   margin: 0;
-  font-family: "Druk", Arial, sans-serif;
+  font-family: "Ultramono", Arial, sans-serif;
   font-size: 45px;
   line-height: 0.95;
-  font-weight: 500;
+  font-weight: 900;
   letter-spacing: 0;
   color: var(--color-white);
   text-transform: uppercase;
 }
 
 .hero__title-note {
-  font-family: "Wix", Arial, sans-serif;
+  font-family: "Ultramono", Arial, sans-serif;
   font-size: 31px;
   line-height: 1;
-  font-weight: 400;
+  font-weight: 300;
   color: var(--color-white);
   white-space: nowrap;
 }
@@ -481,7 +479,7 @@ ol {
 .hero__text {
   max-width: 587px;
   margin: 24px 0 0;
-  font-family: "Wix", Arial, sans-serif;
+  font-family: "ExoExpanded", Arial, sans-serif;
   font-size: 22px;
   line-height: 1.18;
   font-weight: 400;
@@ -492,28 +490,29 @@ ol {
   position: absolute;
   left: 0;
   bottom: 0;
-  z-index: 4;
-  display: flex;
-  align-items: flex-start;
-  width: 395px;
-  height: 90px;
-  padding-top: 36px;
-  padding-right: 24px;
+  z-index: 1;
+  width: 424px;
+  height: 118px;
   background: var(--color-white);
   border-top-right-radius: var(--radius-xl);
+  pointer-events: none;
 }
 
 .hero__button {
+  position: relative;
+  z-index: 2;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 350px;
   height: 54px;
+  margin-top: auto;
   margin-left: 20px;
+  margin-bottom: 18px;
   padding: 0 24px;
   border: 1px solid var(--color-border-dark-hero);
   background-color: transparent;
-  font-family: "Wix", Arial, sans-serif;
+  font-family: "Ultramono", Arial, sans-serif;
   font-size: 18px;
   line-height: 1;
   font-weight: 400;
@@ -534,9 +533,10 @@ ol {
 
 .about .section-title {
   margin: 0 0 42px;
+  font-family: "Ultramono", Arial, sans-serif;
   font-size: 35px;
   line-height: 1;
-  font-weight: 500;
+  font-weight: 900;
   color: var(--color-green);
 }
 
@@ -550,7 +550,7 @@ ol {
 
 .about__content {
   max-width: 641px;
-  font-family: "Wix", Arial, sans-serif;
+  font-family: "ExoExpanded", Arial, sans-serif;
   font-size: 20px;
   line-height: 1.55;
   font-weight: 400;
@@ -572,16 +572,16 @@ ol {
 
 .stat__value {
   margin: 0;
-  font-family: "Druk", Arial, sans-serif;
+  font-family: "ExoExpanded", Arial, sans-serif;
   font-size: 50px;
   line-height: 0.95;
-  font-weight: 500;
+  font-weight: 700;
   color: var(--color-black);
 }
 
 .stat__label {
   margin-top: 8px;
-  font-family: "Wix", Arial, sans-serif;
+  font-family: "ExoExpanded", Arial, sans-serif;
   font-size: 20px;
   line-height: 1.25;
   font-weight: 400;
@@ -623,7 +623,7 @@ ol {
 .services__sublead {
   margin-inline: auto;
   text-align: center;
-  font-family: "Wix", Arial, sans-serif;
+  font-family: "ExoExpanded", Arial, sans-serif;
   font-size: 20px;
   font-weight: 400;
   color: var(--color-black);
@@ -652,7 +652,7 @@ ol {
   min-height: 56px;
   border: none;
   background: transparent;
-  font-family: "Wix", Arial, sans-serif;
+  font-family: "ExoExpanded", Arial, sans-serif;
   font-size: 20px;
   line-height: 1;
   font-weight: 400;
@@ -735,17 +735,17 @@ ol {
 .service-card__number,
 .ready-card__number {
   margin: 0 0 12px;
-  font-family: "Druk", Arial, sans-serif;
+  font-family: "ExoExpanded", Arial, sans-serif;
   font-size: 50px;
   line-height: 0.95;
-  font-weight: 500;
+  font-weight: 700;
   color: var(--color-black);
 }
 
 .service-card__title,
 .ready-card__title {
   margin: 0 0 12px;
-  font-family: "Wix", Arial, sans-serif;
+  font-family: "ExoExpanded", Arial, sans-serif;
   font-size: 22px;
   line-height: 1.2;
   font-weight: 700;
@@ -755,7 +755,7 @@ ol {
 .service-card__text,
 .ready-card__list li {
   margin: 0;
-  font-family: "Wix", Arial, sans-serif;
+  font-family: "ExoExpanded", Arial, sans-serif;
   font-size: 18px;
   line-height: 1.55;
   font-weight: 400;
@@ -797,7 +797,7 @@ ol {
 .ready-form__title {
   max-width: 420px;
   margin: 0 0 24px;
-  font-family: "Wix", Arial, sans-serif;
+  font-family: "ExoExpanded", Arial, sans-serif;
   font-size: 22px;
   line-height: 1.25;
   font-weight: 700;
@@ -820,7 +820,7 @@ ol {
   border: none;
   border-radius: var(--radius-sm);
   background-color: var(--color-white);
-  font-family: "Wix", Arial, sans-serif;
+  font-family: "ExoExpanded", Arial, sans-serif;
   font-size: 18px;
   color: var(--color-black);
 }
@@ -830,7 +830,7 @@ ol {
   display: flex;
   align-items: flex-start;
   gap: 10px;
-  font-family: "Wix", Arial, sans-serif;
+  font-family: "ExoExpanded", Arial, sans-serif;
   font-size: 14px;
   line-height: 1.35;
   font-weight: 400;
@@ -854,7 +854,7 @@ ol {
   height: 52px;
   border: 1px solid var(--color-border-light);
   background: transparent;
-  font-family: "Wix", Arial, sans-serif;
+  font-family: "ExoExpanded", Arial, sans-serif;
   font-size: 18px;
   line-height: 1;
   font-weight: 400;
@@ -865,13 +865,12 @@ ol {
 .services-form__link-btn,
 .ready-form__link-btn {
   display: inline-flex;
-  align-items: center;
-  justify-content: flex-start;
+  align-items: flex-start;
   width: 100%;
   min-height: 60px;
   padding: 0 18px;
   border: 1px solid var(--color-border-light);
-  font-family: "Wix", Arial, sans-serif;
+  font-family: "ExoExpanded", Arial, sans-serif;
   font-size: 18px;
   line-height: 1.2;
   font-weight: 400;
@@ -912,9 +911,10 @@ ol {
 
 .projects__title {
   margin: 0 0 32px;
+  font-family: "Ultramono", Arial, sans-serif;
   font-size: 35px;
   line-height: 1;
-  font-weight: 500;
+  font-weight: 900;
   color: var(--color-green);
 }
 
@@ -994,10 +994,10 @@ ol {
   min-height: 42px;
   margin: 16px 0 8px;
   padding: 0 16px;
-  font-family: "Druk", Arial, sans-serif;
+  font-family: "Ultramono", Arial, sans-serif;
   font-size: 20px;
   line-height: 1.05;
-  font-weight: 500;
+  font-weight: 900;
   color: var(--color-black);
 }
 
@@ -1006,7 +1006,7 @@ ol {
   margin: 0;
   padding: 0 16px;
   flex-grow: 1;
-  font-family: "Wix", Arial, sans-serif;
+  font-family: "ExoExpanded", Arial, sans-serif;
   font-size: 16px;
   line-height: 1.4;
   font-weight: 400;
@@ -1024,7 +1024,7 @@ ol {
   padding: 0 24px;
   border: 1px solid var(--color-border-dark);
   background-color: transparent;
-  font-family: "Wix", Arial, sans-serif;
+  font-family: "ExoExpanded", Arial, sans-serif;
   font-size: 16px;
   line-height: 1;
   font-weight: 400;
@@ -1067,10 +1067,10 @@ ol {
 
 .ready-objects__title {
   margin: 0 0 24px;
-  font-family: "Druk", Arial, sans-serif;
+  font-family: "Ultramono", Arial, sans-serif;
   font-size: 35px;
   line-height: 1;
-  font-weight: 500;
+  font-weight: 900;
   color: var(--color-green);
   text-transform: uppercase;
 }
@@ -1078,7 +1078,7 @@ ol {
 .ready-objects__text {
   max-width: 560px;
   margin: 0;
-  font-family: "Wix", Arial, sans-serif;
+  font-family: "ExoExpanded", Arial, sans-serif;
   font-size: 20px;
   line-height: 1.55;
   font-weight: 400;
@@ -1129,9 +1129,10 @@ ol {
 
 .conditions__title {
   margin: 0 0 36px;
+  font-family: "Ultramono", Arial, sans-serif;
   font-size: 35px;
   line-height: 1;
-  font-weight: 500;
+  font-weight: 900;
   color: var(--color-green);
 }
 
@@ -1168,16 +1169,16 @@ ol {
 
 .conditions-tile__value {
   margin: 0;
-  font-family: "Druk", Arial, sans-serif;
+  font-family: "ExoExpanded", Arial, sans-serif;
   font-size: 50px;
   line-height: 0.95;
-  font-weight: 500;
+  font-weight: 700;
   color: var(--color-green);
 }
 
 .conditions-tile__label {
   margin-top: 10px;
-  font-family: "Wix", Arial, sans-serif;
+  font-family: "ExoExpanded", Arial, sans-serif;
   font-size: 20px;
   line-height: 1.25;
   font-weight: 400;
@@ -1202,10 +1203,10 @@ ol {
 .steps__title {
   max-width: 833px;
   margin: 0 0 40px;
-  font-family: "Druk", Arial, sans-serif;
+  font-family: "Ultramono", Arial, sans-serif;
   font-size: 35px;
   line-height: 1;
-  font-weight: 500;
+  font-weight: 900;
   color: var(--color-white);
   text-align: left;
   text-transform: none;
@@ -1237,7 +1238,7 @@ ol {
   margin: 0 0 22px;
   border-radius: 50%;
   background-color: var(--color-green);
-  font-family: "Wix", Arial, sans-serif;
+  font-family: "ExoExpanded", Arial, sans-serif;
   font-size: 30px;
   line-height: 1;
   font-weight: 400;
@@ -1246,7 +1247,7 @@ ol {
 
 .steps-panel__title {
   margin: 0 0 18px;
-  font-family: "Wix", Arial, sans-serif;
+  font-family: "ExoExpanded", Arial, sans-serif;
   font-size: 25px;
   line-height: 1.15;
   font-weight: 400;
@@ -1255,7 +1256,7 @@ ol {
 
 .steps-panel__text {
   margin: 0;
-  font-family: "Wix", Arial, sans-serif;
+  font-family: "ExoExpanded", Arial, sans-serif;
   font-size: 18px;
   line-height: 1.38;
   font-weight: 400;
@@ -1264,7 +1265,7 @@ ol {
 
 .steps__caption {
   margin: 0 0 18px;
-  font-family: "Wix", Arial, sans-serif;
+  font-family: "ExoExpanded", Arial, sans-serif;
   font-size: 22px;
   line-height: 1.2;
   font-weight: 400;
@@ -1288,7 +1289,7 @@ ol {
   padding: 0 20px;
   border: none;
   background-color: var(--color-white);
-  font-family: "Wix", Arial, sans-serif;
+  font-family: "ExoExpanded", Arial, sans-serif;
   font-size: 18px;
   line-height: 1;
   font-weight: 400;
@@ -1316,7 +1317,7 @@ ol {
   height: 54px;
   border: 1px solid var(--color-border-light);
   background-color: transparent;
-  font-family: "Wix", Arial, sans-serif;
+  font-family: "ExoExpanded", Arial, sans-serif;
   font-size: 18px;
   line-height: 1;
   font-weight: 400;
@@ -1350,7 +1351,7 @@ ol {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  font-family: "Wix", Arial, sans-serif;
+  font-family: "ExoExpanded", Arial, sans-serif;
   font-size: 14px;
   line-height: 1.3;
   font-weight: 400;
@@ -1405,10 +1406,10 @@ ol {
 .plot__title {
   max-width: 698px;
   margin: 0 0 18px;
-  font-family: "Druk", Arial, sans-serif;
+  font-family: "Ultramono", Arial, sans-serif;
   font-size: 35px;
   line-height: 1;
-  font-weight: 500;
+  font-weight: 900;
   color: var(--color-white);
   text-transform: uppercase;
 }
@@ -1416,7 +1417,7 @@ ol {
 .plot__text {
   max-width: 591px;
   margin: 0 0 20px;
-  font-family: "Wix", Arial, sans-serif;
+  font-family: "ExoExpanded", Arial, sans-serif;
   font-size: 22px;
   line-height: 1.25;
   font-weight: 400;
@@ -1503,7 +1504,7 @@ ol {
 
 .gallery__title {
   margin: 0 0 16px;
-  font-family: "Wix", Arial, sans-serif;
+  font-family: "ExoExpanded", Arial, sans-serif;
   font-size: 24px;
   line-height: 1.15;
   font-weight: 500;
@@ -1512,7 +1513,7 @@ ol {
 
 .gallery__text {
   margin: 0;
-  font-family: "Wix", Arial, sans-serif;
+  font-family: "ExoExpanded", Arial, sans-serif;
   font-size: 18px;
   line-height: 1.4;
   font-weight: 400;
@@ -1528,7 +1529,7 @@ ol {
   padding: 0 24px;
   border: 1px solid var(--color-border-light);
   background-color: transparent;
-  font-family: "Wix", Arial, sans-serif;
+  font-family: "ExoExpanded", Arial, sans-serif;
   font-size: 16px;
   line-height: 1;
   font-weight: 500;
@@ -1550,9 +1551,10 @@ ol {
 
 .faq__title {
   margin: 0 0 34px;
+  font-family: "Ultramono", Arial, sans-serif;
   font-size: 35px;
   line-height: 1;
-  font-weight: 500;
+  font-weight: 900;
   color: var(--color-green);
   text-transform: uppercase;
 }
@@ -1579,7 +1581,7 @@ ol {
   padding: 25px 30px;
   border: none;
   background-color: var(--color-surface);
-  font-family: "Wix", Arial, sans-serif;
+  font-family: "ExoExpanded", Arial, sans-serif;
   font-size: 20px;
   line-height: 1.2;
   font-weight: 400;
@@ -1624,7 +1626,7 @@ ol {
 .faq-item__body p {
   margin: 0;
   padding-bottom: 24px;
-  font-family: "Wix", Arial, sans-serif;
+  font-family: "ExoExpanded", Arial, sans-serif;
   font-size: 20px;
   line-height: 1.5;
   font-weight: 400;
@@ -1698,7 +1700,7 @@ ol {
 }
 
 .site-footer__nav a {
-  font-family: "Wix", Arial, sans-serif;
+  font-family: "ExoExpanded", Arial, sans-serif;
   font-size: 19px;
   line-height: 1;
   font-weight: 400;
@@ -1722,7 +1724,7 @@ ol {
 }
 
 .site-footer__company {
-  font-family: "Wix", Arial, sans-serif;
+  font-family: "ExoExpanded", Arial, sans-serif;
   font-size: 13px;
   line-height: 1.45;
   font-weight: 400;
@@ -1749,7 +1751,7 @@ ol {
   border: 1px solid var(--color-border-light-soft);
   border-radius: 50%;
   background: transparent;
-  font-family: "Wix", Arial, sans-serif;
+  font-family: "ExoExpanded", Arial, sans-serif;
   font-size: 14px;
   line-height: 1;
   font-weight: 400;
@@ -1773,7 +1775,7 @@ ol {
   margin-left: 258px;
   border: 1px solid var(--color-border-light);
   background: transparent;
-  font-family: "Wix", Arial, sans-serif;
+  font-family: "ExoExpanded", Arial, sans-serif;
   font-size: 16px;
   line-height: 1;
   font-weight: 400;
@@ -1789,7 +1791,7 @@ ol {
 
 .site-footer__copy {
   margin-top: 16px;
-  font-family: "Wix", Arial, sans-serif;
+  font-family: "ExoExpanded", Arial, sans-serif;
   font-size: 13px;
   line-height: 1.4;
   font-weight: 400;
@@ -1804,7 +1806,7 @@ ol {
 }
 
 .site-footer__address {
-  font-family: "Wix", Arial, sans-serif;
+  font-family: "ExoExpanded", Arial, sans-serif;
   font-size: 21px;
   line-height: 1.55;
   font-weight: 400;
@@ -1813,10 +1815,10 @@ ol {
 
 .site-footer__phone {
   margin-top: 24px;
-  font-family: "Druk", Arial, sans-serif;
+  font-family: "Ultramono", Arial, sans-serif;
   font-size: 24px;
   line-height: 1;
-  font-weight: 500;
+  font-weight: 900;
   color: var(--color-white);
 }
 
@@ -1828,7 +1830,7 @@ ol {
 }
 
 .site-footer__legal a {
-  font-family: "Wix", Arial, sans-serif;
+  font-family: "ExoExpanded", Arial, sans-serif;
   font-size: 13px;
   line-height: 1.35;
   font-weight: 400;
@@ -1854,7 +1856,7 @@ body {
   :root {
     --container-max-width: 1040px;
     --container-padding: 18px;
-    --header-height: 88px;
+    --header-height: 86px;
     --body-offset: 104px;
   }
 
@@ -1901,32 +1903,32 @@ body {
 
   .hero__main {
     min-height: 620px;
-    padding: 230px 32px 120px;
+    padding: 210px 32px 16px;
   }
 
   .hero__title {
-    font-size: 40px;
+    font-size: 52px;
   }
 
   .hero__title-note {
-    font-size: 26px;
+    font-size: 27px;
   }
 
   .hero__text {
-    max-width: 520px;
+    max-width: 560px;
     font-size: 19px;
   }
 
   .hero__cutout {
-    width: 360px;
-    height: 82px;
-    padding-top: 28px;
+    width: 386px;
+    height: 106px;
   }
 
   .hero__button {
-    width: 316px;
+    width: 320px;
     height: 50px;
     margin-left: 16px;
+    margin-bottom: 16px;
     font-size: 16px;
   }
 
@@ -2290,12 +2292,11 @@ body {
     margin-top: 28px;
   }
 }
-
 @media (max-width: 992px) {
   :root {
     --container-max-width: 780px;
     --container-padding: 16px;
-    --header-height: 82px;
+    --header-height: 80px;
     --body-offset: 98px;
   }
 
@@ -2330,7 +2331,7 @@ body {
   .header__button {
     width: 210px;
     height: 42px;
-    font-size: 14px;
+    font-size: 13px;
   }
 
   .hero {
@@ -2343,33 +2344,33 @@ body {
 
   .hero__main {
     min-height: 560px;
-    padding: 210px 26px 100px;
+    padding: 190px 26px 14px;
   }
 
   .hero__title {
-    font-size: 36px;
+    font-size: 44px;
   }
 
   .hero__title-note {
-    font-size: 24px;
+    font-size: 23px;
   }
 
   .hero__text {
-    max-width: 460px;
-    font-size: 18px;
+    max-width: 500px;
+    font-size: 17px;
   }
 
   .hero__cutout {
-    width: 330px;
-    height: 76px;
-    padding-top: 24px;
+    width: 348px;
+    height: 96px;
   }
 
   .hero__button {
-    width: 288px;
+    width: 292px;
     height: 46px;
     margin-left: 14px;
-    font-size: 16px;
+    margin-bottom: 14px;
+    font-size: 15px;
   }
 
   .about {
@@ -2767,10 +2768,11 @@ body {
 
   .header__mobile-center .header__city {
     font-size: 12px;
-    font-weight: 500;
+    font-weight: 900;
   }
 
   .header__mobile-center .header__phone {
+    font-family: "ExoExpanded", Arial, sans-serif;
     font-size: 11px;
     font-weight: 400;
   }
@@ -2880,7 +2882,7 @@ body {
 
   .header__drawer-menu a {
     display: block;
-    font-family: "Wix", Arial, sans-serif;
+    font-family: "ExoExpanded", Arial, sans-serif;
     font-size: 18px;
     line-height: 1.2;
     font-weight: 400;
@@ -2895,7 +2897,7 @@ body {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-family: "Wix", Arial, sans-serif;
+    font-family: "ExoExpanded", Arial, sans-serif;
     font-size: 16px;
     line-height: 1;
     font-weight: 400;
@@ -2959,11 +2961,14 @@ body {
   .hero__title {
     font-size: 30px;
     line-height: 0.98;
+    font-weight: 900;
     color: #ffffff;
   }
 
   .hero__title-note {
+    font-family: "Ultramono", Arial, sans-serif;
     font-size: 18px;
+    font-weight: 300;
     color: #ffffff;
   }
 
@@ -2979,6 +2984,7 @@ body {
     width: 100%;
     height: 48px;
     margin: 20px 0 0;
+    font-family: "Ultramono", Arial, sans-serif;
     font-size: 16px;
     background: rgba(255, 255, 255, 0.88);
     color: #000000;
@@ -3806,7 +3812,7 @@ body.modal-open {
   border: none;
   background: transparent;
   padding: 0;
-  font-family: "Wix", Arial, sans-serif;
+  font-family: "ExoExpanded", Arial, sans-serif;
   font-size: 38px;
   line-height: 1;
   color: #369b4d;
@@ -3820,10 +3826,10 @@ body.modal-open {
 .callback-modal__title {
   margin: 0 0 18px;
   text-align: center;
-  font-family: "Druk", Arial, sans-serif;
+  font-family: "Ultramono", Arial, sans-serif;
   font-size: 34px;
   line-height: 1;
-  font-weight: 500;
+  font-weight: 900;
   color: #369b4d;
 }
 
@@ -3831,7 +3837,7 @@ body.modal-open {
   max-width: 560px;
   margin: 0 auto 28px;
   text-align: center;
-  font-family: "Wix", Arial, sans-serif;
+  font-family: "ExoExpanded", Arial, sans-serif;
   font-size: 26px;
   line-height: 1.3;
   font-weight: 600;
@@ -3851,7 +3857,7 @@ body.modal-open {
   border: none;
   border-radius: 8px;
   background: #dcdcdc;
-  font-family: "Wix", Arial, sans-serif;
+  font-family: "ExoExpanded", Arial, sans-serif;
   font-size: 20px;
   line-height: 1;
   font-weight: 400;
@@ -3866,7 +3872,7 @@ body.modal-open {
   display: flex;
   align-items: flex-start;
   gap: 14px;
-  font-family: "Wix", Arial, sans-serif;
+  font-family: "ExoExpanded", Arial, sans-serif;
   font-size: 18px;
   line-height: 1.35;
   font-weight: 400;
@@ -3887,7 +3893,7 @@ body.modal-open {
   margin-top: 2px;
   border: 1px solid rgba(0, 0, 0, 0.55);
   background: transparent;
-  font-family: "Wix", Arial, sans-serif;
+  font-family: "ExoExpanded", Arial, sans-serif;
   font-size: 26px;
   line-height: 1;
   font-weight: 600;
@@ -3898,6 +3904,21 @@ body.modal-open {
 
 .callback-modal__submit:hover {
   background: rgba(0, 0, 0, 0.03);
+}
+
+.section-title,
+.services__section-title,
+.projects__title,
+.ready-objects__title,
+.conditions__title,
+.steps__title,
+.plot__title,
+.faq__title,
+.about .section-title {
+  font-family: "Ultramono", Arial, sans-serif;
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: 0.95;
 }
 
 @media (max-width: 768px) {
