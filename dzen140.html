@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="./assets/vendor/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="./style.css">
 
-    <!-- page css for dzen140 -->
     <style>
         .project-page {
             background: var(--color-bg);
@@ -20,27 +19,28 @@
         }
 
         .project-hero {
-            padding: 34px 0 46px;
+            padding: 31px 0 57px;
             background:
                 linear-gradient(180deg, rgba(62, 70, 79, 0.86) 0%, rgba(62, 70, 79, 0.78) 100%),
-                url("./assets/images/project-140-bg.jpg") center / cover no-repeat;
+                url("./assets/images/project_bg_main.png") center / cover no-repeat;
         }
 
         .project-hero__title {
-            margin: 0 0 18px;
+            margin: 0 0 28px;
             font-family: "ExoExpanded", Arial, sans-serif;
             font-size: 45px;
-            line-height: 1;
+            line-height: 61px;
             font-weight: 700;
             color: #ffffff;
             text-transform: uppercase;
+            letter-spacing: 0;
         }
 
         .project-hero__layout {
             display: grid;
             grid-template-columns: 944px 446px;
             gap: 30px;
-            align-items: stretch;
+            align-items: start;
         }
 
         .project-hero__gallery {
@@ -48,38 +48,44 @@
         }
 
         .project-hero__slider-stack {
-            display: grid;
-        }
-
-        .project-hero__slider-shell,
-        .project-hero__arrow {
-            grid-area: 1 / 1;
+            position: relative;
+            width: 944px;
+            height: 498px;
         }
 
         .project-hero__slider-shell {
-            border-radius: 24px;
+            width: 944px;
+            height: 498px;
+            border-radius: 14px;
             overflow: hidden;
-            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.14);
+            position: relative;
             z-index: 1;
         }
 
         .project-hero__slider,
         .project-hero__slider .swiper-wrapper,
         .project-hero__slider .swiper-slide {
+            width: 100%;
             height: 100%;
         }
 
         .project-hero__slide {
             display: flex;
+            width: 100%;
+            height: 100%;
         }
 
         .project-hero__slide-image {
             display: block;
             width: 100%;
-            height: auto;
+            height: 100%;
+            object-fit: cover;
         }
 
         .project-hero__arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
             width: 30px;
             height: 30px;
             border: none;
@@ -92,37 +98,35 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            align-self: center;
-            z-index: 2;
+            z-index: 3;
             cursor: pointer;
             padding: 0;
         }
 
         .project-hero__arrow--prev {
-            justify-self: start;
-            margin-left: 20px;
+            left: 20px;
         }
 
         .project-hero__arrow--next {
-            justify-self: end;
-            margin-right: 20px;
+            right: 20px;
         }
 
         .project-hero__info {
-            min-height: 100%;
-            padding: 22px 28px 22px;
-            border-radius: 24px;
+            width: 446px;
+            min-height: 498px;
+            padding: 44px 44px 40px;
+            border-radius: 14px;
             background: #ffffff;
-            display: grid;
-            grid-template-rows: auto auto auto 1fr auto;
-            align-items: start;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
         }
 
         .project-hero__price {
-            margin: 0 0 28px;
+            margin: 0 0 42px;
             font-family: "ExoExpanded", Arial, sans-serif;
             font-size: 22px;
-            line-height: 1.02;
+            line-height: 34px;
             font-weight: 700;
             color: #000000;
             text-transform: uppercase;
@@ -131,14 +135,16 @@
         .project-hero__features {
             display: grid;
             gap: 22px;
-            margin: 0 0 24px;
+            margin: 0 0 38px;
+            width: 100%;
         }
 
         .project-hero__feature {
             display: grid;
-            grid-template-columns: 32px 1fr;
-            gap: 16px;
+            grid-template-columns: 32px auto;
+            column-gap: 20px;
             align-items: center;
+            min-height: 32px;
         }
 
         .project-hero__feature-icon {
@@ -159,11 +165,11 @@
 
         .project-hero__feature-text {
             display: flex;
-            align-items: baseline;
-            gap: 10px;
+            align-items: center;
+            gap: 12px;
             font-family: "ExoExpanded", Arial, sans-serif;
             font-size: 16px;
-            line-height: 1.1;
+            line-height: 32px;
             color: #000000;
         }
 
@@ -176,11 +182,11 @@
         }
 
         .project-hero__description {
-            margin: 0;
-            max-width: 308px;
+            width: 308px;
+            margin: 0 0 42px;
             font-family: "ExoExpanded", Arial, sans-serif;
             font-size: 22px;
-            line-height: 1.32;
+            line-height: 29px;
             font-weight: 400;
             color: #000000;
         }
@@ -190,8 +196,7 @@
         }
 
         .project-hero__button-wrap {
-            display: flex;
-            align-items: end;
+            margin-top: auto;
         }
 
         .project-hero__button {
@@ -211,49 +216,70 @@
         }
 
         .project-about {
-            padding: 58px 0 54px;
+            padding: 67px 0 68px;
+        }
+
+        .project-about .section-title {
+            margin: 0 0 37px;
+            text-align: center;
+            font-family: "ExoExpanded", Arial, sans-serif;
+            font-size: 35px;
+            line-height: 54px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #369b4d;
         }
 
         .project-about__grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 54px;
+            grid-template-columns: 735px 1fr;
+            column-gap: 65px;
             align-items: start;
         }
 
         .project-about__media {
+            width: 735px;
             border-radius: 14px;
             overflow: hidden;
         }
 
         .project-about__image {
             display: block;
-            width: 100%;
-            height: auto;
+            width: 735px;
+            height: 452px;
+            object-fit: cover;
+        }
+
+        .project-about__content {
+            padding-top: 11px;
         }
 
         .project-about__title {
-            margin: 0 0 24px;
+            margin: 0 0 33px;
             font-family: "ExoExpanded", Arial, sans-serif;
-            font-size: 35px;
-            line-height: 1;
+            font-size: 30px;
+            line-height: 47px;
             font-weight: 700;
             text-transform: uppercase;
+            color: #000000;
         }
 
         .project-about__text {
-            margin: 0 0 26px;
-            font-family: "ExoExpanded", Arial, sans-serif;
+            max-width: 608px;
+            margin: 0 0 34px;
+            font-family: "Wix Madefor Display", "Wix", Arial, sans-serif;
             font-size: 20px;
-            line-height: 1.55;
+            line-height: 1.88;
             font-weight: 400;
+            color: #000000;
         }
 
         .project-about__note {
-            margin: 0 0 22px;
-            font-family: "ExoExpanded", Arial, sans-serif;
+            margin: 0 0 34px;
+            font-family: "Wix Madefor Display", "Wix", Arial, sans-serif;
             font-size: 20px;
-            line-height: 1.45;
+            line-height: 1.5;
+            color: #000000;
         }
 
         .project-about__note strong {
@@ -262,17 +288,37 @@
 
         .project-about__facts {
             display: flex;
+            align-items: center;
+            gap: 52px;
             flex-wrap: wrap;
-            gap: 30px 46px;
         }
 
         .project-about__fact {
             display: flex;
             align-items: center;
-            gap: 14px;
-            font-family: "ExoExpanded", Arial, sans-serif;
-            font-size: 18px;
-            line-height: 1.2;
+            gap: 18px;
+            min-height: 32px;
+        }
+
+        .project-about__fact-icon {
+            width: 32px;
+            height: 32px;
+            flex: 0 0 32px;
+            object-fit: contain;
+            display: block;
+        }
+
+        .project-about__fact-text {
+            font-family: "Wix Madefor Display", "Wix", Arial, sans-serif;
+            font-size: 20px;
+            line-height: 31px;
+            font-weight: 400;
+            color: #000000;
+            white-space: nowrap;
+        }
+
+        .project-about__fact-text strong {
+            font-weight: 700;
         }
 
         .project-about__fact strong {
@@ -280,87 +326,216 @@
         }
 
         .project-plan {
-            padding: 28px 0 62px;
+            padding: 10px 0 70px;
+        }
+
+        .project-plan .section-title {
+            margin: 0 0 40px;
+            text-align: center;
+            font-family: "ExoExpanded", Arial, sans-serif;
+            font-size: 35px;
+            line-height: 54px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #369b4d;
         }
 
         .project-plan__grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
         }
 
         .project-plan__card {
-            background: #f5f5f4;
-            border-radius: 14px;
-            box-shadow: var(--shadow-soft);
-            padding: 20px 20px 24px;
+            background: #f3f3f3;
+            border: 1px solid #dddddd;
+            border-radius: 16px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+            padding: 22px 22px 28px;
+        }
+
+        .project-plan__button {
+            display: block;
+            width: 100%;
+            padding: 0;
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            text-align: left;
         }
 
         .project-plan__image-wrap {
-            margin-bottom: 16px;
+            margin-bottom: 28px;
+            background: #ffffff;
         }
 
         .project-plan__image {
             display: block;
             width: 100%;
-            height: auto;
+            height: 517px;
+            object-fit: contain;
         }
 
         .project-plan__caption {
             margin: 0;
             text-align: center;
             font-family: "ExoExpanded", Arial, sans-serif;
-            font-size: 24px;
-            line-height: 1.1;
+            font-size: 30px;
+            line-height: 47px;
             font-weight: 700;
+            color: #000000;
+        }
+
+        .plan-lightbox {
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            display: none;
+        }
+
+        .plan-lightbox.is-open {
+            display: block;
+        }
+
+        .plan-lightbox__backdrop {
+            position: absolute;
+            inset: 0;
+            background: rgba(255, 255, 255, 0.96);
+        }
+
+        .plan-lightbox__dialog {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px 70px;
+        }
+
+        .plan-lightbox__stage {
+            position: relative;
+            max-width: 1060px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .plan-lightbox__image {
+            display: block;
+            max-width: 100%;
+            max-height: calc(100vh - 70px);
+            width: auto;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .plan-lightbox__close {
+            position: absolute;
+            top: 18px;
+            right: 18px;
+            width: 44px;
+            height: 44px;
+            border: none;
+            background: transparent;
+            color: #000000;
+            font-size: 52px;
+            line-height: 1;
+            cursor: pointer;
+            padding: 0;
+            z-index: 3;
+        }
+
+        .plan-lightbox__arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 44px;
+            height: 44px;
+            border: none;
+            background: transparent;
+            color: #000000;
+            font-size: 56px;
+            line-height: 1;
+            cursor: pointer;
+            padding: 0;
+            z-index: 3;
+        }
+
+        .plan-lightbox__arrow--prev {
+            left: 18px;
+        }
+
+        .plan-lightbox__arrow--next {
+            right: 18px;
         }
 
         .project-format {
-            padding: 8px 0 64px;
+            padding: 11px 0 78px;
         }
 
         .project-format__title {
-            margin-bottom: 44px;
+            margin: 0 0 63px;
+            text-align: center;
+            font-family: "ExoExpanded", Arial, sans-serif;
+            font-size: 35px;
+            line-height: 54px;
+            font-weight: 700;
+            color: #369b4d;
+            text-transform: none;
         }
 
         .project-format__grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 34px;
+            grid-template-columns: repeat(3, 350px);
+            justify-content: center;
+            column-gap: 51px;
+            row-gap: 40px;
         }
 
         .project-format__card {
             display: flex;
             flex-direction: column;
+            width: 350px;
         }
 
         .project-format__media {
-            margin-bottom: 16px;
-            border-radius: 12px;
+            width: 350px;
+            height: 229px;
+            margin-bottom: 28px;
+            border-radius: 14px;
             overflow: hidden;
         }
 
         .project-format__image {
             display: block;
             width: 100%;
-            height: auto;
+            height: 100%;
+            object-fit: cover;
         }
 
         .project-format__price {
             margin: 0 0 10px;
-            font-family: "ExoExpanded", Arial, sans-serif;
-            font-size: 18px;
-            line-height: 1;
+            font-family: "Wix Madefor Display", "Wix", Arial, sans-serif;
+            font-size: 20px;
+            line-height: 31px;
+            font-weight: 400;
+            color: #369b4d;
+        }
+
+        .project-format__price strong {
             font-weight: 700;
-            color: var(--color-green);
         }
 
         .project-format__name {
-            margin: 0 0 18px;
+            margin: 0 0 22px;
             font-family: "ExoExpanded", Arial, sans-serif;
-            font-size: 22px;
-            line-height: 1.2;
+            font-size: 20px;
+            line-height: 31px;
             font-weight: 700;
+            color: #000000;
         }
 
         .project-format__more {
@@ -368,61 +543,226 @@
             align-items: center;
             justify-content: space-between;
             gap: 16px;
-            margin-bottom: 18px;
-            font-family: "ExoExpanded", Arial, sans-serif;
-            font-size: 18px;
-            line-height: 1.2;
+            margin-bottom: 29px;
+            padding: 0;
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            text-align: left;
+            width: 100%;
+        }
+
+        .project-format__more-text {
+            font-family: "Wix Madefor Display", "Wix", Arial, sans-serif;
+            font-size: 20px;
+            line-height: 31px;
+            font-weight: 400;
+            color: #000000;
         }
 
         .project-format__plus {
-            font-size: 38px;
-            line-height: 1;
-            font-weight: 300;
+            width: 20px;
+            height: 20px;
+            flex: 0 0 20px;
+            display: block;
+            object-fit: contain;
         }
 
         .project-format__button {
+            width: 350px;
+            min-height: 54px;
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            width: 100%;
-            min-height: 54px;
             border: 1px solid #000000;
-            font-family: "ExoExpanded", Arial, sans-serif;
-            font-size: 16px;
+            background: transparent;
+            color: #000000;
+            font-family: "Wix Madefor Display", "Wix", Arial, sans-serif;
+            font-size: 18px;
             line-height: 1;
             font-weight: 400;
             text-transform: uppercase;
-        }
-
-        .project-visit {
+            cursor: pointer;
             padding: 0;
         }
 
+        .project-format__details {
+            display: none;
+            margin: -8px 0 24px;
+            font-family: "Wix Madefor Display", "Wix", Arial, sans-serif;
+            font-size: 18px;
+            line-height: 1.6;
+            color: #000000;
+        }
+
+        .project-format__card.is-open .project-format__details {
+            display: block;
+        }
+
+        .project-visit {
+            padding: 0 0 78px;
+        }
+
+        .project-visit .steps__inner {
+            min-height: 531px;
+            padding: 58px 66px 54px;
+            background:
+                linear-gradient(180deg, rgba(15, 17, 21, 0.42) 0%, rgba(15, 17, 21, 0.42) 100%),
+                url("./assets/images/project-140-visit-bg.jpg") center / cover no-repeat;
+            color: #ffffff;
+        }
+
+        .project-visit .steps__title {
+            max-width: 809px;
+            margin: 0 0 32px;
+            font-family: "ExoExpanded", Arial, sans-serif;
+            font-size: 35px;
+            line-height: 54px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #ffffff;
+        }
+
+        .project-visit .steps__caption {
+            max-width: 686px;
+            margin: 0 0 56px;
+            font-family: "Wix Madefor Display", "Wix", Arial, sans-serif;
+            font-size: 22px;
+            line-height: 26px;
+            font-weight: 400;
+            color: #ffffff;
+        }
+
+        .project-visit .steps__form-new {
+            display: grid;
+            grid-template-columns: 342px 342px 350px;
+            column-gap: 26px;
+            row-gap: 22px;
+            align-items: start;
+        }
+
+        .project-visit .steps__input {
+            width: 100%;
+            height: 60px;
+            padding: 0 20px;
+            border: none;
+            border-radius: 14px;
+            background: #ffffff;
+            font-family: "Wix Madefor Display", "Wix", Arial, sans-serif;
+            font-size: 20px;
+            line-height: 1;
+            font-weight: 400;
+            color: #000000;
+            box-sizing: border-box;
+        }
+
+        .project-visit .steps__input::placeholder {
+            color: #c7c7c7;
+            opacity: 1;
+        }
+
+        .project-visit .steps__submit {
+            width: 350px;
+            min-height: 54px;
+            border: 1px solid #ffffff;
+            background: transparent;
+            color: #ffffff;
+            font-family: "Wix Madefor Display", "Wix", Arial, sans-serif;
+            font-size: 18px;
+            line-height: 1;
+            font-weight: 400;
+            text-transform: uppercase;
+            cursor: pointer;
+            padding: 0;
+            align-self: center;
+            justify-self: start;
+        }
+
+        .project-visit .steps__checks {
+            grid-column: 1 / span 2;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-top: 2px;
+        }
+
+        .project-visit .steps__check {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .project-visit .steps__check input {
+            position: absolute;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .project-visit .steps__check-box {
+            width: 28px;
+            height: 28px;
+            border: 1px solid rgba(255, 255, 255, 0.85);
+            background: transparent;
+            flex: 0 0 28px;
+            position: relative;
+            box-sizing: border-box;
+        }
+
+        .project-visit .steps__check input:checked+.steps__check-box::after {
+            content: "";
+            position: absolute;
+            left: 8px;
+            top: 3px;
+            width: 8px;
+            height: 15px;
+            border-right: 2px solid #ffffff;
+            border-bottom: 2px solid #ffffff;
+            transform: rotate(45deg);
+        }
+
+        .project-visit .steps__check-text {
+            font-family: "Wix Madefor Display", "Wix", Arial, sans-serif;
+            font-size: 14px;
+            line-height: 18px;
+            font-weight: 400;
+            color: #ffffff;
+        }
+
         .project-gallery {
-            padding: 46px 0 70px;
+            padding: 46px 0 76px;
         }
 
         .project-gallery__tabs {
             display: grid;
-            grid-template-columns: 270px 270px;
+            grid-template-columns: 278.8px 278.8px;
             justify-content: center;
-            margin-bottom: 34px;
+            margin-bottom: 86px;
         }
 
         .project-gallery__tab {
-            min-height: 56px;
+            min-height: 55px;
             border: 1px solid #000000;
-            background: transparent;
-            font-family: "ExoExpanded", Arial, sans-serif;
+            background: #ffffff;
+            font-family: "Wix Madefor Display", "Wix", Arial, sans-serif;
             font-size: 20px;
             line-height: 1;
             font-weight: 400;
+            color: #000000;
             cursor: pointer;
+            padding: 14px 22px;
+        }
+
+        .project-gallery__tab+.project-gallery__tab {
+            margin-left: -1px;
         }
 
         .project-gallery__tab.is-active {
-            color: var(--color-green);
-            border-color: var(--color-green-border);
+            color: #369b4d;
+            border-color: #369b4d;
+            position: relative;
+            z-index: 1;
         }
 
         .project-gallery__panel {
@@ -433,17 +773,60 @@
             display: block;
         }
 
-        .project-gallery__grid {
+        .project-gallery__top {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 28px;
+        }
+
+        .project-gallery__nav {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .project-gallery__arrow {
+            width: 48px;
+            height: 48px;
+            border: none;
+            border-radius: 50%;
+            background: #9c9c9c;
+            color: #ffffff;
+            font-size: 30px;
+            line-height: 1;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            padding: 0;
+        }
+
+        .project-gallery__slider {
+            overflow: hidden;
+        }
+
+        .project-gallery__slide {
+            box-sizing: border-box;
+        }
+
+        .project-gallery__layout {
             display: grid;
-            grid-template-columns: 1.4fr 1fr;
-            gap: 18px;
+            grid-template-columns: 888px 428px;
+            gap: 22px;
             align-items: start;
+        }
+
+        .project-gallery__card--large,
+        .project-gallery__card--small {
+            width: 100%;
+            overflow: hidden;
         }
 
         .project-gallery__image {
             display: block;
             width: 100%;
-            height: auto;
+            height: 500px;
+            object-fit: cover;
         }
 
         .project-consult {
@@ -451,30 +834,35 @@
         }
 
         .project-consult__box {
-            border-radius: 18px;
+            border-radius: 20px;
             overflow: hidden;
             background:
-                linear-gradient(180deg, rgba(47, 56, 66, 0.76) 0%, rgba(47, 56, 66, 0.76) 100%),
-                url("./assets/images/dzen140-consult-bg.jpg") center / cover no-repeat;
-            box-shadow: 0 10px 22px rgba(0, 0, 0, 0.14);
+                linear-gradient(180deg, rgba(18, 18, 18, 0.40) 0%, rgba(18, 18, 18, 0.40) 100%),
+                url("./assets/images/project-140-consult-bg.jpg") center / cover no-repeat;
+            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.14);
         }
 
         .project-consult__inner {
             display: grid;
-            grid-template-columns: 1.15fr 0.85fr;
-            gap: 54px;
-            padding: 40px 54px;
+            grid-template-columns: 1fr 560px;
+            column-gap: 88px;
+            align-items: start;
+            padding: 60px 66px 60px 66px;
+            min-height: 526px;
             color: #ffffff;
         }
 
         .project-consult__text {
-            font-family: "ExoExpanded", Arial, sans-serif;
-            font-size: 20px;
-            line-height: 1.55;
+            max-width: 760px;
+            font-family: "Wix Madefor Display", "Wix", Arial, sans-serif;
+            font-size: 22px;
+            line-height: 1.72;
+            font-weight: 400;
+            color: #ffffff;
         }
 
         .project-consult__text p {
-            margin: 0 0 26px;
+            margin: 0 0 32px;
         }
 
         .project-consult__text p:last-child {
@@ -485,311 +873,117 @@
             font-weight: 700;
         }
 
+        .project-consult__form-box {
+            width: 100%;
+            max-width: 448px;
+            justify-self: center;
+            padding-top: 12px;
+        }
+
         .project-consult__form-title {
-            margin: 0 0 20px;
+            margin: 0 0 24px;
             text-align: center;
-            font-family: "ExoExpanded", Arial, sans-serif;
-            font-size: 24px;
-            line-height: 1.25;
-            font-weight: 700;
+            font-family: "Wix Madefor Display", "Wix", Arial, sans-serif;
+            font-size: 22px;
+            line-height: 26px;
+            font-weight: 400;
             color: #ffffff;
         }
 
         .project-consult__form {
             display: flex;
             flex-direction: column;
-            gap: 14px;
+            gap: 18px;
         }
 
         .project-consult__input {
             width: 100%;
-            min-height: 58px;
-            padding: 0 18px;
+            height: 75px;
+            padding: 0 24px;
             border: none;
-            border-radius: 10px;
+            border-radius: 20px;
             background: #ffffff;
-            font-family: "ExoExpanded", Arial, sans-serif;
-            font-size: 18px;
+            font-family: "Wix Madefor Display", "Wix", Arial, sans-serif;
+            font-size: 20px;
+            line-height: 1;
+            font-weight: 400;
+            color: #000000;
+            box-sizing: border-box;
+        }
+
+        .project-consult__input::placeholder {
+            color: #c7c7c7;
+            opacity: 1;
+        }
+
+        .project-consult__checks {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            margin-top: 4px;
+            margin-bottom: 10px;
         }
 
         .project-consult__check {
             display: flex;
             align-items: flex-start;
-            gap: 10px;
-            font-family: "ExoExpanded", Arial, sans-serif;
+            gap: 12px;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .project-consult__check input {
+            position: absolute;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .project-consult__check-box {
+            width: 28px;
+            height: 28px;
+            border: 1px solid rgba(255, 255, 255, 0.9);
+            background: transparent;
+            flex: 0 0 28px;
+            position: relative;
+            box-sizing: border-box;
+            margin-top: 1px;
+        }
+
+        .project-consult__check input:checked+.project-consult__check-box::after {
+            content: "";
+            position: absolute;
+            left: 8px;
+            top: 3px;
+            width: 8px;
+            height: 15px;
+            border-right: 2px solid #ffffff;
+            border-bottom: 2px solid #ffffff;
+            transform: rotate(45deg);
+        }
+
+        .project-consult__check-text {
+            font-family: "Wix Madefor Display", "Wix", Arial, sans-serif;
             font-size: 14px;
-            line-height: 1.35;
+            line-height: 18px;
+            font-weight: 400;
             color: #ffffff;
         }
 
         .project-consult__submit {
-            min-height: 54px;
+            width: 100%;
+            min-height: 68px;
             border: 1px solid #ffffff;
             background: transparent;
             color: #ffffff;
-            font-family: "ExoExpanded", Arial, sans-serif;
+            font-family: "Wix Madefor Display", "Wix", Arial, sans-serif;
             font-size: 18px;
             line-height: 1;
             font-weight: 400;
             text-transform: uppercase;
-        }
-
-        .project-other {
-            padding: 0 0 74px;
-        }
-
-        .project-other__title {
-            margin-bottom: 34px;
-        }
-
-        .project-other__shell {
-            display: flex;
-            align-items: center;
-            gap: 26px;
-        }
-
-        .project-other__arrow {
-            width: 40px;
-            height: 40px;
-            border: none;
-            border-radius: 50%;
-            background: #9b9b9b;
-            color: #ffffff;
-            font-size: 20px;
-            line-height: 1;
             cursor: pointer;
-            flex-shrink: 0;
+            padding: 0;
         }
 
-        .project-other__grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 38px;
-            flex: 1;
-        }
-
-        .project-other__card {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .project-other__media {
-            margin-bottom: 18px;
-            overflow: hidden;
-            border-radius: 10px;
-        }
-
-        .project-other__image {
-            display: block;
-            width: 100%;
-            height: auto;
-        }
-
-        .project-other__name {
-            margin: 0 0 10px;
-            font-family: "ExoExpanded", Arial, sans-serif;
-            font-size: 24px;
-            line-height: 1.05;
-            font-weight: 700;
-            text-transform: uppercase;
-        }
-
-        .project-other__text {
-            margin: 0 0 24px;
-            font-family: "ExoExpanded", Arial, sans-serif;
-            font-size: 18px;
-            line-height: 1.45;
-        }
-
-        .project-other__button {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 264px;
-            min-height: 60px;
-            border: 1px solid #000000;
-            font-family: "ExoExpanded", Arial, sans-serif;
-            font-size: 16px;
-            line-height: 1;
-            text-transform: uppercase;
-        }
-
-        .project-bottom-cta {
-            padding: 0 0 88px;
-        }
-
-        .project-bottom-cta__box {
-            border-radius: 18px;
-            overflow: hidden;
-            background:
-                linear-gradient(90deg, rgba(22, 22, 22, 0.24) 0%, rgba(22, 22, 22, 0.14) 100%),
-                url("./assets/images/dzen140-bottom-cta.jpg") center / cover no-repeat;
-            min-height: 520px;
-            padding: 44px 36px 34px;
-            display: grid;
-            grid-template-columns: 1fr 260px;
-            gap: 26px;
-            align-items: start;
-        }
-
-        .project-bottom-cta__main {
-            max-width: 560px;
-            display: flex;
-            flex-direction: column;
-            justify-content: end;
-            min-height: 100%;
-        }
-
-        .project-bottom-cta__title {
-            margin: 0 0 16px;
-            font-family: "ExoExpanded", Arial, sans-serif;
-            font-size: 34px;
-            line-height: 1.1;
-            font-weight: 700;
-            color: #ffffff;
-            text-transform: uppercase;
-        }
-
-        .project-bottom-cta__text {
-            max-width: 420px;
-            margin: 0 0 28px;
-            font-family: "ExoExpanded", Arial, sans-serif;
-            font-size: 20px;
-            line-height: 1.45;
-            color: #ffffff;
-        }
-
-        .project-bottom-cta__button {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 350px;
-            min-height: 54px;
-            border: 1px solid #000000;
-            background: #ffffff;
-            font-family: "ExoExpanded", Arial, sans-serif;
-            font-size: 16px;
-            line-height: 1;
-            font-weight: 400;
-            text-transform: uppercase;
-        }
-
-        .project-bottom-cta__stats {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            justify-self: end;
-        }
-
-        .project-bottom-cta__stat {
-            min-height: 120px;
-            padding: 24px;
-            border-radius: 18px;
-            background: rgba(58, 58, 58, 0.34);
-            backdrop-filter: blur(10px);
-            color: #ffffff;
-        }
-
-        .project-bottom-cta__stat-value {
-            margin: 0 0 10px;
-            font-family: "ExoExpanded", Arial, sans-serif;
-            font-size: 36px;
-            line-height: 1;
-            font-weight: 700;
-        }
-
-        .project-bottom-cta__stat-text {
-            margin: 0;
-            font-family: "ExoExpanded", Arial, sans-serif;
-            font-size: 18px;
-            line-height: 1.3;
-        }
-
-        @media (max-width: 1499px) {
-            .project-hero__layout {
-                grid-template-columns: minmax(0, 1fr) 420px;
-                gap: 24px;
-            }
-
-            .project-about__grid,
-            .project-consult__inner,
-            .project-bottom-cta__box {
-                gap: 34px;
-            }
-
-            .project-other__grid {
-                gap: 24px;
-            }
-        }
-
-        @media (max-width: 1199px) {
-            .project-hero__layout,
-            .project-about__grid,
-            .project-plan__grid,
-            .project-consult__inner,
-            .project-bottom-cta__box {
-                grid-template-columns: 1fr;
-            }
-
-            .project-format__grid,
-            .project-other__grid {
-                grid-template-columns: 1fr;
-            }
-
-            .project-gallery__grid {
-                grid-template-columns: 1fr;
-            }
-
-            .project-hero__info {
-                max-width: 446px;
-            }
-
-            .project-other__shell {
-                align-items: flex-start;
-            }
-
-            .project-bottom-cta__stats {
-                justify-self: start;
-            }
-        }
-
-        @media (max-width: 767px) {
-            .project-hero,
-            .project-about,
-            .project-plan,
-            .project-format,
-            .project-gallery,
-            .project-consult,
-            .project-other,
-            .project-bottom-cta {
-                padding-top: 24px;
-                padding-bottom: 34px;
-            }
-
-            .project-hero__title,
-            .project-about__title {
-                font-size: 32px;
-            }
-
-            .project-gallery__tabs {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .project-other__shell {
-                gap: 12px;
-            }
-
-            .project-other__arrow {
-                width: 30px;
-                height: 30px;
-                font-size: 16px;
-            }
-
-            .project-bottom-cta__button,
-            .project-other__button {
-                width: 100%;
-            }
-        }
     </style>
 </head>
 
@@ -863,27 +1057,30 @@
                                 <div class="swiper project-hero__slider js-project-hero-slider">
                                     <div class="swiper-wrapper">
                                         <div class="swiper-slide project-hero__slide">
-                                            <img class="project-hero__slide-image" src="./assets/images/project-140-hero-1.jpg" alt="Дом Дзен 140 — фото 1">
+                                            <img class="project-hero__slide-image"
+                                                src="./assets/images/project_1_main.png" alt="Дом Дзен 140 — фото 1">
                                         </div>
                                         <div class="swiper-slide project-hero__slide">
-                                            <img class="project-hero__slide-image" src="./assets/images/project-140-hero-2.jpg" alt="Дом Дзен 140 — фото 2">
+                                            <img class="project-hero__slide-image"
+                                                src="./assets/images/project_2_main.png" alt="Дом Дзен 140 — фото 2">
                                         </div>
                                         <div class="swiper-slide project-hero__slide">
-                                            <img class="project-hero__slide-image" src="./assets/images/project-140-hero-3.jpg" alt="Дом Дзен 140 — фото 3">
+                                            <img class="project-hero__slide-image"
+                                                src="./assets/images/project_3_main.png" alt="Дом Дзен 140 — фото 3">
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <button class="project-hero__arrow project-hero__arrow--prev" type="button" aria-label="Предыдущее фото">&lt;</button>
-                            <button class="project-hero__arrow project-hero__arrow--next" type="button" aria-label="Следующее фото">&gt;</button>
+                            <button class="project-hero__arrow project-hero__arrow--prev" type="button"
+                                aria-label="Предыдущее фото">&lt;</button>
+                            <button class="project-hero__arrow project-hero__arrow--next" type="button"
+                                aria-label="Следующее фото">&gt;</button>
                         </div>
                     </div>
 
                     <aside class="project-hero__info">
-                        <h2 class="project-hero__price">
-                            от 10 200 000 ₽
-                        </h2>
+                        <h2 class="project-hero__price">от 10 200 000 ₽</h2>
 
                         <div class="project-hero__features">
                             <div class="project-hero__feature">
@@ -937,24 +1134,23 @@
                         </p>
 
                         <div class="project-hero__button-wrap">
-                            <a href="#contacts" class="project-hero__button">Оставить заявку</a>
+                            <a href="#contacts" class="project-hero__button">ОСТАВИТЬ ЗАЯВКУ</a>
                         </div>
                     </aside>
                 </div>
             </div>
         </section>
-
         <section class="project-about">
             <div class="container">
                 <h2 class="section-title">Описание проекта</h2>
 
                 <div class="project-about__grid">
                     <div class="project-about__media">
-                        <img class="project-about__image" src="./assets/images/project-140-about.jpg" alt="Дом Дзен 140">
+                        <img class="project-about__image" src="./assets/images/project_about.png" alt="Дом Дзен 140">
                     </div>
 
                     <div class="project-about__content">
-                        <h3 class="project-about__title">S-140 м² 1 этаж</h3>
+                        <h3 class="project-about__title">S-140 м² 1 ЭТАЖ</h3>
 
                         <p class="project-about__text">
                             Крыша комбинированная, двухскатная, металлочерепица.
@@ -970,41 +1166,71 @@
 
                         <div class="project-about__facts">
                             <div class="project-about__fact">
-                                <span>▥</span>
-                                <span><strong>12,5 м²</strong> веранда</span>
+                                <img class="project-about__fact-icon" src="./assets/images/icon-veranda.svg" alt=""
+                                    aria-hidden="true">
+                                <div class="project-about__fact-text">
+                                    <strong>12,5 м<sup>2</sup></strong> веранда
+                                </div>
                             </div>
 
                             <div class="project-about__fact">
-                                <span>⚡</span>
-                                <span><strong>6,3 м²</strong> тех. помещение</span>
+                                <img class="project-about__fact-icon" src="./assets/images/icon-tech-room.svg" alt=""
+                                    aria-hidden="true">
+                                <div class="project-about__fact-text">
+                                    <strong>6,3 м<sup>2</sup></strong> тех. помещение
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
         <section class="project-plan">
             <div class="container">
                 <h2 class="section-title">Планировка</h2>
 
                 <div class="project-plan__grid">
                     <article class="project-plan__card">
-                        <div class="project-plan__image-wrap">
-                            <img class="project-plan__image" src="./assets/images/project-140-plan-empty.jpg" alt="Планировка без мебели">
-                        </div>
-                        <p class="project-plan__caption">Без мебели</p>
+                        <button class="project-plan__button" type="button" data-plan-index="0"
+                            aria-label="Открыть планировку без мебели">
+                            <div class="project-plan__image-wrap">
+                                <img class="project-plan__image" src="./assets/images/project-plan1.png"
+                                    alt="Планировка без мебели">
+                            </div>
+                            <p class="project-plan__caption">Без мебели</p>
+                        </button>
                     </article>
 
                     <article class="project-plan__card">
-                        <div class="project-plan__image-wrap">
-                            <img class="project-plan__image" src="./assets/images/project-140-plan-furniture.jpg" alt="Планировка с мебелью">
-                        </div>
-                        <p class="project-plan__caption">С мебелью</p>
+                        <button class="project-plan__button" type="button" data-plan-index="1"
+                            aria-label="Открыть планировку с мебелью">
+                            <div class="project-plan__image-wrap">
+                                <img class="project-plan__image" src="./assets/images/project-plan2.png"
+                                    alt="Планировка с мебелью">
+                            </div>
+                            <p class="project-plan__caption">С мебелью</p>
+                        </button>
                     </article>
                 </div>
             </div>
         </section>
+
+        <div class="plan-lightbox" id="planLightbox" aria-hidden="true">
+            <div class="plan-lightbox__backdrop" data-plan-close></div>
+
+            <div class="plan-lightbox__dialog" role="dialog" aria-modal="true" aria-label="Просмотр планировки">
+                <button class="plan-lightbox__close" type="button" aria-label="Закрыть" data-plan-close>×</button>
+                <button class="plan-lightbox__arrow plan-lightbox__arrow--prev" type="button"
+                    aria-label="Предыдущая планировка">‹</button>
+
+                <div class="plan-lightbox__stage">
+                    <img class="plan-lightbox__image" id="planLightboxImage" src="" alt="">
+                </div>
+
+                <button class="plan-lightbox__arrow plan-lightbox__arrow--next" type="button"
+                    aria-label="Следующая планировка">›</button>
+            </div>
+        </div>
 
         <section class="project-format">
             <div class="container">
@@ -1013,7 +1239,8 @@
                 <div class="project-format__grid">
                     <article class="project-format__card">
                         <div class="project-format__media">
-                            <img class="project-format__image" src="./assets/images/project-140-format-1.jpg" alt="Формат 1">
+                            <img class="project-format__image" src="./assets/images/project-140-format-1.png"
+                                alt="Формат 1">
                         </div>
                         <p class="project-format__price">от 10 200 000 ₽</p>
                         <h3 class="project-format__name">Формат 1: Под чистовую</h3>
@@ -1026,7 +1253,8 @@
 
                     <article class="project-format__card">
                         <div class="project-format__media">
-                            <img class="project-format__image" src="./assets/images/project-140-format-2.jpg" alt="Формат 2">
+                            <img class="project-format__image" src="./assets/images/project-140-format-2.png"
+                                alt="Формат 2">
                         </div>
                         <p class="project-format__price">От 13 200 000 ₽</p>
                         <h3 class="project-format__name">Формат 2: Под ключ</h3>
@@ -1039,7 +1267,8 @@
 
                     <article class="project-format__card">
                         <div class="project-format__media">
-                            <img class="project-format__image" src="./assets/images/project-140-format-3.jpg" alt="Формат 3">
+                            <img class="project-format__image" src="./assets/images/project-140-format-3.png"
+                                alt="Формат 3">
                         </div>
                         <p class="project-format__price">От 15 700 000 ₽</p>
                         <h3 class="project-format__name">Формат 3: Под тапочки</h3>
@@ -1052,11 +1281,11 @@
                 </div>
             </div>
         </section>
-
         <section class="steps project-visit">
             <div class="container">
                 <div class="steps__inner">
                     <h2 class="steps__title">Хотите убедиться в качестве домов лично?</h2>
+
                     <p class="steps__caption">
                         Организуем для вас экскурсию уже в построенный дом.
                         Покажем, что уже построили в реальности, а не на рендерах.
@@ -1065,24 +1294,26 @@
                     <form class="steps__form-new">
                         <input class="steps__input" type="text" placeholder="Ваше имя">
                         <input class="steps__input" type="tel" placeholder="+7 (000) 000-00-00">
-                        <button class="steps__submit" type="submit">Оставить заявку</button>
+
+                        <button class="steps__submit" type="button" data-open-callback>ОСТАВИТЬ ЗАЯВКУ</button>
 
                         <div class="steps__checks">
                             <label class="steps__check">
                                 <input type="checkbox">
-                                <span>Я согласен с политикой конфиденциальности</span>
+                                <span class="steps__check-box"></span>
+                                <span class="steps__check-text">Я согласен с политикой конфиденциальности</span>
                             </label>
 
                             <label class="steps__check">
                                 <input type="checkbox">
-                                <span>Даю согласие на обработку персональных данных</span>
+                                <span class="steps__check-box"></span>
+                                <span class="steps__check-text">Даю согласие на обработку персональных данных</span>
                             </label>
                         </div>
                     </form>
                 </div>
             </div>
         </section>
-
         <section class="project-gallery">
             <div class="container">
                 <div class="project-gallery__tabs">
@@ -1091,28 +1322,89 @@
                 </div>
 
                 <div class="project-gallery__panel is-active" data-panel="ext">
-                    <div class="project-gallery__grid">
-                        <div>
-                            <img class="project-gallery__image" src="./assets/images/project-140-ext-1.jpg" alt="Экстерьер 1">
+                    <div class="project-gallery__top">
+                        <div class="project-gallery__nav">
+                            <button class="project-gallery__arrow project-gallery__arrow--prev-ext" type="button"
+                                aria-label="Предыдущий слайд">‹</button>
+                            <button class="project-gallery__arrow project-gallery__arrow--next-ext" type="button"
+                                aria-label="Следующий слайд">›</button>
                         </div>
-                        <div>
-                            <img class="project-gallery__image" src="./assets/images/project-140-ext-2.jpg" alt="Экстерьер 2">
+                    </div>
+
+                    <div class="swiper project-gallery__slider js-project-gallery-ext">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide project-gallery__slide">
+                                <div class="project-gallery__layout">
+                                    <div class="project-gallery__card--large">
+                                        <img class="project-gallery__image" src="./assets/images/project-140-ext-1.jpg"
+                                            alt="Экстерьер 1">
+                                    </div>
+                                    <div class="project-gallery__card--small">
+                                        <img class="project-gallery__image" src="./assets/images/project-140-ext-2.jpg"
+                                            alt="Экстерьер 2">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide project-gallery__slide">
+                                <div class="project-gallery__layout">
+                                    <div class="project-gallery__card--large">
+                                        <img class="project-gallery__image" src="./assets/images/project-140-ext-3.jpg"
+                                            alt="Экстерьер 3">
+                                    </div>
+                                    <div class="project-gallery__card--small">
+                                        <img class="project-gallery__image" src="./assets/images/project-140-ext-4.jpg"
+                                            alt="Экстерьер 4">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="project-gallery__panel" data-panel="int">
-                    <div class="project-gallery__grid">
-                        <div>
-                            <img class="project-gallery__image" src="./assets/images/project-140-int-1.jpg" alt="Интерьер 1">
+                    <div class="project-gallery__top">
+                        <div class="project-gallery__nav">
+                            <button class="project-gallery__arrow project-gallery__arrow--prev-int" type="button"
+                                aria-label="Предыдущий слайд">‹</button>
+                            <button class="project-gallery__arrow project-gallery__arrow--next-int" type="button"
+                                aria-label="Следующий слайд">›</button>
                         </div>
-                        <div>
-                            <img class="project-gallery__image" src="./assets/images/project-140-int-2.jpg" alt="Интерьер 2">
+                    </div>
+
+                    <div class="swiper project-gallery__slider js-project-gallery-int">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide project-gallery__slide">
+                                <div class="project-gallery__layout">
+                                    <div class="project-gallery__card--large">
+                                        <img class="project-gallery__image" src="./assets/images/project-140-int-1.jpg"
+                                            alt="Интерьер 1">
+                                    </div>
+                                    <div class="project-gallery__card--small">
+                                        <img class="project-gallery__image" src="./assets/images/project-140-int-2.jpg"
+                                            alt="Интерьер 2">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide project-gallery__slide">
+                                <div class="project-gallery__layout">
+                                    <div class="project-gallery__card--large">
+                                        <img class="project-gallery__image" src="./assets/images/project-140-int-3.jpg"
+                                            alt="Интерьер 3">
+                                    </div>
+                                    <div class="project-gallery__card--small">
+                                        <img class="project-gallery__image" src="./assets/images/project-140-int-4.jpg"
+                                            alt="Интерьер 4">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
 
         <section class="project-consult">
             <div class="container">
@@ -1131,31 +1423,41 @@
                             </p>
 
                             <p>
-                                <strong>Наша задача</strong> — избавить вас от сложностей и рисков стройки.
-                                Мы берём на себя всё: от проектирования дома до расстановки мебели
-                                по нашему дизайн-проекту. Вы получаете полностью готовый дом,
-                                где всё продумано до мелочей.
+                                <strong>Наша задача</strong> — избавить вас от сложностей и рисков
+                                стройки. Мы берём на себя всё: от проектирования дома
+                                до расстановки мебели по нашему дизайн-проекту. Вы
+                                получаете полностью готовый дом, где всё продумано до
+                                мелочей.
                             </p>
                         </div>
 
                         <div class="project-consult__form-box">
-                            <h3 class="project-consult__form-title">Проконсультируйтесь<br>со специалистом</h3>
+                            <h3 class="project-consult__form-title">
+                                Проконсультируйтесь<br>со специалистом
+                            </h3>
 
                             <form class="project-consult__form">
                                 <input class="project-consult__input" type="text" placeholder="Ваше имя">
                                 <input class="project-consult__input" type="tel" placeholder="+7 (000) 000-00-00">
 
-                                <label class="project-consult__check">
-                                    <input type="checkbox">
-                                    <span>Я согласен с политикой конфиденциальности</span>
-                                </label>
+                                <div class="project-consult__checks">
+                                    <label class="project-consult__check">
+                                        <input type="checkbox">
+                                        <span class="project-consult__check-box"></span>
+                                        <span class="project-consult__check-text">Я согласен с политикой
+                                            конфиденциальности</span>
+                                    </label>
 
-                                <label class="project-consult__check">
-                                    <input type="checkbox">
-                                    <span>Даю согласие на обработку персональных данных</span>
-                                </label>
+                                    <label class="project-consult__check">
+                                        <input type="checkbox">
+                                        <span class="project-consult__check-box"></span>
+                                        <span class="project-consult__check-text">Даю согласие на обработку персональных
+                                            данных</span>
+                                    </label>
+                                </div>
 
-                                <button class="project-consult__submit" type="submit">Консультация</button>
+                                <button class="project-consult__submit" type="button"
+                                    data-open-callback>КОНСУЛЬТАЦИЯ</button>
                             </form>
                         </div>
                     </div>
@@ -1173,7 +1475,8 @@
                     <div class="project-other__grid">
                         <article class="project-other__card">
                             <div class="project-other__media">
-                                <img class="project-other__image" src="./assets/images/project-140-card.jpg" alt="Дзен 140">
+                                <img class="project-other__image" src="./assets/images/project-140-card.jpg"
+                                    alt="Дзен 140">
                             </div>
                             <h3 class="project-other__name">Дзен 140</h3>
                             <p class="project-other__text">Дом со вторым светом на 140 м²</p>
@@ -1182,7 +1485,8 @@
 
                         <article class="project-other__card">
                             <div class="project-other__media">
-                                <img class="project-other__image" src="./assets/images/project-155-card.jpg" alt="Дзен 155">
+                                <img class="project-other__image" src="./assets/images/project-155-card.jpg"
+                                    alt="Дзен 155">
                             </div>
                             <h3 class="project-other__name">Дзен 155</h3>
                             <p class="project-other__text">Классический дом с двухскатной крышей и двумя верандами.</p>
@@ -1191,10 +1495,12 @@
 
                         <article class="project-other__card">
                             <div class="project-other__media">
-                                <img class="project-other__image" src="./assets/images/project-200-card.jpg" alt="Дзен 200">
+                                <img class="project-other__image" src="./assets/images/project-200-card.jpg"
+                                    alt="Дзен 200">
                             </div>
                             <h3 class="project-other__name">Дзен 200</h3>
-                            <p class="project-other__text">Дом в стиле хай-тек с плоской крышей и навесом для автомобилей.</p>
+                            <p class="project-other__text">Дом в стиле хай-тек с плоской крышей и навесом для
+                                автомобилей.</p>
                             <a href="#" class="project-other__button">Узнать больше</a>
                         </article>
                     </div>
@@ -1263,7 +1569,8 @@
                         <div class="site-footer__socials">
                             <a href="#" class="site-footer__social"><img src="./assets/images/vk.svg" alt="VK"></a>
                             <a href="#" class="site-footer__social"><img src="./assets/images/max.svg" alt="MAX"></a>
-                            <a href="#" class="site-footer__social"><img src="./assets/images/tg.svg" alt="Telegram"></a>
+                            <a href="#" class="site-footer__social"><img src="./assets/images/tg.svg"
+                                    alt="Telegram"></a>
                         </div>
                     </div>
 
@@ -1370,7 +1677,255 @@
                 });
             });
         });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const heroSlider = document.querySelector('.js-project-hero-slider');
+
+            if (heroSlider && typeof Swiper !== 'undefined') {
+                new Swiper(heroSlider, {
+                    loop: true,
+                    speed: 900,
+                    slidesPerView: 1,
+                    spaceBetween: 0,
+                    navigation: {
+                        nextEl: '.project-hero__arrow--next',
+                        prevEl: '.project-hero__arrow--prev'
+                    }
+                });
+            }
+
+            const tabs = document.querySelectorAll('.project-gallery__tab');
+            const panels = document.querySelectorAll('.project-gallery__panel');
+
+            tabs.forEach(function (tab) {
+                tab.addEventListener('click', function () {
+                    const current = tab.dataset.tab;
+
+                    tabs.forEach(function (item) {
+                        item.classList.remove('is-active');
+                    });
+
+                    panels.forEach(function (panel) {
+                        panel.classList.remove('is-active');
+                    });
+
+                    tab.classList.add('is-active');
+
+                    const target = document.querySelector('[data-panel="' + current + '"]');
+                    if (target) {
+                        target.classList.add('is-active');
+                    }
+                });
+            });
+
+            const planItems = [
+                {
+                    src: './assets/images/project-140-plan-empty.jpg',
+                    alt: 'Планировка без мебели'
+                },
+                {
+                    src: './assets/images/project-140-plan-furniture.jpg',
+                    alt: 'Планировка с мебелью'
+                }
+            ];
+
+            const planButtons = document.querySelectorAll('.project-plan__button');
+            const planLightbox = document.getElementById('planLightbox');
+            const planLightboxImage = document.getElementById('planLightboxImage');
+            const planPrev = document.querySelector('.plan-lightbox__arrow--prev');
+            const planNext = document.querySelector('.plan-lightbox__arrow--next');
+            const planCloseButtons = document.querySelectorAll('[data-plan-close]');
+
+            let currentPlanIndex = 0;
+
+            function renderPlan(index) {
+                const item = planItems[index];
+                if (!item) return;
+
+                planLightboxImage.src = item.src;
+                planLightboxImage.alt = item.alt;
+                currentPlanIndex = index;
+            }
+
+            function openPlanLightbox(index) {
+                renderPlan(index);
+                planLightbox.classList.add('is-open');
+                planLightbox.setAttribute('aria-hidden', 'false');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closePlanLightbox() {
+                planLightbox.classList.remove('is-open');
+                planLightbox.setAttribute('aria-hidden', 'true');
+                document.body.style.overflow = '';
+            }
+
+            function showPrevPlan() {
+                const nextIndex = currentPlanIndex === 0 ? planItems.length - 1 : currentPlanIndex - 1;
+                renderPlan(nextIndex);
+            }
+
+            function showNextPlan() {
+                const nextIndex = currentPlanIndex === planItems.length - 1 ? 0 : currentPlanIndex + 1;
+                renderPlan(nextIndex);
+            }
+
+            planButtons.forEach(function (button) {
+                button.addEventListener('click', function () {
+                    const index = Number(button.dataset.planIndex || 0);
+                    openPlanLightbox(index);
+                });
+            });
+
+            if (planPrev) {
+                planPrev.addEventListener('click', showPrevPlan);
+            }
+
+            if (planNext) {
+                planNext.addEventListener('click', showNextPlan);
+            }
+
+            planCloseButtons.forEach(function (button) {
+                button.addEventListener('click', closePlanLightbox);
+            });
+
+            document.addEventListener('keydown', function (event) {
+                if (!planLightbox || !planLightbox.classList.contains('is-open')) return;
+
+                if (event.key === 'Escape') {
+                    closePlanLightbox();
+                }
+
+                if (event.key === 'ArrowLeft') {
+                    showPrevPlan();
+                }
+
+                if (event.key === 'ArrowRight') {
+                    showNextPlan();
+                }
+            });
+        });
+
+        const formatMoreButtons = document.querySelectorAll('.project-format__more');
+
+        formatMoreButtons.forEach(function (button) {
+            button.addEventListener('click', function () {
+                const card = button.closest('.project-format__card');
+                if (!card) return;
+
+                card.classList.toggle('is-open');
+            });
+        });
+
+        const callbackModal = document.getElementById('callbackModal');
+        const callbackOpenButtons = document.querySelectorAll('[data-open-callback]');
+        const callbackCloseButtons = document.querySelectorAll('[data-modal-close]');
+
+        function openCallbackModal() {
+            if (!callbackModal) return;
+            callbackModal.classList.add('is-open');
+            callbackModal.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeCallbackModal() {
+            if (!callbackModal) return;
+            callbackModal.classList.remove('is-open');
+            callbackModal.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+        }
+
+        callbackOpenButtons.forEach(function (button) {
+            button.addEventListener('click', openCallbackModal);
+        });
+
+        callbackCloseButtons.forEach(function (button) {
+            button.addEventListener('click', closeCallbackModal);
+        });
+
+        document.addEventListener('keydown', function (event) {
+            if (!callbackModal || !callbackModal.classList.contains('is-open')) return;
+
+            if (event.key === 'Escape') {
+                closeCallbackModal();
+            }
+        });
+
+        const tabs = document.querySelectorAll('.project-gallery__tab');
+        const panels = document.querySelectorAll('.project-gallery__panel');
+
+        tabs.forEach(function (tab) {
+            tab.addEventListener('click', function () {
+                const current = tab.dataset.tab;
+
+                tabs.forEach(function (item) {
+                    item.classList.remove('is-active');
+                });
+
+                panels.forEach(function (panel) {
+                    panel.classList.remove('is-active');
+                });
+
+                tab.classList.add('is-active');
+
+                const target = document.querySelector('[data-panel="' + current + '"]');
+                if (target) {
+                    target.classList.add('is-active');
+                }
+            });
+        });
+
+        const galleryTabs = document.querySelectorAll('.project-gallery__tab');
+        const galleryPanels = document.querySelectorAll('.project-gallery__panel');
+
+        galleryTabs.forEach(function (tab) {
+            tab.addEventListener('click', function () {
+                const current = tab.dataset.tab;
+
+                galleryTabs.forEach(function (item) {
+                    item.classList.remove('is-active');
+                });
+
+                galleryPanels.forEach(function (panel) {
+                    panel.classList.remove('is-active');
+                });
+
+                tab.classList.add('is-active');
+
+                const target = document.querySelector('[data-panel="' + current + '"]');
+                if (target) {
+                    target.classList.add('is-active');
+                }
+            });
+        });
+
+        if (typeof Swiper !== 'undefined') {
+            new Swiper('.js-project-gallery-ext', {
+                speed: 900,
+                slidesPerView: 1,
+                spaceBetween: 0,
+                loop: true,
+                grabCursor: true,
+                navigation: {
+                    nextEl: '.project-gallery__arrow--next-ext',
+                    prevEl: '.project-gallery__arrow--prev-ext'
+                }
+            });
+
+            new Swiper('.js-project-gallery-int', {
+                speed: 900,
+                slidesPerView: 1,
+                spaceBetween: 0,
+                loop: true,
+                grabCursor: true,
+                navigation: {
+                    nextEl: '.project-gallery__arrow--next-int',
+                    prevEl: '.project-gallery__arrow--prev-int'
+                }
+            });
+        }
     </script>
+
 </body>
 
 </html>
