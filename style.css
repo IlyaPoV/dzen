@@ -6230,3 +6230,33 @@ html body.project-page .heading-number * {
     font-size: 15px;
   }
 }
+
+@media (min-width: 1200px) {
+  .services-build .service-card--wide {
+    grid-column: span 7;
+  }
+
+  .services-build .services-form {
+    grid-column: span 5;
+  }
+
+  .services-build .services-form__title {
+    max-width: 100%;
+  }
+}
+
+.services-form__btn,
+.ready-form__btn,
+.services-form__link-btn,
+.ready-form__link-btn {
+  background-color: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.services-form__btn:hover,
+.ready-form__btn:hover,
+.services-form__link-btn:hover,
+.ready-form__link-btn:hover {
+  background-color: rgba(255, 255, 255, 0.14);
+}
