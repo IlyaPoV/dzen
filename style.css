@@ -1881,9 +1881,7 @@ body {
   overflow-x: hidden;
 }
 
-
 .ready-objects__icon-btn img {
-  opacity: 1;
   width: 52px;
   height: 52px;
   object-fit: contain;
@@ -1894,8 +1892,6 @@ body {
   content: none;
 }
 
-
-/* Футер — просто уменьшаем SVG внутри кружков */
 .site-footer__social {
   background-color: #ffffff;
   border-color: #ffffff;
