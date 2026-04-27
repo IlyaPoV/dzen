@@ -5848,228 +5848,117 @@ body.modal-open {
     min-height: 56px;
   }
 }
-/* === ADD ONLY: dzen140 page fixes — не удаляет и не переписывает старые настройки === */
 
-/* 1. Первый блок: картинка держит высоту правой карточки */
+/* =========================================================
+   ADD ONLY: dzen140 adaptive overrides
+   Важно: все правила заскоуплены через .project-page,
+   поэтому главная / index не затрагивается.
+========================================================= */
+
+/* Цифры на странице проекта — обычным текстовым шрифтом */
+.project-page .heading-number,
+.project-page .project-hero__price,
+.project-page .project-hero__feature-value,
+.project-page .project-about__fact-text strong,
+.project-page .project-format__price,
+.project-page .project-bottom-cta__stat-value {
+  font-family: "ExoExpanded", Arial, sans-serif !important;
+  letter-spacing: normal;
+}
+
+/* Первый блок: фото слева по высоте белого текстового блока */
 @media (min-width: 1200px) {
-  .project-hero__layout {
+  .project-page .project-hero__layout {
     align-items: stretch;
   }
 
-  .project-hero__gallery,
-  .project-hero__slider-stack {
+  .project-page .project-hero__gallery {
     display: flex;
+    min-width: 0;
   }
 
-  .project-hero__gallery,
-  .project-hero__slider-stack,
-  .project-hero__slider-shell {
+  .project-page .project-hero__slider-stack,
+  .project-page .project-hero__slider-shell {
     width: 100%;
     height: 100%;
-  }
-
-  .project-hero__slider-shell {
-    min-height: 100%;
-    aspect-ratio: auto;
-  }
-
-  .project-hero__info {
-    width: 100%;
     min-height: 498px;
+  }
+
+  .project-page .project-hero__slider,
+  .project-page .project-hero__slider .swiper-wrapper,
+  .project-page .project-hero__slider .swiper-slide,
+  .project-page .project-hero__slide,
+  .project-page .project-hero__slide-image {
     height: 100%;
+  }
+
+  .project-page .project-hero__slide-image {
+    object-fit: cover;
   }
 }
 
-/* 2. Блок экскурсии: меньше высота, затемнение и blur фонового фото */
-.project-visit {
-  padding: 0 0 76px;
-}
-
-.project-visit .steps__inner {
+/* Блок экскурсии: блюрим именно картинку, без отдельной блюр-плашки */
+.project-page .project-visit {
   position: relative;
   overflow: hidden;
-  min-height: 480px;
-  padding: 70px 66px 52px;
-  background: none;
-  color: #ffffff;
+  background: none !important;
 }
 
-.project-visit .steps__inner::before,
-.project-visit .steps__inner::after {
+.project-page .project-visit::before {
   content: "";
   position: absolute;
-  inset: 0;
-  pointer-events: none;
-}
-
-.project-visit .steps__inner::before {
+  top: 0;
+  left: -18px;
+  right: -18px;
+  height: 531px;
   z-index: 0;
   background: url("./assets/images/project-140-visit-bg.jpg") center / cover no-repeat;
-  filter: blur(3px);
+  filter: blur(5px) brightness(0.58);
   transform: scale(1.035);
-}
-
-.project-visit .steps__inner::after {
-  z-index: 1;
-  background: rgba(5, 9, 13, 0.58);
-}
-
-.project-visit .steps__inner > * {
-  position: relative;
-  z-index: 2;
-}
-
-.project-visit .steps__title {
-  margin-bottom: 28px;
-}
-
-.project-visit .steps__caption {
-  margin-bottom: 44px;
-}
-
-/* 3. Последний CTA: логика как у hero главной — фон, белая подложка, кнопка отдельно */
-.project-bottom-cta {
-  padding: 54px 0 96px;
-}
-
-.project-bottom-cta__box {
-  position: relative;
-  min-height: 610px;
-  border-radius: var(--radius-xl);
-  overflow: hidden;
-  background: url("./assets/images/hero.jpg") center / cover no-repeat;
-}
-
-.project-bottom-cta__box::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  background: linear-gradient(90deg,
-      rgba(0, 0, 0, 0.58) 0%,
-      rgba(0, 0, 0, 0.42) 48%,
-      rgba(0, 0, 0, 0.30) 100%);
-}
-
-.project-bottom-cta__box::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  z-index: 2;
-  width: 424px;
-  height: 118px;
-  background: #ffffff;
-  border-top-right-radius: var(--radius-xl);
   pointer-events: none;
 }
 
-.project-bottom-cta__main {
-  position: relative;
-  z-index: 3;
-  min-height: 610px;
-  max-width: 760px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 356px 40px 18px;
-}
-
-.project-bottom-cta__title {
-  max-width: 720px;
-  margin: 0 0 22px;
-  font-family: "Ultramono", Arial, sans-serif;
-  font-size: 35px;
-  line-height: 1.12;
-  font-weight: 900;
-  color: #ffffff;
-}
-
-.project-bottom-cta__text {
-  max-width: 520px;
-  margin: 0;
-  font-family: "ExoExpanded", Arial, sans-serif;
-  font-size: 20px;
-  line-height: 1.55;
-  font-weight: 400;
-  color: #ffffff;
-}
-
-.project-bottom-cta__button {
-  position: relative;
-  z-index: 4;
-  width: 350px;
-  height: 54px;
-  margin-top: auto;
-  margin-left: -40px;
-  margin-bottom: 0;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 24px;
-  border: 1px solid rgba(0, 0, 0, 0.55);
-  background: transparent;
-  font-family: "ExoExpanded", Arial, sans-serif;
-  font-size: 18px;
-  line-height: 1;
-  font-weight: 400;
-  color: #000000;
-  text-transform: uppercase;
-  cursor: pointer;
-}
-
-.project-bottom-cta__stats {
+.project-page .project-visit::after {
+  content: "";
   position: absolute;
-  top: 90px;
-  right: 40px;
-  z-index: 3;
-  width: 300px;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 531px;
+  z-index: 1;
+  background: rgba(5, 9, 12, 0.22);
+  pointer-events: none;
 }
 
-.project-bottom-cta__stat {
-  min-height: 126px;
-  padding: 26px 26px 22px;
-  border-radius: 6px;
-  background: rgba(20, 20, 20, 0.32);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  color: #ffffff;
+.project-page .project-visit .container,
+.project-page .project-visit .steps__inner {
+  position: relative;
+  z-index: 2;
 }
 
-.project-bottom-cta__stat-value {
-  margin: 0 0 10px;
-  font-family: "Ultramono", Arial, sans-serif;
-  font-size: 48px;
-  line-height: 0.95;
-  font-weight: 900;
-  color: #ffffff;
+.project-page .project-visit .steps__inner {
+  background: transparent !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
 }
 
-.project-bottom-cta__stat-text {
-  margin: 0;
-  font-family: "ExoExpanded", Arial, sans-serif;
-  font-size: 18px;
-  line-height: 1.25;
-  font-weight: 600;
-  color: #ffffff;
+.project-page .project-visit .steps__title {
+  margin-bottom: 26px;
 }
 
-/* 4. Анимация для кнопок комплектаций */
-.project-format__button {
+.project-page .project-visit .steps__caption {
+  margin-bottom: 48px;
+}
+
+/* Блик для кнопок комплектаций, без изменения старого списка */
+.project-page .project-format__button {
   position: relative;
   overflow: hidden;
   isolation: isolate;
 }
 
-.project-format__button > * {
-  position: relative;
-  z-index: 1;
-}
-
-.project-format__button::after {
+.project-page .project-format__button::after {
   content: "";
   position: absolute;
   top: -20%;
@@ -6088,104 +5977,256 @@ body.modal-open {
   animation: button-shine 5s ease-in-out infinite;
 }
 
+/* Нижний CTA: высота как у блока экскурсии + логика хиро главной */
+.project-page .project-bottom-cta {
+  padding: 0 0 78px;
+}
+
+.project-page .project-bottom-cta__box {
+  position: relative;
+  min-height: 531px;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  isolation: isolate;
+  background: url("./assets/images/project-bottom-cta-bg.jpg") center / cover no-repeat;
+}
+
+.project-page .project-bottom-cta__box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(90deg,
+      rgba(0, 0, 0, 0.58) 0%,
+      rgba(0, 0, 0, 0.46) 42%,
+      rgba(0, 0, 0, 0.22) 100%);
+  pointer-events: none;
+}
+
+.project-page .project-bottom-cta__box::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 3;
+  width: 424px;
+  height: 118px;
+  background: #ffffff;
+  border-top-right-radius: var(--radius-xl);
+  pointer-events: none;
+}
+
+/* текст поднимаем выше, чтобы не залезал под белую подложку */
+.project-page .project-bottom-cta__main {
+  position: relative;
+  z-index: 2;
+  max-width: 760px;
+  padding: 190px 40px 150px;
+  color: #ffffff;
+}
+
+.project-page .project-bottom-cta__title {
+  max-width: 735px;
+  margin: 0 0 18px;
+  font-family: "Ultramono", Arial, sans-serif;
+  font-size: 40px;
+  line-height: 1.05;
+  font-weight: 900;
+  color: #ffffff;
+}
+
+.project-page .project-bottom-cta__text {
+  max-width: 580px;
+  margin: 0;
+  font-family: "ExoExpanded", Arial, sans-serif;
+  font-size: 20px;
+  line-height: 1.35;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.project-page .project-bottom-cta__button {
+  position: absolute;
+  left: 40px;
+  bottom: 30px;
+  z-index: 4;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 350px;
+  height: 54px;
+  padding: 0 24px;
+  border: 1px solid rgba(0, 0, 0, 0.55);
+  background: transparent;
+  font-family: "ExoExpanded", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 400;
+  color: #000000;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.project-page .project-bottom-cta__stats {
+  position: absolute;
+  top: 44px;
+  right: 44px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  width: 310px;
+}
+
+.project-page .project-bottom-cta__stat {
+  min-height: 118px;
+  padding: 24px 28px;
+  border-radius: 8px;
+  background: rgba(14, 18, 20, 0.58);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #ffffff;
+}
+
+.project-page .project-bottom-cta__stat-value {
+  margin: 0 0 8px;
+  font-family: "ExoExpanded", Arial, sans-serif;
+  font-size: 46px;
+  line-height: 1;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: normal;
+}
+
+.project-page .project-bottom-cta__stat-text {
+  margin: 0;
+  font-family: "ExoExpanded", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.25;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+html body .heading-number,
+html body .heading-number *,
+html body.project-page .heading-number,
+html body.project-page .heading-number * {
+  font-family: "ExoExpanded", Arial, sans-serif;
+  font-weight: inherit;
+  line-height: inherit;
+  letter-spacing: normal;
+}
+
 @media (max-width: 1199px) {
-  .project-hero__slider-stack,
-  .project-hero__slider-shell {
-    height: auto;
-    aspect-ratio: 944 / 498;
+  .project-page .project-bottom-cta__box {
+    min-height: 531px;
   }
 
-  .project-visit .steps__inner {
-    min-height: 450px;
-    padding: 54px 32px 46px;
+  .project-page .project-bottom-cta__main {
+    padding: 190px 32px 140px;
   }
 
-  .project-bottom-cta__box,
-  .project-bottom-cta__main {
-    min-height: 560px;
-  }
-
-  .project-bottom-cta__main {
-    padding: 280px 32px 18px;
-  }
-
-  .project-bottom-cta__stats {
-    top: 46px;
+  .project-page .project-bottom-cta__stats {
     right: 32px;
-    width: 260px;
-    gap: 20px;
+    width: 270px;
+  }
+}
+
+@media (max-width: 900px) {
+  .project-page .project-bottom-cta__main {
+    max-width: 100%;
+    padding: 230px 28px 140px;
   }
 
-  .project-bottom-cta__stat {
-    min-height: 112px;
-    padding: 22px;
+  .project-page .project-bottom-cta__stats {
+    top: 28px;
+    right: 28px;
+    width: 240px;
+    gap: 16px;
   }
 
-  .project-bottom-cta__stat-value {
-    font-size: 40px;
+  .project-page .project-bottom-cta__stat {
+    min-height: auto;
+    padding: 18px 20px;
+  }
+
+  .project-page .project-bottom-cta__stat-value {
+    font-size: 36px;
+  }
+
+  .project-page .project-bottom-cta__stat-text {
+    font-size: 15px;
   }
 }
 
 @media (max-width: 767px) {
-  .project-visit .steps__inner {
+
+  .project-page .project-visit::before,
+  .project-page .project-visit::after {
+    height: 100%;
+  }
+
+  .project-page .project-visit .steps__title {
+    margin-bottom: 18px;
+  }
+
+  .project-page .project-visit .steps__caption {
+    margin-bottom: 22px;
+  }
+
+  .project-page .project-bottom-cta {
+    padding-bottom: 44px;
+  }
+
+  .project-page .project-bottom-cta__box {
     min-height: auto;
-    padding: 42px 20px 38px;
+    padding-bottom: 108px;
+    border-radius: 24px;
   }
 
-  .project-bottom-cta {
-    padding: 36px 0 56px;
-  }
-
-  .project-bottom-cta__box {
-    min-height: auto;
-    border-radius: 18px;
-  }
-
-  .project-bottom-cta__box::after {
-    display: none;
-  }
-
-  .project-bottom-cta__main {
-    min-height: auto;
-    padding: 240px 20px 24px;
-  }
-
-  .project-bottom-cta__title {
-    font-size: 27px;
-    line-height: 1.08;
-  }
-
-  .project-bottom-cta__text {
-    font-size: 17px;
-  }
-
-  .project-bottom-cta__button {
+  .project-page .project-bottom-cta__box::after {
     width: 100%;
-    height: 50px;
-    margin: 24px 0 0;
-    color: #ffffff;
-    border-color: rgba(255, 255, 255, 0.85);
+    height: 96px;
+    border-radius: 24px 24px 0 0;
   }
 
-  .project-bottom-cta__stats {
+  .project-page .project-bottom-cta__stats {
     position: relative;
-    inset: auto;
-    z-index: 3;
+    top: auto;
+    right: auto;
+    z-index: 2;
     width: auto;
-    padding: 0 20px 24px;
-    display: grid;
-    gap: 14px;
+    padding: 24px 18px 0;
+    gap: 12px;
   }
 
-  .project-bottom-cta__stat {
-    min-height: 92px;
+  .project-page .project-bottom-cta__main {
+    padding: 32px 18px 30px;
   }
 
-  .project-bottom-cta__stat-value {
+  .project-page .project-bottom-cta__title {
+    font-size: 28px;
+    line-height: 1.05;
+  }
+
+  .project-page .project-bottom-cta__text {
+    font-size: 16px;
+  }
+
+  .project-page .project-bottom-cta__button {
+    left: 18px;
+    right: 18px;
+    bottom: 24px;
+    width: auto;
+    height: 50px;
+    font-size: 16px;
+  }
+
+  .project-page .project-bottom-cta__stat-value {
     font-size: 34px;
   }
 
-  .project-bottom-cta__stat-text {
+  .project-page .project-bottom-cta__stat-text {
     font-size: 15px;
   }
 }
