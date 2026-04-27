@@ -143,6 +143,13 @@ ol {
   padding: 0;
 }
 
+.heading-number {
+  font-family: "ExoExpanded", Arial, sans-serif;
+  font-weight: inherit;
+  line-height: inherit;
+  letter-spacing: normal;
+}
+
 /* общий блик для кнопок */
 .header__button,
 .header__drawer-button,
@@ -1223,7 +1230,7 @@ ol {
 }
 
 .steps__title {
-  max-width: 833px;
+  max-width: 850px;
   margin: 0 0 40px;
   font-family: "Ultramono", Arial, sans-serif;
   font-size: 35px;
@@ -2820,6 +2827,7 @@ body {
     font-size: 22px;
   }
 }
+
 @media (min-width: 901px) and (max-width: 1360px) {
   .header__inner {
     display: grid;
