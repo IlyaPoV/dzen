@@ -315,6 +315,7 @@ ol {
 }
 
 .header__menu {
+  gap: 0;
   display: flex;
   align-items: flex-start;
   gap: 44px;
@@ -1898,6 +1899,7 @@ body {
 
 
 @media (max-width: 1199px) {
+  .header__menu { flex-wrap: wrap; }
   .hero__main {
     grid-template-columns: 1fr;
   }
@@ -1914,6 +1916,8 @@ body {
 }
 
 @media (max-width: 1200px) {
+  .header__mobile-center { flex-direction: row; justify-content: space-between; }
+  .header__button { margin-left: 20px; }
   :root {
     --container-max-width: 1040px;
     --container-padding: 18px;
@@ -1931,6 +1935,7 @@ body {
   }
 
   .header__menu {
+  gap: 0;
     gap: 22px;
     padding-top: 0;
   }
@@ -2381,6 +2386,7 @@ body {
   }
 
   .header__menu {
+  gap: 0;
     gap: 14px;
     padding-top: 0;
   }
@@ -5299,6 +5305,7 @@ body.modal-open {
 }
 
 @media (max-width: 1199px) {
+  .header__menu { flex-wrap: wrap; }
   .project-hero__layout {
     grid-template-columns: 1fr;
     gap: 24px;
