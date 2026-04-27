@@ -1882,6 +1882,94 @@ body {
 }
 
 
+.ready-objects__icon-btn img {
+  opacity: 1;
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+  filter: brightness(0) saturate(100%) invert(44%) sepia(56%) saturate(579%) hue-rotate(84deg) brightness(92%) contrast(88%);
+}
+
+.ready-objects__icon-btn::before {
+  content: none;
+}
+
+
+/* Футер — просто уменьшаем SVG внутри кружков */
+.site-footer__social {
+  background-color: #ffffff;
+  border-color: #ffffff;
+}
+
+.site-footer__social img {
+  opacity: 1;
+  width: 21px;
+  height: 21px;
+  object-fit: contain;
+  filter: brightness(0) saturate(100%);
+}
+
+.site-footer__social::before {
+  content: none;
+}
+
+.site-footer__socials .site-footer__social:nth-child(1) img {
+  width: 22px;
+  height: 22px;
+}
+
+.site-footer__socials .site-footer__social:nth-child(2) img {
+  width: 20px;
+  height: 20px;
+}
+
+.site-footer__socials .site-footer__social:nth-child(3) img {
+  width: 22px;
+  height: 22px;
+}
+
+
+/* Адаптив */
+@media (max-width: 1200px) {
+  .ready-objects__icon-btn img {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+@media (max-width: 992px) {
+  .ready-objects__icon-btn img {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ready-objects__icon-btn img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .site-footer__social img {
+    width: 18px;
+    height: 18px;
+  }
+
+  .site-footer__socials .site-footer__social:nth-child(1) img {
+    width: 19px;
+    height: 19px;
+  }
+
+  .site-footer__socials .site-footer__social:nth-child(2) img {
+    width: 17px;
+    height: 17px;
+  }
+
+  .site-footer__socials .site-footer__social:nth-child(3) img {
+    width: 19px;
+    height: 19px;
+  }
+}
 
 @media (max-width: 1360px) and (min-width: 1201px) {
   :root {
