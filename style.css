@@ -150,6 +150,10 @@ ol {
   letter-spacing: normal;
 }
 
+.project-slide__title.heading-number,
+.steps__title.heading-number,
+.gallery__title.heading-number,
+.project-hero__title.heading-number,
 /* общий блик для кнопок */
 .header__button,
 .header__drawer-button,
@@ -163,6 +167,7 @@ ol {
 .steps__submit,
 .project-consult__submit,
 .project-bottom-cta__button,
+.project-format__button,
 .plot__submit,
 .gallery__button,
 .site-footer__button,
@@ -184,6 +189,7 @@ ol {
 .steps__submit>*,
 .project-consult__submit>*,
 .project-bottom-cta__button>*,
+.project-format__button>*,
 .plot__submit>*,
 .gallery__button>*,
 .site-footer__button>*,
@@ -204,6 +210,7 @@ ol {
 .steps__submit::after,
 .project-consult__submit::after,
 .project-bottom-cta__button::after,
+.project-format__button::after,
 .plot__submit::after,
 .gallery__button::after,
 .site-footer__button::after,
@@ -515,21 +522,9 @@ ol {
   pointer-events: none;
 }
 
-
-
-.hero__button-underlay {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  z-index: 2;
-  width: 500px;
-  height: 100px;
-  background: url("./assets/images/podlozhka.svg") left bottom / 100% 100% no-repeat;
-}
-
 .hero__button {
   position: relative;
-  z-index: 4;
+  z-index: 3;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1080,12 +1075,6 @@ ol {
   color: var(--color-black);
 }
 
-.project-slide__title.heading-number {
-  font-family: "ExoExpanded", Arial, sans-serif;
-  font-weight: 400;
-  letter-spacing: normal;
-}
-
 .project-slide__text {
   min-height: 46px;
   margin: 0;
@@ -1296,12 +1285,6 @@ ol {
   color: var(--color-white);
   text-align: left;
   text-transform: none;
-}
-
-.steps__title.heading-number {
-  font-family: "ExoExpanded", Arial, sans-serif;
-  font-weight: 400;
-  letter-spacing: normal;
 }
 
 .steps__cards {
@@ -1605,12 +1588,6 @@ ol {
   line-height: 1.15;
   font-weight: 500;
   color: var(--color-white);
-}
-
-.gallery__title.heading-number {
-  font-family: "ExoExpanded", Arial, sans-serif;
-  font-weight: 400;
-  letter-spacing: normal;
 }
 
 .gallery__text {
@@ -4448,12 +4425,6 @@ body.modal-open {
   letter-spacing: 0;
 }
 
-.project-hero__title.heading-number {
-  font-family: "ExoExpanded", Arial, sans-serif;
-  font-weight: 400;
-  letter-spacing: normal;
-}
-
 .project-hero__layout {
   display: grid;
   grid-template-columns: 944px 446px;
@@ -4705,12 +4676,6 @@ body.modal-open {
   font-weight: 700;
   text-transform: uppercase;
   color: #000000;
-}
-
-.project-about__title.heading-number {
-  font-family: "ExoExpanded", Arial, sans-serif;
-  font-weight: 400;
-  letter-spacing: normal;
 }
 
 .project-about__text {
@@ -5016,9 +4981,6 @@ body.modal-open {
 }
 
 .project-format__button {
-  position: relative;
-  overflow: hidden;
-  isolation: isolate;
   width: 350px;
   min-height: 54px;
   display: inline-flex;
@@ -5034,25 +4996,6 @@ body.modal-open {
   text-transform: uppercase;
   cursor: pointer;
   padding: 0;
-}
-
-.project-format__button::after {
-  content: "";
-  position: absolute;
-  top: -20%;
-  left: -35%;
-  width: 22%;
-  height: 140%;
-  z-index: 0;
-  pointer-events: none;
-  transform: skewX(-24deg) translateX(0);
-  background: linear-gradient(90deg,
-      rgba(255, 255, 255, 0) 0%,
-      rgba(255, 255, 255, 0.08) 25%,
-      rgba(255, 255, 255, 0.32) 50%,
-      rgba(255, 255, 255, 0.08) 75%,
-      rgba(255, 255, 255, 0) 100%);
-  animation: button-shine 5s ease-in-out infinite;
 }
 
 .project-format__details {
