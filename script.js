@@ -1,81 +1,81 @@
-(function () {
-  if (typeof Swiper === "undefined") return;
-
-  const projectsSlider = document.querySelector(".projects-swiper");
-  if (!projectsSlider) return;
-
-  new Swiper(projectsSlider, {
+const projectsSwiper = new Swiper(".projects-swiper", {
     loop: true,
     speed: 700,
     slidesPerView: 3,
     slidesPerGroup: 1,
     spaceBetween: 24,
     navigation: {
-      nextEl: ".projects__arrow--next",
-      prevEl: ".projects__arrow--prev"
+        nextEl: ".projects__arrow--next",
+        prevEl: ".projects__arrow--prev"
     },
     breakpoints: {
-      0: { slidesPerView: 1, spaceBetween: 14 },
-      768: { slidesPerView: 2, spaceBetween: 18 },
-      1200: { slidesPerView: 3, spaceBetween: 24 }
+        0: {
+            slidesPerView: 1,
+            spaceBetween: 14
+        },
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 18
+        },
+        1200: {
+            slidesPerView: 3,
+            spaceBetween: 24
+        }
     }
-  });
-})();
-
-document.querySelectorAll(".faq-item__head").forEach((button) => {
-  button.addEventListener("click", () => {
-    const item = button.closest(".faq-item");
-    item.classList.toggle("is-open");
-  });
 });
-
+document.querySelectorAll(".faq-item__head").forEach((button) => {
+    button.addEventListener("click", () => {
+        const item = button.closest(".faq-item");
+        item.classList.toggle("is-open");
+    });
+});
 const siteHeader = document.getElementById("site-header");
 
 const toggleHeaderState = () => {
-  if (!siteHeader) return;
-  siteHeader.classList.toggle("header--scrolled", window.scrollY > 12);
+    if (!siteHeader) return;
+    siteHeader.classList.toggle("header--scrolled", window.scrollY > 12);
 };
 
 toggleHeaderState();
 window.addEventListener("scroll", toggleHeaderState, { passive: true });
 
 (function () {
-  const track = document.querySelector(".hero__track");
-  const slides = document.querySelectorAll(".hero__track .hero__slide");
+    const track = document.querySelector(".hero__track");
+    const slides = document.querySelectorAll(".hero__track .hero__slide");
 
-  if (!track || !slides.length) return;
+    if (!track || !slides.length) return;
 
-  let currentIndex = 0;
-  const totalSlides = slides.length;
+    let currentIndex = 0;
+    const totalSlides = slides.length;
 
-  setInterval(() => {
-    currentIndex = (currentIndex + 1) % totalSlides;
-    track.style.transform = `translateX(-${currentIndex * (100 / totalSlides)}%)`;
-  }, 10000);
+    setInterval(() => {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        track.style.transform = `translateX(-${currentIndex * (100 / totalSlides)}%)`;
+    }, 10000);
 })();
 
 (function () {
-  const tabs = document.querySelectorAll(".services__tab");
-  const panels = document.querySelectorAll(".services__panel");
+    const tabs = document.querySelectorAll(".services__tab");
+    const panels = document.querySelectorAll(".services__panel");
 
-  tabs.forEach((tab) => {
-    tab.addEventListener("click", () => {
-      const target = tab.dataset.tab;
+    tabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+            const target = tab.dataset.tab;
 
-      tabs.forEach((item) => item.classList.remove("is-active"));
-      panels.forEach((panel) => panel.classList.remove("is-active"));
+            tabs.forEach((item) => item.classList.remove("is-active"));
+            panels.forEach((panel) => panel.classList.remove("is-active"));
 
-      tab.classList.add("is-active");
+            tab.classList.add("is-active");
 
-      const currentPanel = document.querySelector(
-        `.services__panel[data-panel="${target}"]`
-      );
+            const currentPanel = document.querySelector(
+                `.services__panel[data-panel="${target}"]`
+            );
 
-      if (currentPanel) {
-        currentPanel.classList.add("is-active");
-      }
+            if (currentPanel) {
+                currentPanel.classList.add("is-active");
+            }
+        });
     });
-  });
 })();
 
 (function () {
@@ -142,7 +142,6 @@ window.addEventListener("scroll", toggleHeaderState, { passive: true });
   if (!modal) return;
 
   const openSelectors = [
-    "[data-open-callback]",
     ".header__button",
     ".header__drawer-button",
     ".site-footer__button"
@@ -188,138 +187,3 @@ window.addEventListener("scroll", toggleHeaderState, { passive: true });
     }
   });
 })();
-
-(function () {
-  if (typeof Swiper === "undefined") return;
-
-  const heroSlider = document.querySelector(".js-project-hero-slider");
-  if (heroSlider) {
-    new Swiper(heroSlider, {
-      loop: true,
-      speed: 900,
-      slidesPerView: 1,
-      spaceBetween: 0,
-      navigation: {
-        nextEl: ".project-hero__arrow--next",
-        prevEl: ".project-hero__arrow--prev"
-      }
-    });
-  }
-
-  [
-    {
-      selector: ".js-project-gallery-ext",
-      next: ".project-gallery__arrow--next-ext",
-      prev: ".project-gallery__arrow--prev-ext"
-    },
-    {
-      selector: ".js-project-gallery-int",
-      next: ".project-gallery__arrow--next-int",
-      prev: ".project-gallery__arrow--prev-int"
-    }
-  ].forEach((gallery) => {
-    const slider = document.querySelector(gallery.selector);
-    if (!slider) return;
-
-    new Swiper(slider, {
-      loop: true,
-      speed: 900,
-      slidesPerView: 1,
-      spaceBetween: 0,
-      grabCursor: true,
-      navigation: {
-        nextEl: gallery.next,
-        prevEl: gallery.prev
-      }
-    });
-  });
-})();
-
-(function () {
-  const tabs = document.querySelectorAll(".project-gallery__tab");
-  const panels = document.querySelectorAll(".project-gallery__panel");
-  if (!tabs.length || !panels.length) return;
-
-  tabs.forEach((tab) => {
-    tab.addEventListener("click", () => {
-      const current = tab.dataset.tab;
-
-      tabs.forEach((item) => item.classList.remove("is-active"));
-      panels.forEach((panel) => panel.classList.remove("is-active"));
-
-      tab.classList.add("is-active");
-
-      const target = document.querySelector(`[data-panel="${current}"]`);
-      if (target) target.classList.add("is-active");
-    });
-  });
-})();
-
-(function () {
-  document.querySelectorAll(".project-format__more").forEach((button) => {
-    button.addEventListener("click", () => {
-      const card = button.closest(".project-format__card");
-      if (card) card.classList.toggle("is-open");
-    });
-  });
-})();
-
-(function () {
-  const planItems = [
-    { src: "./assets/images/project-plan1.png", alt: "Планировка без мебели" },
-    { src: "./assets/images/project-plan2.png", alt: "Планировка с мебелью" }
-  ];
-
-  const planButtons = document.querySelectorAll(".project-plan__button");
-  const lightbox = document.getElementById("planLightbox");
-  const image = document.getElementById("planLightboxImage");
-  const prev = document.querySelector(".plan-lightbox__arrow--prev");
-  const next = document.querySelector(".plan-lightbox__arrow--next");
-  const closeButtons = document.querySelectorAll("[data-plan-close]");
-
-  if (!planButtons.length || !lightbox || !image) return;
-
-  let currentIndex = 0;
-
-  const render = (index) => {
-    const item = planItems[index];
-    if (!item) return;
-
-    image.src = item.src;
-    image.alt = item.alt;
-    currentIndex = index;
-  };
-
-  const open = (index) => {
-    render(index);
-    lightbox.classList.add("is-open");
-    lightbox.setAttribute("aria-hidden", "false");
-    document.body.style.overflow = "hidden";
-  };
-
-  const close = () => {
-    lightbox.classList.remove("is-open");
-    lightbox.setAttribute("aria-hidden", "true");
-    document.body.style.overflow = document.body.classList.contains("modal-open") ? "hidden" : "";
-  };
-
-  const showPrev = () => render(currentIndex === 0 ? planItems.length - 1 : currentIndex - 1);
-  const showNext = () => render(currentIndex === planItems.length - 1 ? 0 : currentIndex + 1);
-
-  planButtons.forEach((button) => {
-    button.addEventListener("click", () => open(Number(button.dataset.planIndex || 0)));
-  });
-
-  if (prev) prev.addEventListener("click", showPrev);
-  if (next) next.addEventListener("click", showNext);
-
-  closeButtons.forEach((button) => button.addEventListener("click", close));
-
-  document.addEventListener("keydown", (event) => {
-    if (!lightbox.classList.contains("is-open")) return;
-
-    if (event.key === "Escape") close();
-    if (event.key === "ArrowLeft") showPrev();
-    if (event.key === "ArrowRight") showNext();
-  });
-})(); ы

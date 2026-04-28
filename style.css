@@ -151,18 +151,63 @@ ol {
 }
 
 /* общий блик для кнопок */
-.btn-shine {
+.header__button,
+.header__drawer-button,
+.hero__button,
+.project-hero__button,
+.services-form__btn,
+.ready-form__btn,
+.services-form__link-btn,
+.ready-form__link-btn,
+.project-slide__btn,
+.steps__submit,
+.project-consult__submit,
+.project-bottom-cta__button,
+.plot__submit,
+.gallery__button,
+.site-footer__button,
+.callback-modal__submit {
   position: relative;
   overflow: hidden;
   isolation: isolate;
 }
 
-.btn-shine > * {
+.header__button>*,
+.header__drawer-button>*,
+.hero__button>*,
+.project-hero__button>*,
+.services-form__btn>*,
+.ready-form__btn>*,
+.services-form__link-btn>*,
+.ready-form__link-btn>*,
+.project-slide__btn>*,
+.steps__submit>*,
+.project-consult__submit>*,
+.project-bottom-cta__button>*,
+.plot__submit>*,
+.gallery__button>*,
+.site-footer__button>*,
+.callback-modal__submit>* {
   position: relative;
   z-index: 1;
 }
 
-.btn-shine::after {
+.header__button::after,
+.header__drawer-button::after,
+.hero__button::after,
+.project-hero__button::after,
+.services-form__btn::after,
+.ready-form__btn::after,
+.services-form__link-btn::after,
+.ready-form__link-btn::after,
+.project-slide__btn::after,
+.steps__submit::after,
+.project-consult__submit::after,
+.project-bottom-cta__button::after,
+.plot__submit::after,
+.gallery__button::after,
+.site-footer__button::after,
+.callback-modal__submit::after {
   content: "";
   position: absolute;
   top: -20%;
@@ -179,21 +224,6 @@ ol {
       rgba(255, 255, 255, 0.08) 75%,
       rgba(255, 255, 255, 0) 100%);
   animation: button-shine 5s ease-in-out infinite;
-}
-
-/* общая база для стрелок слайдеров */
-.slider-arrow {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border: none;
-  line-height: 1;
-  cursor: pointer;
-  padding: 0;
-}
-
-.slider-arrow--round {
-  border-radius: 50%;
 }
 
 @keyframes button-shine {
@@ -485,21 +515,9 @@ ol {
   pointer-events: none;
 }
 
-
-
-.hero__button-underlay {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  z-index: 2;
-  width: 500px;
-  height: 100px;
-  background: url("./assets/images/podlozhka.svg") left bottom / 100% 100% no-repeat;
-}
-
 .hero__button {
   position: relative;
-  z-index: 4;
+  z-index: 3;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -975,12 +993,19 @@ ol {
 }
 
 .projects__arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   width: 40px;
   height: 40px;
   flex-shrink: 0;
+  border: none;
+  border-radius: 50%;
   background-color: var(--color-green-dark);
   color: var(--color-white);
   font-size: 0;
+  line-height: 1;
+  cursor: pointer;
   transition:
     background-color 0.25s ease,
     opacity 0.25s ease;
@@ -4495,11 +4520,19 @@ body.modal-open {
   transform: translateY(-50%);
   width: 30px;
   height: 30px;
+  border: none;
+  border-radius: 50%;
   background: #ffffff;
   color: #6d7d8d;
   font-family: Arial, sans-serif;
   font-size: 22px;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   z-index: 3;
+  cursor: pointer;
+  padding: 0;
 }
 
 .project-hero__arrow--prev {
@@ -4971,6 +5004,9 @@ body.modal-open {
 }
 
 .project-format__button {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
   width: 350px;
   min-height: 54px;
   display: inline-flex;
@@ -4986,6 +5022,25 @@ body.modal-open {
   text-transform: uppercase;
   cursor: pointer;
   padding: 0;
+}
+
+.project-format__button::after {
+  content: "";
+  position: absolute;
+  top: -20%;
+  left: -35%;
+  width: 22%;
+  height: 140%;
+  z-index: 0;
+  pointer-events: none;
+  transform: skewX(-24deg) translateX(0);
+  background: linear-gradient(90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.08) 25%,
+      rgba(255, 255, 255, 0.32) 50%,
+      rgba(255, 255, 255, 0.08) 75%,
+      rgba(255, 255, 255, 0) 100%);
+  animation: button-shine 5s ease-in-out infinite;
 }
 
 .project-format__details {
@@ -5016,7 +5071,7 @@ body.modal-open {
   right: -18px;
   height: 531px;
   z-index: 0;
-  background: url("./assets/images/services-form-bg.jpg") center / cover no-repeat;
+  background: url("./assets/images/project-140-visit-bg.jpg") center / cover no-repeat;
   filter: blur(5px) brightness(0.58);
   transform: scale(1.035);
   pointer-events: none;
@@ -5226,9 +5281,17 @@ body.modal-open {
 .project-gallery__arrow {
   width: 48px;
   height: 48px;
+  border: none;
+  border-radius: 50%;
   background: #9c9c9c;
   color: #ffffff;
   font-size: 30px;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
 }
 
 .project-gallery__slider {
