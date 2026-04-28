@@ -417,7 +417,7 @@ ol {
 .hero__card {
   position: relative;
   min-height: 699px;
-  border-radius: var(--radius-xl);
+  border-radius: var(--radius-xl) var(--radius-xl) var(--radius-xl) 0;
   overflow: hidden;
   background-color: var(--color-surface-placeholder);
 }
@@ -536,7 +536,7 @@ ol {
   height: 54px;
   margin-top: auto;
   margin-left: -40px;
-  margin-bottom: 8px;
+  margin-bottom: 0px;
   padding: 0 24px;
   border: 1px solid var(--color-border-dark-hero);
   background-color: transparent;
