@@ -322,4 +322,4 @@ window.addEventListener("scroll", toggleHeaderState, { passive: true });
     if (event.key === "ArrowLeft") showPrev();
     if (event.key === "ArrowRight") showNext();
   });
-})();
+})(); ы
