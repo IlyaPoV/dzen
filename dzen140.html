@@ -13,8 +13,8 @@
     <header class="header" id="site-header">
         <div class="container">
             <div class="header__inner">
-                <a href="./index.html" class="header__logo">
-                    <img src="./assets/images/logo.png" alt="Дзен">
+                <a href="#" class="header__logo">
+                    <img src="./assets/images/logo.png" alt="Дзен" />
                 </a>
 
                 <div class="header__mobile-center">
@@ -23,19 +23,25 @@
                 </div>
 
                 <button class="header__burger" type="button" aria-label="Открыть меню">
-                    <span></span><span></span><span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </button>
 
                 <nav class="header__drawer">
                     <div class="header__drawer-head">
                         <button class="header__drawer-close" type="button" aria-label="Закрыть меню">×</button>
                     </div>
+
                     <ul class="header__drawer-menu">
                         <li><a href="#about">О нас</a></li>
                         <li><a href="#projects">Проекты</a></li>
+                        <li><a href="#gallery">Галерея</a></li>
+                        <li><a href="#blog">Блог</a></li>
                         <li><a href="#contacts">Контакты</a></li>
                     </ul>
-                    <a href="#contacts" class="header__drawer-button" data-open-callback>Заказать звонок</a>
+
+                    <a href="#contacts" class="header__drawer-button btn btn--shine">Заказать звонок</a>
                 </nav>
 
                 <div class="header__backdrop"></div>
@@ -53,8 +59,8 @@
                         <div class="header__city">Екатеринбург</div>
                         <a href="tel:+79120342244" class="header__phone">+7 (912) 034-22-44</a>
                     </div>
-                    <a href="#contacts" class="header__button" data-open-callback>
-                        <span class="header__button-icon">↗</span>
+
+                    <a href="#contacts" class="header__button btn btn--shine btn--arrow">
                         <span>ЗАКАЗАТЬ ЗВОНОК</span>
                     </a>
                 </div>
@@ -77,9 +83,9 @@
                                 <div class="swiper-slide"><img src="./assets/images/project_3_main.png" alt=""></div>
                             </div>
                         </div>
-                        <button class="project-hero__arrow project-hero__arrow--prev" type="button"
+                        <button class="arrow arrow--circle arrow--white arrow--prev" type="button"
                             aria-label="Предыдущее фото"></button>
-                        <button class="project-hero__arrow project-hero__arrow--next" type="button"
+                        <button class="arrow arrow--circle arrow--white arrow--next" type="button"
                             aria-label="Следующее фото"></button>
                     </div>
 
@@ -186,12 +192,12 @@
             <div class="plan-lightbox__backdrop" data-plan-close></div>
             <div class="plan-lightbox__dialog" role="dialog" aria-modal="true" aria-label="Просмотр планировки">
                 <button class="plan-lightbox__close" type="button" aria-label="Закрыть" data-plan-close>×</button>
-                <button class="plan-lightbox__arrow plan-lightbox__arrow--prev" type="button"
+                <button class="arrow arrow--prev" type="button"
                     aria-label="Предыдущая планировка"></button>
                 <div class="plan-lightbox__stage">
                     <img class="plan-lightbox__image" id="planLightboxImage" src="" alt="">
                 </div>
-                <button class="plan-lightbox__arrow plan-lightbox__arrow--next" type="button"
+                <button class="arrow arrow--next" type="button"
                     aria-label="Следующая планировка"></button>
             </div>
         </div>
@@ -266,18 +272,17 @@
                     <form class="steps__form-new">
                         <input class="steps__input" type="text" placeholder="Ваше имя">
                         <input class="steps__input" type="tel" placeholder="+7 (000) 000-00-00">
-                        <button class="steps__submit" type="button" data-open-callback>ОСТАВИТЬ ЗАЯВКУ</button>
+                        <button type="submit" class="steps__submit btn btn--shine">ОСТАВИТЬ ЗАЯВКУ</button>
 
                         <div class="steps__checks">
-                            <label class="steps__check">
+                            <label class="steps__check form-check form-check--light">
                                 <input type="checkbox">
-                                <span class="steps__check-box"></span>
-                                <span class="steps__check-text">Я согласен с политикой конфиденциальности</span>
+                                <span>Я согласен с политикой конфиденциальности</span>
                             </label>
-                            <label class="steps__check">
+
+                            <label class="steps__check form-check form-check--light">
                                 <input type="checkbox">
-                                <span class="steps__check-box"></span>
-                                <span class="steps__check-text">Даю согласие на обработку персональных данных</span>
+                                <span>Даю согласие на обработку персональных данных</span>
                             </label>
                         </div>
                     </form>
@@ -296,9 +301,9 @@
                 <div class="project-gallery__panel is-active" data-panel="ext">
                     <div class="project-gallery__top">
                         <div class="project-gallery__nav">
-                            <button class="project-gallery__arrow project-gallery__arrow--prev-ext" type="button"
+                            <button class="arrow arrow--circle arrow--gray arrow--prev" type="button"
                                 aria-label="Предыдущий слайд"></button>
-                            <button class="project-gallery__arrow project-gallery__arrow--next-ext" type="button"
+                            <button class="arrow arrow--circle arrow--gray arrow--next" type="button"
                                 aria-label="Следующий слайд"></button>
                         </div>
                     </div>
@@ -327,9 +332,9 @@
                 <div class="project-gallery__panel" data-panel="int">
                     <div class="project-gallery__top">
                         <div class="project-gallery__nav">
-                            <button class="project-gallery__arrow project-gallery__arrow--prev-int" type="button"
+                            <button class="arrow arrow--circle arrow--gray arrow--prev" type="button"
                                 aria-label="Предыдущий слайд"></button>
-                            <button class="project-gallery__arrow project-gallery__arrow--next-int" type="button"
+                            <button class="arrow arrow--circle arrow--gray arrow--next" type="button"
                                 aria-label="Следующий слайд"></button>
                         </div>
                     </div>
@@ -377,19 +382,18 @@
                             <form class="project-consult__form">
                                 <input class="project-consult__input" type="text" placeholder="Ваше имя">
                                 <input class="project-consult__input" type="tel" placeholder="+7 (000) 000-00-00">
-                                <div class="project-consult__checks">
-                                    <label class="project-consult__check">
+                                <div class="steps__checks">
+                                    <label class="steps__check form-check form-check--light">
                                         <input type="checkbox">
-                                        <span class="project-consult__check-box"></span>
                                         <span>Я согласен с политикой конфиденциальности</span>
                                     </label>
-                                    <label class="project-consult__check">
+
+                                    <label class="steps__check form-check form-check--light">
                                         <input type="checkbox">
-                                        <span class="project-consult__check-box"></span>
                                         <span>Даю согласие на обработку персональных данных</span>
                                     </label>
                                 </div>
-                                <button class="btn btn--shine project-consult__submit" type="button"
+                                <button class="services-form__btn btn btn--shine" type="button"
                                     data-open-callback>КОНСУЛЬТАЦИЯ</button>
                             </form>
                         </div>
@@ -404,7 +408,7 @@
             </div>
 
             <div class="projects__outer">
-                <button class="projects__arrow projects__arrow--prev" type="button" aria-label="Назад"></button>
+                <button class="arrow arrow--circle arrow--green arrow--prev" type="button" aria-label="Назад"></button>
 
                 <div class="projects__center">
                     <div class="container">
@@ -456,7 +460,7 @@
                     </div>
                 </div>
 
-                <button class="projects__arrow projects__arrow--next" type="button" aria-label="Вперёд"></button>
+                <button class="arrow arrow--circle arrow--green arrow--next" type="button" aria-label="Вперёд"></button>
             </div>
         </section>
 
