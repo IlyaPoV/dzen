@@ -2406,6 +2406,53 @@ body.modal-open {
     align-items: flex-start;
     text-align: left;
   }
+
+  .project-hero__layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .project-about__grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .project-plan__grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .project-format__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+  }
+
+  .project-gallery__layout {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .project-consult__inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 40px 24px;
+  }
+
+  .project-bottom-cta__box {
+    min-height: auto;
+    padding-bottom: 40px;
+  }
+
+  .project-bottom-cta__main {
+    padding: 80px 24px 60px;
+  }
+
+  .project-bottom-cta__stats {
+    position: static;
+    width: 100%;
+    padding: 24px 24px 0;
+    gap: 16px;
+  }
 }
 
 @media (max-width: 900px) {
@@ -2683,6 +2730,29 @@ body.modal-open {
   }
 
   .site-footer__button {
+    width: 100%;
+  }
+
+  .project-format__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-gallery__image {
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+
+  .steps__inner,
+  .project-visit .steps__inner {
+    padding: 40px 20px;
+  }
+
+  .steps__form-new {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .steps__submit {
     width: 100%;
   }
 }
@@ -3196,6 +3266,71 @@ body.modal-open {
     height: 62px;
     font-size: 22px;
   }
+
+  .project-hero {
+    padding: 32px 0 40px;
+  }
+
+  .project-hero__title {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+
+  .project-about {
+    padding: 48px 0;
+  }
+
+  .project-about__title,
+  .project-plan__caption {
+    font-size: 24px;
+  }
+
+  .project-about__text,
+  .project-about__note {
+    font-size: 17px;
+  }
+
+  .project-plan {
+    padding: 10px 0 40px;
+  }
+
+  .project-plan__card {
+    padding: 16px;
+  }
+
+  .project-format {
+    padding: 40px 0 60px;
+  }
+
+  .project-consult {
+    padding-bottom: 48px;
+  }
+
+  .project-consult__inner {
+    padding: 32px 20px;
+  }
+
+  .project-consult__text {
+    font-size: 18px;
+  }
+
+  .project-bottom-cta__main {
+    padding: 60px 20px 40px;
+  }
+
+  .project-bottom-cta__title {
+    font-size: 28px;
+  }
+
+  .btn {
+    min-height: 52px;
+    padding: 0 24px;
+    font-size: 17px;
+  }
+
+  .btn--full {
+    width: 100%;
+  }
 }
 
 @media (max-width: 390px) {
@@ -3245,5 +3380,23 @@ body.modal-open {
   .callback-modal__submit {
     height: 56px;
     font-size: 18px;
+  }
+
+  .project-hero__info {
+    padding: 28px 20px;
+  }
+
+  .project-about__facts {
+    gap: 20px;
+    flex-direction: column;
+  }
+
+  .plan-lightbox__dialog {
+    padding: 20px;
+  }
+
+  .plan-lightbox__arrow {
+    width: 40px;
+    height: 40px;
   }
 }
