@@ -2546,6 +2546,10 @@ body.modal-open {
     --hero-height: 560px;
   }
 
+  .hero__button-underlay{
+    display: none;
+  }
+
   .header {
     padding-block: 8px;
   }
