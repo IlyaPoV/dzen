@@ -2053,7 +2053,7 @@ body.modal-open {
 }
 
 .project-gallery {
-  padding: 46px 0 76px;
+  padding: 40px 0 76px;
 }
 
 .project-gallery__tabs {
@@ -3336,8 +3336,12 @@ body.modal-open {
     font-size: 22px;
   }
 
-  .project-hero {
-    padding: 32px 0 40px;
+  .project-hero__info {
+    padding: 32px 24px;
+  }
+
+  .project-hero__features {
+    gap: 24px;
   }
 
   .project-hero__title {
