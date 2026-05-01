@@ -962,6 +962,10 @@ body.modal-open {
   background: rgba(201, 164, 106, .08);
 }
 
+.apply-btn {
+  width: 75%
+}
+
 .ready-objects {
   padding-block: 64px 96px;
 }
@@ -2259,6 +2263,31 @@ body.modal-open {
   line-height: 1.25;
   font-weight: 600;
 }
+.project-hero__slider {
+  position: relative;
+}
+
+.project-hero__slider .arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.project-hero__slider .arrow--prev {
+  left: 20px;
+}
+
+.project-hero__slider .arrow--next {
+  right: 20px;
+}
+
+.project-plan__image {
+  height: 498px;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
 
 @media (max-width: 1200px) {
 
