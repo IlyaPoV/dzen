@@ -5,17 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Дом «Дзен 140»</title>
-
     <link rel="stylesheet" href="./assets/vendor/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="./style.css">
 </head>
 
-<body class="project-page">
+<body>
     <header class="header" id="site-header">
         <div class="container">
             <div class="header__inner">
-                <a href="./index.html" class="header__logo">
-                    <img src="./assets/images/logo.png" alt="Дзен">
+                <a href="#" class="header__logo">
+                    <img src="./assets/images/logo.png" alt="Дзен" />
                 </a>
 
                 <div class="header__mobile-center">
@@ -37,10 +36,12 @@
                     <ul class="header__drawer-menu">
                         <li><a href="#about">О нас</a></li>
                         <li><a href="#projects">Проекты</a></li>
+                        <li><a href="#gallery">Галерея</a></li>
+                        <li><a href="#blog">Блог</a></li>
                         <li><a href="#contacts">Контакты</a></li>
                     </ul>
 
-                    <a href="#contacts" class="header__drawer-button" data-open-callback>Заказать звонок</a>
+                    <a href="#contacts" class="header__drawer-button btn btn--shine">Заказать звонок</a>
                 </nav>
 
                 <div class="header__backdrop"></div>
@@ -59,8 +60,7 @@
                         <a href="tel:+79120342244" class="header__phone">+7 (912) 034-22-44</a>
                     </div>
 
-                    <a href="#contacts" class="header__button" data-open-callback>
-                        <span class="header__button-icon">↗</span>
+                    <a href="#contacts" class="header__button btn btn--shine btn--arrow">
                         <span>ЗАКАЗАТЬ ЗВОНОК</span>
                     </a>
                 </div>
@@ -69,102 +69,53 @@
     </header>
 
     <main>
+        <!-- PROJECT HERO -->
         <section class="project-hero">
             <div class="container">
-                <h1 class="project-hero__title heading-number">Дом «Дзен 140»</h1>
+                <h1 class="title project-hero__title heading-number">Дом «Дзен 140»</h1>
 
                 <div class="project-hero__layout">
-                    <div class="project-hero__gallery">
-                        <div class="project-hero__slider-stack">
-                            <div class="project-hero__slider-shell">
-                                <div class="swiper project-hero__slider js-project-hero-slider">
-                                    <div class="swiper-wrapper">
-                                        <div class="swiper-slide project-hero__slide">
-                                            <img class="project-hero__slide-image"
-                                                src="./assets/images/project_1_main.png" alt="Дом Дзен 140 — фото 1">
-                                        </div>
-                                        <div class="swiper-slide project-hero__slide">
-                                            <img class="project-hero__slide-image"
-                                                src="./assets/images/project_2_main.png" alt="Дом Дзен 140 — фото 2">
-                                        </div>
-                                        <div class="swiper-slide project-hero__slide">
-                                            <img class="project-hero__slide-image"
-                                                src="./assets/images/project_3_main.png" alt="Дом Дзен 140 — фото 3">
-                                        </div>
-                                    </div>
-                                </div>
+                    <div class="project-hero__slider">
+                        <div class="swiper js-project-hero-slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="./assets/images/project_1_main.png" alt=""></div>
+                                <div class="swiper-slide"><img src="./assets/images/project_2_main.png" alt=""></div>
+                                <div class="swiper-slide"><img src="./assets/images/project_3_main.png" alt=""></div>
                             </div>
-
-                            <button class="project-hero__arrow project-hero__arrow--prev" type="button"
-                                aria-label="Предыдущее фото">&lt;</button>
-                            <button class="project-hero__arrow project-hero__arrow--next" type="button"
-                                aria-label="Следующее фото">&gt;</button>
                         </div>
+                        <button class="arrow arrow--circle arrow--white arrow--prev" type="button"
+                            aria-label="Предыдущее фото"></button>
+                        <button class="arrow arrow--circle arrow--white arrow--next" type="button"
+                            aria-label="Следующее фото"></button>
                     </div>
 
-                    <aside class="project-hero__info">
-                        <h2 class="project-hero__price">от 10 200 000 ₽</h2>
+                    <div class="project-hero__info">
+                        <div class="project-hero__price">от 10 200 000 ₽</div>
 
                         <div class="project-hero__features">
                             <div class="project-hero__feature">
-                                <div class="project-hero__feature-icon" aria-hidden="true">
-                                    <svg viewBox="0 0 32 32">
-                                        <path d="M5 15.5h22v8.5H5z"></path>
-                                        <path d="M8 15.5V11a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v4.5"></path>
-                                        <path d="M5 24v2.5"></path>
-                                        <path d="M27 24v2.5"></path>
-                                    </svg>
-                                </div>
-                                <div class="project-hero__feature-text">
-                                    <span class="project-hero__feature-value">3</span>
-                                    <span class="project-hero__feature-label">Спальни</span>
-                                </div>
+                                <img src="./assets/images/Bed_traced.svg" alt="">
+                                <span><b>3</b> спальни</span>
                             </div>
-
                             <div class="project-hero__feature">
-                                <div class="project-hero__feature-icon" aria-hidden="true">
-                                    <svg viewBox="0 0 32 32">
-                                        <path d="M9 8.5h6v5H9z"></path>
-                                        <path d="M15 11h3.5a4.5 4.5 0 0 1 4.5 4.5V21H9"></path>
-                                        <path d="M9 21v2.5a2.5 2.5 0 0 0 2.5 2.5h10A2.5 2.5 0 0 0 24 23.5V21"></path>
-                                        <path d="M23 13v-2.5"></path>
-                                    </svg>
-                                </div>
-                                <div class="project-hero__feature-text">
-                                    <span class="project-hero__feature-value">2</span>
-                                    <span class="project-hero__feature-label">Санузла</span>
-                                </div>
+                                <img src="./assets/images/Bathtub_traced.svg" alt="">
+                                <span><b>2</b> санузла</span>
                             </div>
-
                             <div class="project-hero__feature">
-                                <div class="project-hero__feature-icon" aria-hidden="true">
-                                    <svg viewBox="0 0 32 32">
-                                        <rect x="7" y="5" width="18" height="22"></rect>
-                                        <path d="M16 5v22"></path>
-                                        <path d="M7 16h18"></path>
-                                    </svg>
-                                </div>
-                                <div class="project-hero__feature-text">
-                                    <span class="project-hero__feature-value">2 м</span>
-                                    <span class="project-hero__feature-label">Окна</span>
-                                </div>
+                                <img src="./assets/images/Closed_Window.svg" alt="">
+                                <span><b>2 м</b> окна</span>
                             </div>
                         </div>
 
-                        <p class="project-hero__description">
-                            Готовый проект <strong>«под ключ»</strong><br>
-                            для вашей лучшей жизни.
-                        </p>
+                        <p class="project-hero__text">Готовый проект <strong>«под ключ»</strong></p>
 
-                        <div class="project-hero__button-wrap">
-                            <button class="project-hero__button" type="button" data-open-callback>ОСТАВИТЬ
-                                ЗАЯВКУ</button>
-                        </div>
-                    </aside>
+                        <button class="btn project-hero__button" data-open-callback>ОСТАВИТЬ ЗАЯВКУ</button>
+                    </div>
                 </div>
             </div>
         </section>
 
+        <!-- PROJECT ABOUT -->
         <section class="project-about" id="about">
             <div class="container">
                 <h2 class="section-title">Описание проекта</h2>
@@ -191,18 +142,12 @@
 
                         <div class="project-about__facts">
                             <div class="project-about__fact">
-                                <img class="project-about__fact-icon" src="./assets/images/icon-veranda.svg" alt=""
-                                    aria-hidden="true">
-                                <div class="project-about__fact-text">
-                                    <strong>12,5 м<sup>2</sup></strong> веранда
-                                </div>
+                                <img class="project-about__fact-icon" src="./assets/images/Balcony.svg" alt="">
+                                <div class="project-about__fact-text"><strong>12,5 м<sup>2</sup></strong> веранда</div>
                             </div>
-
                             <div class="project-about__fact">
-                                <img class="project-about__fact-icon" src="./assets/images/icon-tech-room.svg" alt=""
-                                    aria-hidden="true">
-                                <div class="project-about__fact-text">
-                                    <strong>6,3 м<sup>2</sup></strong> тех. помещение
+                                <img class="project-about__fact-icon" src="./assets/images/photo.svg" alt="">
+                                <div class="project-about__fact-text"><strong>6,3 м<sup>2</sup></strong> тех. помещение
                                 </div>
                             </div>
                         </div>
@@ -211,6 +156,7 @@
             </div>
         </section>
 
+        <!-- PROJECT PLAN -->
         <section class="project-plan">
             <div class="container">
                 <h2 class="section-title">Планировка</h2>
@@ -241,26 +187,25 @@
             </div>
         </section>
 
+        <!-- PLAN LIGHTBOX -->
         <div class="plan-lightbox" id="planLightbox" aria-hidden="true">
             <div class="plan-lightbox__backdrop" data-plan-close></div>
-
             <div class="plan-lightbox__dialog" role="dialog" aria-modal="true" aria-label="Просмотр планировки">
                 <button class="plan-lightbox__close" type="button" aria-label="Закрыть" data-plan-close>×</button>
-                <button class="plan-lightbox__arrow plan-lightbox__arrow--prev" type="button"
-                    aria-label="Предыдущая планировка">‹</button>
-
+                <button class="arrow arrow--prev" type="button"
+                    aria-label="Предыдущая планировка"></button>
                 <div class="plan-lightbox__stage">
                     <img class="plan-lightbox__image" id="planLightboxImage" src="" alt="">
                 </div>
-
-                <button class="plan-lightbox__arrow plan-lightbox__arrow--next" type="button"
-                    aria-label="Следующая планировка">›</button>
+                <button class="arrow arrow--next" type="button"
+                    aria-label="Следующая планировка"></button>
             </div>
         </div>
 
+        <!-- PROJECT FORMAT -->
         <section class="project-format" id="formats">
             <div class="container">
-                <h2 class="section-title project-format__title">Форматы комплектации Вашего дома:</h2>
+                <h2 class="section-title">Форматы комплектации Вашего дома:</h2>
 
                 <div class="project-format__grid">
                     <article class="project-format__card">
@@ -268,22 +213,15 @@
                             <img class="project-format__image" src="./assets/images/project-140-format-1.png"
                                 alt="Формат 1">
                         </div>
-
                         <p class="project-format__price"><strong>от 10 200 000 ₽</strong></p>
                         <h3 class="project-format__name">Формат 1: Под чистовую</h3>
-
-                        <button class="project-format__more" type="button">
-                            <span class="project-format__more-text">Подробное описание</span>
-                            <img class="project-format__plus" src="./assets/images/icon-plus.svg" alt=""
-                                aria-hidden="true">
-                        </button>
-
+                        <button class="project-format__more" type="button">Подробное описание</button>
                         <div class="project-format__details">
                             Подготовленный дом под чистовую отделку: выполнены основные строительные и инженерные
                             работы, чтобы вы могли завершить интерьер по своему вкусу.
                         </div>
-
-                        <button class="project-format__button" type="button" data-open-callback>КОНСУЛЬТАЦИЯ</button>
+                        <button class="btn btn--shine project-format__button" type="button"
+                            data-open-callback>КОНСУЛЬТАЦИЯ</button>
                     </article>
 
                     <article class="project-format__card">
@@ -291,22 +229,15 @@
                             <img class="project-format__image" src="./assets/images/project-140-format-2.png"
                                 alt="Формат 2">
                         </div>
-
                         <p class="project-format__price"><strong>От 13 200 000 ₽</strong></p>
                         <h3 class="project-format__name">Формат 2: Под ключ</h3>
-
-                        <button class="project-format__more" type="button">
-                            <span class="project-format__more-text">Подробное описание</span>
-                            <img class="project-format__plus" src="./assets/images/icon-plus.svg" alt=""
-                                aria-hidden="true">
-                        </button>
-
+                        <button class="project-format__more" type="button">Подробное описание</button>
                         <div class="project-format__details">
                             Полностью готовый дом с чистовой отделкой, подключёнными инженерными системами и
                             завершёнными внутренними работами.
                         </div>
-
-                        <button class="project-format__button" type="button" data-open-callback>КОНСУЛЬТАЦИЯ</button>
+                        <button class="btn btn--shine project-format__button" type="button"
+                            data-open-callback>КОНСУЛЬТАЦИЯ</button>
                     </article>
 
                     <article class="project-format__card">
@@ -314,32 +245,25 @@
                             <img class="project-format__image" src="./assets/images/project-140-format-3.png"
                                 alt="Формат 3">
                         </div>
-
                         <p class="project-format__price"><strong>От 15 700 000 ₽</strong></p>
                         <h3 class="project-format__name">Формат 3: Под тапочки</h3>
-
-                        <button class="project-format__more" type="button">
-                            <span class="project-format__more-text">Подробное описание</span>
-                            <img class="project-format__plus" src="./assets/images/icon-plus.svg" alt=""
-                                aria-hidden="true">
-                        </button>
-
+                        <button class="project-format__more" type="button">Подробное описание</button>
                         <div class="project-format__details">
                             Максимальная комплектация: готовый для жизни дом с отделкой, сантехникой, освещением и
                             интерьерными решениями.
                         </div>
-
-                        <button class="project-format__button" type="button" data-open-callback>КОНСУЛЬТАЦИЯ</button>
+                        <button class="btn btn--shine project-format__button" type="button"
+                            data-open-callback>КОНСУЛЬТАЦИЯ</button>
                     </article>
                 </div>
             </div>
         </section>
 
+        <!-- PROJECT VISIT / STEPS -->
         <section class="steps project-visit" id="visit">
             <div class="container">
                 <div class="steps__inner">
                     <h2 class="steps__title">Хотите убедиться в качестве домов лично?</h2>
-
                     <p class="steps__caption">
                         Организуем для вас экскурсию уже в построенный дом.
                         Покажем, что уже построили в реальности, а не на рендерах.
@@ -348,20 +272,17 @@
                     <form class="steps__form-new">
                         <input class="steps__input" type="text" placeholder="Ваше имя">
                         <input class="steps__input" type="tel" placeholder="+7 (000) 000-00-00">
-
-                        <button class="steps__submit" type="button" data-open-callback>ОСТАВИТЬ ЗАЯВКУ</button>
+                        <button type="submit" class="steps__submit btn btn--shine">ОСТАВИТЬ ЗАЯВКУ</button>
 
                         <div class="steps__checks">
-                            <label class="steps__check">
+                            <label class="steps__check form-check form-check--light">
                                 <input type="checkbox">
-                                <span class="steps__check-box"></span>
-                                <span class="steps__check-text">Я согласен с политикой конфиденциальности</span>
+                                <span>Я согласен с политикой конфиденциальности</span>
                             </label>
 
-                            <label class="steps__check">
+                            <label class="steps__check form-check form-check--light">
                                 <input type="checkbox">
-                                <span class="steps__check-box"></span>
-                                <span class="steps__check-text">Даю согласие на обработку персональных данных</span>
+                                <span>Даю согласие на обработку персональных данных</span>
                             </label>
                         </div>
                     </form>
@@ -369,6 +290,7 @@
             </div>
         </section>
 
+        <!-- PROJECT GALLERY -->
         <section class="project-gallery" id="gallery">
             <div class="container">
                 <div class="project-gallery__tabs">
@@ -379,38 +301,28 @@
                 <div class="project-gallery__panel is-active" data-panel="ext">
                     <div class="project-gallery__top">
                         <div class="project-gallery__nav">
-                            <button class="project-gallery__arrow project-gallery__arrow--prev-ext" type="button"
-                                aria-label="Предыдущий слайд">‹</button>
-                            <button class="project-gallery__arrow project-gallery__arrow--next-ext" type="button"
-                                aria-label="Следующий слайд">›</button>
+                            <button class="arrow arrow--circle arrow--gray arrow--prev" type="button"
+                                aria-label="Предыдущий слайд"></button>
+                            <button class="arrow arrow--circle arrow--gray arrow--next" type="button"
+                                aria-label="Следующий слайд"></button>
                         </div>
                     </div>
-
                     <div class="swiper project-gallery__slider js-project-gallery-ext">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide project-gallery__slide">
                                 <div class="project-gallery__layout">
-                                    <div class="project-gallery__card--large">
-                                        <img class="project-gallery__image" src="./assets/images/project-140-ext-1.jpg"
-                                            alt="Экстерьер 1">
-                                    </div>
-                                    <div class="project-gallery__card--small">
-                                        <img class="project-gallery__image" src="./assets/images/project-140-ext-2.jpg"
-                                            alt="Экстерьер 2">
-                                    </div>
+                                    <div class="project-gallery__card--large"><img class="project-gallery__image"
+                                            src="./assets/images/ex1.png" alt="Экстерьер 1"></div>
+                                    <div class="project-gallery__card--small"><img class="project-gallery__image"
+                                            src="./assets/images/ex2.png" alt="Экстерьер 2"></div>
                                 </div>
                             </div>
-
                             <div class="swiper-slide project-gallery__slide">
                                 <div class="project-gallery__layout">
-                                    <div class="project-gallery__card--large">
-                                        <img class="project-gallery__image" src="./assets/images/project-140-ext-3.jpg"
-                                            alt="Экстерьер 3">
-                                    </div>
-                                    <div class="project-gallery__card--small">
-                                        <img class="project-gallery__image" src="./assets/images/project-140-ext-4.jpg"
-                                            alt="Экстерьер 4">
-                                    </div>
+                                    <div class="project-gallery__card--large"><img class="project-gallery__image"
+                                            src="./assets/images/ex3.png" alt="Экстерьер 3"></div>
+                                    <div class="project-gallery__card--small"><img class="project-gallery__image"
+                                            src="./assets/images/ex4.png" alt="Экстерьер 4"></div>
                                 </div>
                             </div>
                         </div>
@@ -420,38 +332,28 @@
                 <div class="project-gallery__panel" data-panel="int">
                     <div class="project-gallery__top">
                         <div class="project-gallery__nav">
-                            <button class="project-gallery__arrow project-gallery__arrow--prev-int" type="button"
-                                aria-label="Предыдущий слайд">‹</button>
-                            <button class="project-gallery__arrow project-gallery__arrow--next-int" type="button"
-                                aria-label="Следующий слайд">›</button>
+                            <button class="arrow arrow--circle arrow--gray arrow--prev" type="button"
+                                aria-label="Предыдущий слайд"></button>
+                            <button class="arrow arrow--circle arrow--gray arrow--next" type="button"
+                                aria-label="Следующий слайд"></button>
                         </div>
                     </div>
-
                     <div class="swiper project-gallery__slider js-project-gallery-int">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide project-gallery__slide">
                                 <div class="project-gallery__layout">
-                                    <div class="project-gallery__card--large">
-                                        <img class="project-gallery__image" src="./assets/images/project-140-int-1.jpg"
-                                            alt="Интерьер 1">
-                                    </div>
-                                    <div class="project-gallery__card--small">
-                                        <img class="project-gallery__image" src="./assets/images/project-140-int-2.jpg"
-                                            alt="Интерьер 2">
-                                    </div>
+                                    <div class="project-gallery__card--large"><img class="project-gallery__image"
+                                            src="./assets/images/in1.png" alt="Интерьер 1"></div>
+                                    <div class="project-gallery__card--small"><img class="project-gallery__image"
+                                            src="./assets/images/in2.png" alt="Интерьер 2"></div>
                                 </div>
                             </div>
-
                             <div class="swiper-slide project-gallery__slide">
                                 <div class="project-gallery__layout">
-                                    <div class="project-gallery__card--large">
-                                        <img class="project-gallery__image" src="./assets/images/project-140-int-3.jpg"
-                                            alt="Интерьер 3">
-                                    </div>
-                                    <div class="project-gallery__card--small">
-                                        <img class="project-gallery__image" src="./assets/images/project-140-int-4.jpg"
-                                            alt="Интерьер 4">
-                                    </div>
+                                    <div class="project-gallery__card--large"><img class="project-gallery__image"
+                                            src="./assets/images/in3.png" alt="Интерьер 3"></div>
+                                    <div class="project-gallery__card--small"><img class="project-gallery__image"
+                                            src="./assets/images/in4.png" alt="Интерьер 4"></div>
                                 </div>
                             </div>
                         </div>
@@ -460,57 +362,38 @@
             </div>
         </section>
 
+        <!-- PROJECT CONSULT -->
         <section class="project-consult">
             <div class="container">
                 <div class="project-consult__box">
                     <div class="project-consult__inner">
                         <div class="project-consult__text">
-                            <p>
-                                <strong>Застройщик «Дзен»</strong> специализируется на строительстве
-                                и продаже готовых домов по собственным проектам
-                                класса «комфорт» и «комфорт+».
+                            <p><strong>Застройщик «Дзен»</strong> специализируется на строительстве и продаже готовых
+                                домов по собственным проектам класса «комфорт» и «комфорт+».</p>
+                            <p>Наши основные объекты расположены в КП «Заповедник» и других посёлках под Екатеринбургом.
                             </p>
-
-                            <p>
-                                Наши <strong>основные объекты расположены</strong> в КП
-                                «Заповедник» и других посёлках под Екатеринбургом.
-                            </p>
-
-                            <p>
-                                <strong>Наша задача</strong> — избавить вас от сложностей и рисков
-                                стройки. Мы берём на себя всё: от проектирования дома
-                                до расстановки мебели по нашему дизайн-проекту. Вы
-                                получаете полностью готовый дом, где всё продумано до
-                                мелочей.
-                            </p>
+                            <p><strong>Наша задача</strong> — избавить вас от сложностей и рисков стройки. Мы берём на
+                                себя всё: от проектирования дома до расстановки мебели по нашему дизайн-проекту. Вы
+                                получаете полностью готовый дом, где всё продумано до мелочей.</p>
                         </div>
 
                         <div class="project-consult__form-box">
-                            <h3 class="project-consult__form-title">
-                                Проконсультируйтесь<br>со специалистом
-                            </h3>
-
+                            <h3 class="project-consult__form-title">Проконсультируйтесь<br>со специалистом</h3>
                             <form class="project-consult__form">
                                 <input class="project-consult__input" type="text" placeholder="Ваше имя">
                                 <input class="project-consult__input" type="tel" placeholder="+7 (000) 000-00-00">
-
-                                <div class="project-consult__checks">
-                                    <label class="project-consult__check">
+                                <div class="steps__checks">
+                                    <label class="steps__check form-check form-check--light">
                                         <input type="checkbox">
-                                        <span class="project-consult__check-box"></span>
-                                        <span class="project-consult__check-text">Я согласен с политикой
-                                            конфиденциальности</span>
+                                        <span>Я согласен с политикой конфиденциальности</span>
                                     </label>
 
-                                    <label class="project-consult__check">
+                                    <label class="steps__check form-check form-check--light">
                                         <input type="checkbox">
-                                        <span class="project-consult__check-box"></span>
-                                        <span class="project-consult__check-text">Даю согласие на обработку персональных
-                                            данных</span>
+                                        <span>Даю согласие на обработку персональных данных</span>
                                     </label>
                                 </div>
-
-                                <button class="project-consult__submit" type="button"
+                                <button class="services-form__btn btn btn--shine" type="button"
                                     data-open-callback>КОНСУЛЬТАЦИЯ</button>
                             </form>
                         </div>
@@ -521,11 +404,11 @@
 
         <section id="projects" class="projects">
             <div class="container">
-                <h2 class="section-title projects__title">Другие проекты</h2>
+                <h2 class="section-title projects__title">ДРУГИЕ ПРОЕКТЫ</h2>
             </div>
 
             <div class="projects__outer">
-                <button class="projects__arrow projects__arrow--prev" type="button" aria-label="Назад">‹</button>
+                <button class="arrow arrow--circle arrow--green arrow--prev" type="button" aria-label="Назад"></button>
 
                 <div class="projects__center">
                     <div class="container">
@@ -537,7 +420,7 @@
                                     </div>
                                     <h3 class="project-slide__title heading-number">ДЗЕН 140</h3>
                                     <p class="project-slide__text">Дом со вторым светом на 140 м²</p>
-                                    <a href="./dzen140.html" class="project-slide__btn">УЗНАТЬ БОЛЬШЕ</a>
+                                    <a href="#" class="project-slide__btn btn btn--shine">УЗНАТЬ БОЛЬШЕ</a>
                                 </article>
 
                                 <article class="swiper-slide project-slide">
@@ -545,9 +428,10 @@
                                         <img src="./assets/images/project-155.png" alt="Дзен 155">
                                     </div>
                                     <h3 class="project-slide__title heading-number">ДЗЕН 155</h3>
-                                    <p class="project-slide__text">Классический дом с двускатной крышей и двумя
-                                        верандами.</p>
-                                    <a href="#projects" class="project-slide__btn">УЗНАТЬ БОЛЬШЕ</a>
+                                    <p class="project-slide__text">
+                                        Классический дом с двускатной крышей и двумя верандами.
+                                    </p>
+                                    <a href="#" class="project-slide__btn btn btn--shine">УЗНАТЬ БОЛЬШЕ</a>
                                 </article>
 
                                 <article class="swiper-slide project-slide">
@@ -555,9 +439,10 @@
                                         <img src="./assets/images/project-200.png" alt="Дзен 200">
                                     </div>
                                     <h3 class="project-slide__title heading-number">ДЗЕН 200</h3>
-                                    <p class="project-slide__text">Дом в стиле хай-тек с плоской крышей и навесом для
-                                        автомобилей.</p>
-                                    <a href="#projects" class="project-slide__btn">УЗНАТЬ БОЛЬШЕ</a>
+                                    <p class="project-slide__text">
+                                        Дом в стиле хай-тек с плоской крышей и навесом для автомобилей.
+                                    </p>
+                                    <a href="#" class="project-slide__btn btn btn--shine">УЗНАТЬ БОЛЬШЕ</a>
                                 </article>
 
                                 <article class="swiper-slide project-slide">
@@ -565,30 +450,32 @@
                                         <img src="./assets/images/project-170.jpg" alt="Дзен 175">
                                     </div>
                                     <h3 class="project-slide__title heading-number">ДЗЕН 175</h3>
-                                    <p class="project-slide__text">Современный одноэтажный дом с террасой и удобной
-                                        планировкой.</p>
-                                    <a href="#projects" class="project-slide__btn">УЗНАТЬ БОЛЬШЕ</a>
+                                    <p class="project-slide__text">
+                                        Современный одноэтажный дом с террасой и удобной планировкой.
+                                    </p>
+                                    <a href="#" class="project-slide__btn btn btn--shine">УЗНАТЬ БОЛЬШЕ</a>
                                 </article>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <button class="projects__arrow projects__arrow--next" type="button" aria-label="Вперёд">›</button>
+                <button class="arrow arrow--circle arrow--green arrow--next" type="button" aria-label="Вперёд"></button>
             </div>
         </section>
 
+        <!-- PROJECT BOTTOM CTA -->
         <section class="project-bottom-cta">
             <div class="container">
                 <div class="project-bottom-cta__box">
                     <div class="project-bottom-cta__main">
                         <h2 class="project-bottom-cta__title">Доверьте нам строительство дома под ключ</h2>
-                        <p class="project-bottom-cta__text">
-                            Накопленный опыт позволяет нам строить
-                            одни из лучших домов в области
-                        </p>
-                        <button class="project-bottom-cta__button" type="button"
-                            data-open-callback>КОНСУЛЬТАЦИЯ</button>
+                        <p class="project-bottom-cta__text">Накопленный опыт позволяет нам строить одни из лучших домов
+                            в области</p>
+                        <a href="#projects" class="hero__button btn btn--shine" data-open-callback>
+                            КОНСУЛЬТАЦИЯ
+                        </a>
+                        <div class="hero__button-underlay" aria-hidden="true"></div>
                     </div>
 
                     <div class="project-bottom-cta__stats">
@@ -596,12 +483,10 @@
                             <p class="project-bottom-cta__stat-value">100+</p>
                             <p class="project-bottom-cta__stat-text">успешных проектов</p>
                         </div>
-
                         <div class="project-bottom-cta__stat">
                             <p class="project-bottom-cta__stat-value">5 лет</p>
                             <p class="project-bottom-cta__stat-text">гарантия на строительство</p>
                         </div>
-
                         <div class="project-bottom-cta__stat">
                             <p class="project-bottom-cta__stat-value">от 180</p>
                             <p class="project-bottom-cta__stat-text">дней готовность дома</p>
@@ -617,7 +502,7 @@
             <div class="site-footer__inner">
                 <div class="site-footer__left">
                     <div class="site-footer__top">
-                        <a href="./index.html" class="site-footer__logo">
+                        <a href="#" class="site-footer__logo">
                             <img src="./assets/images/logo_footer.webp" alt="Дзен">
                         </a>
 
@@ -636,15 +521,16 @@
                         </div>
 
                         <div class="site-footer__socials">
-                            <a href="#" class="site-footer__social"><img src="./assets/images/vk_logo.svg" alt="VK"></a>
-                            <a href="#" class="site-footer__social"><img src="./assets/images/max_logo.svg" alt="MAX"></a>
+                            <a href="#" class="site-footer__social"><img src="./assets/images/vk_logo.svg"
+                                    alt="MAX"></a>
+                            <a href="#" class="site-footer__social"><img src="./assets/images/max_logo.svg"
+                                    alt="MAX"></a>
                             <a href="#" class="site-footer__social"><img src="./assets/images/tg_logo.svg"
-                                    alt="Telegram"></a>
+                                    alt="MAX"></a>
                         </div>
                     </div>
 
-                    <a href="#contacts" class="site-footer__button" data-open-callback>
-                        <span>»</span>
+                    <a href="#" class="site-footer__button btn btn--shine btn--arrow">
                         <span>ЗАКАЗАТЬ ЗВОНОК</span>
                     </a>
 
@@ -657,7 +543,9 @@
                         <p>ул. Вильгельма де Геннина, 40</p>
                     </div>
 
-                    <a class="site-footer__phone" href="tel:+79120342244">+7 (912) 034-22-44</a>
+                    <a class="site-footer__phone" href="tel:+79120342244">
+                        +7 (912) 034-22-44
+                    </a>
 
                     <div class="site-footer__legal">
                         <a href="#">Политика обработки персональных данных</a>
@@ -667,211 +555,44 @@
             </div>
         </div>
     </footer>
-
     <div class="callback-modal" id="callbackModal" aria-hidden="true">
         <div class="callback-modal__backdrop" data-modal-close></div>
 
         <div class="callback-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="callbackModalTitle">
             <div class="callback-modal__top">
-                <button class="callback-modal__close" type="button" aria-label="Закрыть" data-modal-close>×</button>
+                <button class="callback-modal__close" type="button" aria-label="Закрыть" data-modal-close>
+                    ×
+                </button>
             </div>
 
             <div class="callback-modal__body">
-                <h2 class="callback-modal__title" id="callbackModalTitle">Заказать звонок</h2>
+                <h2 class="callback-modal__title heading-number" id="callbackModalTitle">Заказать звонок</h2>
+
                 <p class="callback-modal__text">
                     Оставьте контактные данные и наш специалист свяжется с Вами через 15 минут
                 </p>
 
                 <form class="callback-modal__form">
-                    <input class="callback-modal__input" type="text" placeholder="Ваше имя">
-                    <input class="callback-modal__input" type="tel" placeholder="+7 (000) 000-00-00">
+                    <input class="callback-modal__input form-input" type="text" placeholder="Ваше имя">
+                    <input class="callback-modal__input form-input" type="tel" placeholder="+7 (000) 000-00-00">
 
-                    <label class="callback-modal__check">
+                    <label class="callback-modal__check form-check">
                         <input type="checkbox" checked>
                         <span>Я даю согласие на обработку своих персональных данных в соответствии с политикой</span>
                     </label>
 
-                    <label class="callback-modal__check">
+                    <label class="callback-modal__check form-check">
                         <input type="checkbox" checked>
                         <span>Даю согласие на обработку персональных данных</span>
                     </label>
 
-                    <button class="callback-modal__submit" type="submit">Жду звонка</button>
+                    <button class="callback-modal__submit btn btn--shine" type="submit">Жду звонка</button>
                 </form>
             </div>
         </div>
     </div>
-
     <script src="./assets/vendor/swiper/swiper-bundle.min.js"></script>
     <script defer src="./script.js"></script>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            if (typeof Swiper !== 'undefined') {
-                const heroSlider = document.querySelector('.js-project-hero-slider');
-                if (heroSlider) {
-                    new Swiper(heroSlider, {
-                        loop: true,
-                        speed: 900,
-                        slidesPerView: 1,
-                        spaceBetween: 0,
-                        navigation: {
-                            nextEl: '.project-hero__arrow--next',
-                            prevEl: '.project-hero__arrow--prev'
-                        }
-                    });
-                }
-
-                const extGallery = document.querySelector('.js-project-gallery-ext');
-                if (extGallery) {
-                    new Swiper(extGallery, {
-                        loop: true,
-                        speed: 900,
-                        slidesPerView: 1,
-                        spaceBetween: 0,
-                        grabCursor: true,
-                        navigation: {
-                            nextEl: '.project-gallery__arrow--next-ext',
-                            prevEl: '.project-gallery__arrow--prev-ext'
-                        }
-                    });
-                }
-
-                const intGallery = document.querySelector('.js-project-gallery-int');
-                if (intGallery) {
-                    new Swiper(intGallery, {
-                        loop: true,
-                        speed: 900,
-                        slidesPerView: 1,
-                        spaceBetween: 0,
-                        grabCursor: true,
-                        navigation: {
-                            nextEl: '.project-gallery__arrow--next-int',
-                            prevEl: '.project-gallery__arrow--prev-int'
-                        }
-                    });
-                }
-
-                const projectsSlider = document.querySelector('.projects-swiper');
-                if (projectsSlider) {
-                    new Swiper(projectsSlider, {
-                        loop: true,
-                        speed: 700,
-                        slidesPerView: 3,
-                        slidesPerGroup: 1,
-                        spaceBetween: 24,
-                        navigation: {
-                            nextEl: '.projects__arrow--next',
-                            prevEl: '.projects__arrow--prev'
-                        },
-                        breakpoints: {
-                            0: { slidesPerView: 1, spaceBetween: 14 },
-                            768: { slidesPerView: 2, spaceBetween: 18 },
-                            1200: { slidesPerView: 3, spaceBetween: 24 }
-                        }
-                    });
-                }
-            }
-
-            const galleryTabs = document.querySelectorAll('.project-gallery__tab');
-            const galleryPanels = document.querySelectorAll('.project-gallery__panel');
-
-            galleryTabs.forEach(function (tab) {
-                tab.addEventListener('click', function () {
-                    const current = tab.dataset.tab;
-
-                    galleryTabs.forEach(function (item) {
-                        item.classList.remove('is-active');
-                    });
-
-                    galleryPanels.forEach(function (panel) {
-                        panel.classList.remove('is-active');
-                    });
-
-                    tab.classList.add('is-active');
-
-                    const target = document.querySelector('[data-panel="' + current + '"]');
-                    if (target) {
-                        target.classList.add('is-active');
-                    }
-                });
-            });
-
-            const planItems = [
-                { src: './assets/images/project-plan1.png', alt: 'Планировка без мебели' },
-                { src: './assets/images/project-plan2.png', alt: 'Планировка с мебелью' }
-            ];
-
-            const planButtons = document.querySelectorAll('.project-plan__button');
-            const planLightbox = document.getElementById('planLightbox');
-            const planLightboxImage = document.getElementById('planLightboxImage');
-            const planPrev = document.querySelector('.plan-lightbox__arrow--prev');
-            const planNext = document.querySelector('.plan-lightbox__arrow--next');
-            const planCloseButtons = document.querySelectorAll('[data-plan-close]');
-            let currentPlanIndex = 0;
-
-            function renderPlan(index) {
-                const item = planItems[index];
-                if (!item || !planLightboxImage) return;
-                planLightboxImage.src = item.src;
-                planLightboxImage.alt = item.alt;
-                currentPlanIndex = index;
-            }
-
-            function openPlanLightbox(index) {
-                if (!planLightbox) return;
-                renderPlan(index);
-                planLightbox.classList.add('is-open');
-                planLightbox.setAttribute('aria-hidden', 'false');
-                document.body.style.overflow = 'hidden';
-            }
-
-            function closePlanLightbox() {
-                if (!planLightbox) return;
-                planLightbox.classList.remove('is-open');
-                planLightbox.setAttribute('aria-hidden', 'true');
-                document.body.style.overflow = document.body.classList.contains('modal-open') ? 'hidden' : '';
-            }
-
-            function showPrevPlan() {
-                renderPlan(currentPlanIndex === 0 ? planItems.length - 1 : currentPlanIndex - 1);
-            }
-
-            function showNextPlan() {
-                renderPlan(currentPlanIndex === planItems.length - 1 ? 0 : currentPlanIndex + 1);
-            }
-
-            planButtons.forEach(function (button) {
-                button.addEventListener('click', function () {
-                    openPlanLightbox(Number(button.dataset.planIndex || 0));
-                });
-            });
-
-            if (planPrev) planPrev.addEventListener('click', showPrevPlan);
-            if (planNext) planNext.addEventListener('click', showNextPlan);
-
-            planCloseButtons.forEach(function (button) {
-                button.addEventListener('click', closePlanLightbox);
-            });
-
-            document.querySelectorAll('.project-format__more').forEach(function (button) {
-                button.addEventListener('click', function () {
-                    const card = button.closest('.project-format__card');
-                    if (card) {
-                        card.classList.toggle('is-open');
-                    }
-                });
-            });
-
-            document.addEventListener('keydown', function (event) {
-                if (planLightbox && planLightbox.classList.contains('is-open')) {
-                    if (event.key === 'Escape') closePlanLightbox();
-                    if (event.key === 'ArrowLeft') showPrevPlan();
-                    if (event.key === 'ArrowRight') showNextPlan();
-                }
-            });
-        });
-    </script>
 </body>
 
 </html>
