@@ -2530,6 +2530,10 @@ body.modal-open {
   .project-bottom-cta__stats {
     order: -1;
   }
+
+  .hero__button-underlay{
+    bottom: -44px;
+  }
   
 }
 
