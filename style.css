@@ -2522,6 +2522,15 @@ body.modal-open {
     padding: 24px 24px 0;
     gap: 16px;
   }
+    .project-bottom-cta__box {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .project-bottom-cta__stats {
+    order: -1;
+  }
+  
 }
 
 @media (max-width: 900px) {
