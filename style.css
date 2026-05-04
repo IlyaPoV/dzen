@@ -180,6 +180,12 @@ body.modal-open {
   color: var(--green);
 }
 
+.site-footer__bottom {
+  display: flex;
+  align-items: end;
+  gap: 24px;
+}
+
 .section-title {
   margin-bottom: 24px;
   text-align: center;
@@ -1125,7 +1131,6 @@ body.modal-open {
   justify-content: center;
   width: 60px;
   height: 60px;
-  margin-bottom: 22px;
   border-radius: 50%;
   background: var(--green);
   font-size: 30px;
@@ -1135,7 +1140,7 @@ body.modal-open {
 
 .steps-panel__title {
   margin-bottom: calc(var(--hero-button-bottom) + 2px);
-  font-size: 25px;
+  font-size: 23px;
   line-height: 1.15;
   margin: 0;
 }
@@ -1470,6 +1475,10 @@ body.modal-open {
   margin-bottom: 20px;
 }
 
+.site-footer__company {
+  align-self: center;
+}
+
 :is(.site-footer__company, .site-footer__copy, .site-footer__legal a) {
   font-size: 13px;
   line-height: 1.4;
@@ -1509,10 +1518,6 @@ body.modal-open {
   margin-bottom: 8px;
 }
 
-.site-footer__copy {
-  margin-top: -12px;
-}
-
 .site-footer__social img {
   width: 23px;
   height: 23px;
@@ -1530,10 +1535,8 @@ body.modal-open {
 }
 
 .site-footer__button {
-  gap: 14px;
   width: 253px;
   height: 44px;
-  margin-left: 258px;
   color: var(--white);
   font-size: 16px;
 }
@@ -2421,10 +2424,6 @@ body.modal-open {
     gap: 36px;
   }
 
-  .about__content {
-    max-width: none;
-  }
-
   :is(.services-build, .services-ready) {
     grid-template-columns: 1fr 1fr;
     gap: 18px;
@@ -2886,6 +2885,11 @@ body.modal-open {
     padding-block: 10px;
   }
 
+  .site-footer__bottom {
+    flex-direction: column-reverse;
+    align-items: start;
+  }
+
   .header__inner {
     grid-template-columns: 78px 1fr 40px;
     min-height: 56px;
@@ -3212,12 +3216,10 @@ body.modal-open {
   .steps-panel__num {
     width: 54px;
     height: 54px;
-    margin-bottom: 16px;
     font-size: 28px;
   }
 
   .steps-panel__title {
-    margin-bottom: 12px;
     font-size: 18px;
   }
 
@@ -3362,11 +3364,6 @@ body.modal-open {
     height: 20px;
   }
 
-  .site-footer__copy {
-    margin-top: 18px;
-    font-size: 12px;
-  }
-
   .site-footer__address {
     font-size: 16px;
   }
@@ -3427,6 +3424,10 @@ body.modal-open {
 
   .project-about {
     padding: 48px 0;
+  }
+  
+  .stat__label {
+    font-size: 14px;
   }
 
   .project-about__title,
@@ -3494,6 +3495,14 @@ body.modal-open {
 
   .hero__title-note {
     font-size: 17px;
+  }
+
+  .about-photo__video {
+    height: 280px;
+  }
+
+  .steps__title {
+    font-size: 22px;
   }
 
   :is(.services-form__btn, .ready-form__btn, .services-form__link-btn, .ready-form__link-btn) {
