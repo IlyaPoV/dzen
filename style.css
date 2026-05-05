@@ -640,7 +640,7 @@ body.modal-open {
 }
 
 .about-photo__box {
-  min-height: 600px;
+  height: 600px;
   overflow: hidden;
   background: var(--placeholder);
 }
@@ -2744,7 +2744,7 @@ body.modal-open {
   }
 
   .about-photo__box {
-    min-height: 360px;
+    height: 360px;
   }
 
   :is(.services-build, .services-ready, .steps__form-new, .plot__form-row) {
@@ -3084,7 +3084,7 @@ body.modal-open {
   }
 
   .about-photo__box {
-    min-height: 280px;
+    height: 280px;
   }
 
   :is(.service-card, .ready-card) {
@@ -3520,10 +3520,6 @@ body.modal-open {
     font-size: 17px;
   }
 
-  .about-photo__video {
-    height: 280px;
-  }
-
   .steps__title {
     font-size: 22px;
   }
@@ -3590,6 +3586,10 @@ body.modal-open {
     width: 40px;
     height: 40px;
   }
+}
 
-
+@media (max-width: 350px) {
+  .services-form__link-btn {
+    white-space: wrap;
+  }
 }
