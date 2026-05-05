@@ -2349,6 +2349,18 @@ body.modal-open {
   font-weight: 400;
 }
 
+@media (max-width: 1367px) {
+    .header__menu {
+    flex-wrap: wrap;
+    gap: 22px;
+    padding-top: 0;
+  }
+
+  .header__menu a {
+    font-size: 16px;
+  }
+}
+
 @media (max-width: 1200px) {
 
   :root {
@@ -2379,16 +2391,6 @@ body.modal-open {
     width: 120px;
   }
 
-  .header__menu {
-    flex-wrap: wrap;
-    gap: 22px;
-    padding-top: 0;
-  }
-
-  .header__menu a {
-    font-size: 16px;
-  }
-
   .header__side {
     gap: 16px;
   }
@@ -2402,7 +2404,7 @@ body.modal-open {
   }
 
   .header__button {
-    width: 220px;
+    width: 260px;
     margin-top: 0;
   }
 
@@ -3120,6 +3122,27 @@ body.modal-open {
 
   .projects__outer {
     gap: 12px;
+    display: block;
+    position: relative;
+  }
+
+  .projects__outer .arrow {
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    margin-top: -22px;
+  }
+
+  .projects__outer  .arrow--prev {
+    left: 0;
+  }
+
+  .projects__outer  .arrow--next {
+    right: 0;
+  }
+
+  .gallery {
+    padding-bottom: 0;
   }
 
   .project-slide {
