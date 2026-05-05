@@ -1842,6 +1842,8 @@ body.modal-open {
 }
 
 .project-plan__image-wrap {
+  height: 498px;
+  overflow: hidden;
   margin-bottom: 20px;
   background: #fff;
 }
@@ -2340,7 +2342,6 @@ body.modal-open {
 }
 
 .project-plan__image {
-  height: 498px;
   border-radius: 14px;
   overflow: hidden;
 }
@@ -2520,7 +2521,7 @@ body.modal-open {
   }
 
   .project-consult__inner {
-    grid-template-columns: 1fr;
+    grid-template-columns: 100%;
     gap: 40px;
     padding: 40px 24px;
   }
@@ -2853,7 +2854,7 @@ body.modal-open {
   }
 
   .steps__form-new {
-    grid-template-columns: 1fr;
+    grid-template-columns: 100%;
     gap: 16px;
   }
 
@@ -3509,6 +3510,19 @@ body.modal-open {
   .services-form__link-btn {
     font-size: 15px;
   }
+
+  .project-gallery__tabs {
+    margin-bottom: 24px;
+  }
+
+  .project-gallery__tabs {
+    grid-template-columns: repeat(2, max-content);
+    font-size: 16px;
+  }
+
+  .project-plan__image-wrap  {
+    height: initial;
+  }
 }
 
 @media (max-width: 390px) {
@@ -3591,5 +3605,18 @@ body.modal-open {
 @media (max-width: 350px) {
   .services-form__link-btn {
     white-space: wrap;
+  }
+
+  .project-consult__form-box {
+    justify-self: stretch;
+    width: 100%;
+  }
+
+  .project-consult__form-title {
+    font-size: 20px;
+  }
+
+  .project-consult__form .project-consult__input {
+    font-size: 16px;
   }
 }
